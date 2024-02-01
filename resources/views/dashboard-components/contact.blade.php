@@ -1,5 +1,5 @@
 <div id="contact_us" class="flex flex-col lg:items-center  lg:flex-row justify-around bg-white px-4 lg:px-20 py-5 mb-40 mt-10 lg:mt-40">
-    <div class="px-14 lg:px-0">
+    <div class="px-14 lg:px-5">
         <h1 class="uppercase tracking-wide text-center lg:text-start">connect with us</h1>
         <h1 class="text-4xl font-bold text-pink-950 tracking-wide mt-10">Turning Dreams into Reality</h1>
 
@@ -38,7 +38,7 @@
 
         </form>
     </div>
-    <div>
+    <div class="px-6">
         <h1 class="uppercase tracking-wide mt-10 text-center lg:text-start lg:mt-0">contact us</h1>
         <div class="w-16 m-auto lg:m-0 lg:w-full h-[1px] bg-pink-950 "></div>
         <div class="mt-10 sm:flex sm:flex-row items-center sm:justify-around lg:flex-col lg:items-start">

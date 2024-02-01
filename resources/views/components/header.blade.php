@@ -1,6 +1,6 @@
 <x-layout>
     <div class="flex items-center justify-between bg-pink-950 w-full px-4 lg:px-10 py-3 ">
-        <img src="{{asset('assets/gazzele-logo.png')}}" alt="logo" class="lg:pl-12">
+        <a href="/"><img src="{{asset('assets/gazzele-logo.png')}}" alt="logo" class="lg:pl-12"></a>
         <div class="hidden lg:flex justify-around lg:w-[800px] items-center">
             <nav class="flex space-x-8 text-white">
                 <div class="group relative">
@@ -23,8 +23,8 @@
 
                     </div>
                 </div>
-                <a href="#" class=" transition-colors duration-300 text-lg">About</a>
-                <a href="#" class=" transition-colors duration-300 text-lg">Products</a>
+                <a href="/about" class=" transition-colors duration-300 text-lg">About</a>
+                <a href="/products" class=" transition-colors duration-300 text-lg">Products</a>
                 <a href="#" class=" transition-colors duration-300 text-lg">News</a>
                 <div class="group relative">
                     <div id="contact" class="transition-colors duration-300 cursor-pointer text-lg">Contact</div>

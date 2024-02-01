@@ -19,20 +19,24 @@
         <div
             class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 text-center flex-wrap mt-5 lg:mt-10  lg:justify-center xl:justify-start lg:space-x-4">
             <div
-                class="border py-2 px-4 rounded-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors">
+                class="border py-2 cursor-pointer  px-4 rounded-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors">
                 Growth
             </div>
             <div
-                class="border py-2 px-4 rounded-full border-pink-950 text-pink-950 hover:bg-pink-950 hover:text-white transition-colors">
+                class="border py-2 cursor-pointer  px-4 rounded-full border-pink-950 text-pink-950 hover:bg-pink-950 hover:text-white transition-colors">
                 SMEs
             </div>
             <div
-                class="border py-2 px-4 rounded-full border-orange-700 text-orange-700 hover:bg-orange-700 hover:text-white transition-colors">
+                class="border py-2  cursor-pointer px-4 rounded-full border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white transition-colors">
                 Services
             </div>
             <div
-                class="border py-2 px-4 rounded-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors">
+                class="border py-2 cursor-pointer  px-4 rounded-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors">
                 Portfolio
+            </div>
+            <div
+                class="border py-2  cursor-pointer px-4 rounded-full border-red-700 text-red-700  hover:bg-red-700  hover:text-white transition-colors">
+                Partners
             </div>
         </div>
     </div>
