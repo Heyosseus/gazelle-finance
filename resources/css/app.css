@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
 }
+
+/* Custom Scrollbar Styles for Webkit/Blink Browsers */
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #4f240e;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+/* Custom Scrollbar Styles for Firefox Browsers */
+body {
+    scrollbar-color: #888 #f1f1f1;
+
+}
+
+
