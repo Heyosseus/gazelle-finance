@@ -4,14 +4,14 @@
         <div class="p-20 mt-10">
             <h1 class="text-3xl text-center">Our <span class="font-bold text-pink-950">Products</span></h1>
             <div class="w-20 h-px bg-black mx-auto mt-2"></div>
-            <p class="w-[800px] leading-6 tracking-wide mt-10 text-center">Our products are similar to private equity
+            <p class="w-full xl:w-[800px] leading-6 tracking-wide mt-10 text-center mx-auto">Our products are similar to private equity
                 than bank
                 financing, with terms appropriate for gazelles, including risk-sharing,
-                performance-based features. Given our higher risk profile, we also expect higher returns.</p>
+                performance-based features.  Given our higher risk profile, we also expect higher returns.</p>
         </div>
         <div
-            class="flex flex-col xl:flex-row items-center xl:items-stretch justify-around w-full space-y-6 lg:space-x-4 ">
-            <div class="bg-gray-950 px-20 py-10 w-[800px] rounded-xl shadow-2xl xl:self-end">
+            class="flex flex-col px-10 xl:px-0 xl:flex-row items-center xl:items-stretch lg:justify-around w-full space-y-6 lg:space-y-0 xl:space-x-4 ">
+            <div class="bg-gray-950 px-20 py-10 w-full xl:w-[800px] rounded-xl shadow-2xl ">
                 <h1 class="text-white text-2xl text-center">Income Participation Loan (IPL)</h1>
                 <p class="text-white text-sm mt-10 text-start leading-8">Repayment schedule tailored to the projected
                     cash flows of the company, and flexible overall term (but
@@ -32,9 +32,9 @@
 
                     USD denomination</p>
             </div>
-            <div class="px-20 py-6 w-[800px] rounded-xl shadow-2xl ">
+            <div class="px-20 py-10 w-full xl:w-[800px] rounded-xl shadow-2xl ">
                 <h1 class="text-gray-950 text-2xl text-center">Equity participation</h1>
-                <p class="text-gray-950 text-sm mt-10 text-start leading-8">
+                <p class="text-gray-950 text-sm mt-10 text-start leading-8 ">
                     Minority equity stake in the company (typically up to 35%).
                     <br>
                     <br>
@@ -88,4 +88,5 @@
         </div>
     </div>
 
+    <x-footer></x-footer>
 </x-layout>
