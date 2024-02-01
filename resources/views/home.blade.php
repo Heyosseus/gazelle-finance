@@ -1,132 +1,66 @@
 <x-layout>
-    <div class="flex items-center justify-between bg-pink-950 w-full px-4 lg:px-10 py-3">
-        <img src="{{asset('assets/gazzele-logo.png')}}" alt="logo" class="lg:pl-12">
-        <div class="hidden lg:flex justify-around lg:w-[800px] items-center">
-            <nav class="flex space-x-8 text-white">
-                <div class="group relative">
-                    <div id="services" class="transition-colors duration-300 cursor-pointer text-lg">Services</div>
-                    <div id="servicesDropdown"
-                         class="hidden absolute left-0 mt-2 bg-white items-center space-x-6 shadow-md text-black rounded-md text-sm w-[460px]  transition-all ">
-                        <div class="p-5 space-y-1">
-                            <h1 class="text-lg font-bold pb-2">Our work</h1>
-                            <a href="#" class="block py-2 hover:text-pink-950 transition-colors">Gazelle finance</a>
-                            <a href="#" class="block py-2 hover:text-pink-950 transition-colors">Ukrainian bridge
-                                facility</a>
-                            <a href="#" class="block pt-2 hover:text-pink-950 transition-colors">Social impacts</a>
-                        </div>
-                        <div class="p-5 space-y-1">
-                            <h1 class="text-lg font-bold pb-2">Company</h1>
-                            <a href="#" class="block  py-2 hover:text-pink-950 transition-colors">Georgia's office</a>
-                            <a href="#" class="block  py-2 hover:text-pink-950 transition-colors">Armenia's office</a>
-                            <a href="#" class="block  pt-2 hover:text-pink-950 transition-colors">Team</a>
-                        </div>
+    <x-header></x-header>
+    <div class="flex lg:flex-col xl:flex-row p-4 lg:p-20 justify-between xl:space-x-4">
+        <div class="block lg:w-full  xl:w-[700px] lg:h-[400px] rounded-md bg-amber-950"></div>
 
-                    </div>
+        <div class="w-full xl:w-[700px] px-4 py-8 lg:p-12 rounded-lg shadow-xl flex flex-col justify-between ">
+            <h1 class="text-2xl lg:text-3xl lg:text-center xl:text-start [text-shadow:_0_1px_0_rgb(0_0_0_/_60%)]">
+                Partnering for
+                business <span class="text-pink-950 font-bold">Growth</span></h1>
+
+            <p class="mt-5 xl:mt-[-20px]">We invest in gazelles, high-growth, small and medium companies <span
+                    class="text-pink-950 font-bold">(SMEs)</span>
+                in the Eurasia region, with a current focus on <em class=" [text-shadow:_0_1px_0_rgb(0_0_0_/_60%)]">Georgia</em>
+                and <em class=" [text-shadow:_0_1px_0_rgb(0_0_0_/_60%)]">Armenia.</em>
+                <br>
+                <br>
+                We provide growth capital and businesses development services to our <em
+                    class=" [text-shadow:_0_1px_0_rgb(0_0_0_/_60%)]">portfolio</em> companies
+                to rapidly scale their businesses and become market leaders.</p>
+
+            <div
+                class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 text-center flex-wrap mt-5 lg:mt-10  lg:justify-center xl:justify-start lg:space-x-4">
+                <div
+                    class="border py-2 px-4 rounded-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors">
+                    Growth
                 </div>
-                <a href="#" class=" transition-colors duration-300 text-lg">About</a>
-                <a href="#" class=" transition-colors duration-300 text-lg">Products</a>
-                <a href="#" class=" transition-colors duration-300 text-lg">News</a>
-                <div class="group relative">
-                    <div id="contact" class="transition-colors duration-300 cursor-pointer text-lg">Contact</div>
-                    <div id="contactDropdown"
-                         class="hidden align-center absolute left-0 mt-2 bg-white space-x-6 shadow-md text-black rounded-md text-sm w-[120px]  ml-[-10px] opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300">
-                        <div class="p-4 space-y-1">
-                            <a href="#" class="block  hover:text-pink-950 transition-colors">Portfolio</a>
-                            <a href="#" class="block py-2 hover:text-pink-950 transition-colors">Careers</a>
-                            <a href="#" class="block pt-2 hover:text-pink-950 transition-colors">Contact us</a>
-                        </div>
-                    </div>
+                <div
+                    class="border py-2 px-4 rounded-full border-pink-950 text-pink-950 hover:bg-pink-950 hover:text-white transition-colors">
+                    SMEs
                 </div>
-            </nav>
-            <select id="langs"
-                    class="bg-pink-950 border border-gray-300 text-gray-900  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block py-2 px-3 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option value="En" class="rounded-2xl">En</option>
-                <option value="Ka">Ka</option>
-            </select>
-        </div>
-
-        <div class="block lg:hidden" id="burgerMenuBtn">
-            <img src="{{ asset('icons/burgerMenu.svg') }}" alt="Burger Menu" width="40">
-        </div>
-
-        {{--        Mobile Menu--}}
-
-        <div id="sidebar"
-             class="fixed top-0 left-[-10px] w-[80vw] h-full bg-white shadow-xl transform -translate-x-full overflow-y-auto transition-transform duration-300 ease-in-out">
-            <div class="px-10 py-7 md:px-20 md:py-10 select-none">
-                <div class="flex items-start justify-between">
-                    <h1 class="font-bold mb-4 text-3xl">Links</h1>
-                    <img src="{{ asset('icons/closeIcon.svg') }} " alt="" width="30" id="close" class="cursor-pointer">
+                <div
+                    class="border py-2 px-4 rounded-full border-orange-700 text-orange-700 hover:bg-orange-700 hover:text-white transition-colors">
+                    Services
                 </div>
-                <a href="#services" class="block py-2 text-xl relative group">
-                Services
-                <span
-                    class="absolute inset-x-0 bottom-0 h-[2px]  bg-pink-950 origin-left transform scale-x-0 transition-transform duration-700  group-hover:scale-x-100">
-                    </span>
-                </a>
-                <a href="#about" class="block py-2 text-xl relative group"">
-                About
-                <span
-                    class="absolute inset-x-0 bottom-0 h-[2px]  bg-pink-950 origin-left transform scale-x-0 transition-transform duration-700  group-hover:scale-x-100">
-                    </span>
-                </a>
-                <a href="#products" class="block py-2 text-xl relative group"">
-                Products
-                <span
-                    class="absolute inset-x-0 bottom-0 h-[2px]  bg-pink-950 origin-left transform scale-x-0 transition-transform duration-700  group-hover:scale-x-100">
-                    </span>
-                </a>
-                <a href="#news" class="block py-2 text-xl relative group"">
-                News
-                <span
-                    class="absolute inset-x-0 bottom-0 h-[2px]  bg-pink-950 origin-left transform scale-x-0 transition-transform duration-700  group-hover:scale-x-100">
-                    </span>
-                </a>
-                <span class="block py-2 text-xl relative group">
-                    Contact
-                    <span
-                        class="absolute inset-x-0 bottom-0 h-[2px] bg-black origin-left transform scale-x-0 transition-transform duration-700 group-hover:scale-x-100">
-                    </span>
-                </span>
+                <div
+                    class="border py-2 px-4 rounded-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors">
+                    Portfolio
+                </div>
             </div>
         </div>
+    </div>
+    @include('dashboard-components.blog')
+    @include('dashboard-components.partners')
+    <x-footer></x-footer>
+
+    <div id="upButton" class="flex items-center scroll-button px-4 py-2 cursor-pointer duration-500 transition bg-pink-950 rounded-xl fixed bottom-10 right-5 lg:right-10 text-white" onclick="scrollToTop()">
+        <img src="{{asset('icons/arrowUpIcon.svg')}}" alt="" width="15">
+    </div>
+
+    <div id="downButton" class="flex justify-between items-center cursor-pointer scroll-button px-4 py-2 duration-500 transition bg-pink-950 rounded-xl fixed bottom-10 right-5 lg:right-10 text-white" onclick="scrollToBottom()">
+        <img src="{{asset('icons/arrowDownIcon.svg')}}" alt="" width="15">
     </div>
 </x-layout>
 
 <script>
-    const services = document.getElementById('services');
-    const contact = document.getElementById('contact');
-    const servicesDropdown = document.getElementById('servicesDropdown');
-    const contactDropdown = document.getElementById('contactDropdown');
+    function scrollToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    }
 
-    services.addEventListener('mouseenter', () => {
-        servicesDropdown.classList.add('flex');
-    });
-
-    servicesDropdown.addEventListener('mouseleave', () => {
-        servicesDropdown.classList.remove('flex');
-    });
-
-    contact.addEventListener('mouseenter', () => {
-        contactDropdown.classList.add('flex');
-    });
-
-    contactDropdown.addEventListener('mouseleave', () => {
-        contactDropdown.classList.remove('flex');
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-        // Toggle the sidebar when the burger menu button is clicked
-        const burgerMenuBtn = document.getElementById('burgerMenuBtn');
-        const sidebar = document.getElementById('sidebar');
-
-        burgerMenuBtn.addEventListener('click', function () {
-            sidebar.classList.toggle('-translate-x-full');
-        });
-
-        const close = document.getElementById('close');
-        close.addEventListener('click', function () {
-            sidebar.classList.toggle('-translate-x-full');
-        });
-    });
+    function scrollToBottom() {
+        document.body.scrollTop = document.body.scrollHeight; // For Safari
+        document.documentElement.scrollTop = document.documentElement.scrollHeight; // For Chrome, Firefox, IE, and Opera
+    }
 </script>
+
