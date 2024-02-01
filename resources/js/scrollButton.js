@@ -6,8 +6,13 @@ function toggleScrollButtons() {
     const isAtTop = window.scrollY === 0;
     const isAtBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - distanceFromBottom;
 
-    upButton.style.display = isAtTop ? 'none' : 'flex';
-    downButton.style.display = isAtBottom ? 'none' : 'flex';
+    if(upButton !== null){
+        upButton.style.display = isAtTop ? 'none' : 'flex';
+
+    }
+    if(downButton !== null){
+        downButton.style.display = isAtBottom ? 'none' : 'flex';
+    }
 }
 
 window.addEventListener('scroll', toggleScrollButtons);
