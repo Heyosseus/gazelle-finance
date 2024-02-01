@@ -6,6 +6,10 @@
                 class="text-pink-950 font-semibold"> Empowering </span> success through strategic partnerships, we
             collaborate to drive innovation and achieve shared
             goals. </p>
+        <a href="#" class="text-pink-950 font-semibold mt-20 flex items-center space-x-2">
+            <p>See more </p>
+            <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
+        </a>
     </div>
     <div class="hidden lg:block lg:w-full  xl:w-[700px] lg:h-[400px] rounded-md bg-amber-950"></div>
 </div>

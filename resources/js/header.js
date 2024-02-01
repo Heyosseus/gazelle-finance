@@ -30,12 +30,12 @@
     // Toggle the sidebar when the burger menu button is clicked
     const burgerMenuBtn = document.getElementById('burgerMenuBtn');
     const sidebar = document.getElementById('sidebar');
+    const close = document.getElementById('close');
 
     burgerMenuBtn.addEventListener('click', function () {
     sidebar.classList.toggle('-translate-x-full');
 });
 
-    const close = document.getElementById('close');
     close.addEventListener('click', function () {
     sidebar.classList.toggle('-translate-x-full');
 });

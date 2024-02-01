@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="flex items-center justify-between bg-pink-950 w-full px-4 lg:px-10 py-3">
+    <div class="flex items-center justify-between bg-pink-950 w-full px-4 lg:px-10 py-3 ">
         <img src="{{asset('assets/gazzele-logo.png')}}" alt="logo" class="lg:pl-12">
         <div class="hidden lg:flex justify-around lg:w-[800px] items-center">
             <nav class="flex space-x-8 text-white">
