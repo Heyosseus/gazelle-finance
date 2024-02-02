@@ -31,9 +31,9 @@
                     <div id="contactDropdown"
                          class="hidden align-center absolute left-0 mt-2 bg-white space-x-6 shadow-md text-black rounded-md text-sm w-[120px]  ml-[-10px] opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300">
                         <div class="p-4 space-y-1">
-                            <a href="#" class="block  hover:text-pink-950 transition-colors">Portfolio</a>
-                            <a href="#partners" class="block py-2 hover:text-pink-950 transition-colors">Partners</a>
-                            <a href="#contact_us" class="block pt-2 hover:text-pink-950 transition-colors">Contact us</a>
+                            <a href="{{ env('APP_URL') }}/#portfolio" class="block  hover:text-pink-950 transition-colors">Portfolio</a>
+                            <a href="{{ env('APP_URL') }}/#partners" class="block py-2 hover:text-pink-950 transition-colors">Partners</a>
+                            <a href="{{ env('APP_URL') }}/#contact_us" class="block pt-2 hover:text-pink-950 transition-colors">Contact us</a>
                         </div>
                     </div>
                 </div>
@@ -46,13 +46,13 @@
         </div>
 
         <div class="block lg:hidden" id="burgerMenuBtn">
-            <img src="{{ asset('icons/burgerMenu.svg') }}" alt="Burger Menu" width="40">
+            <img src="{{ asset('icons/burgerMenu.svg') }}" alt="Burger Menu" width="40" class="cursor-pointer">
         </div>
 
         {{--        Mobile Menu--}}
 
         <div id="sidebar"
-             class="fixed top-0 left-[-10px] w-[80vw] h-full bg-white shadow-xl transform -translate-x-full overflow-y-auto transition-transform duration-300 ease-in-out">
+             class=" lg:hidden fixed top-0 left-[-10px] w-[80vw] h-full bg-white shadow-xl transform -translate-x-full overflow-y-auto transition-transform duration-300 ease-in-out">
             <div class="px-10 py-7 md:px-20 md:py-10 select-none">
                 <div class="flex items-start justify-between">
                     <h1 class="font-bold mb-4 text-3xl">Links</h1>
@@ -65,33 +65,33 @@
                         class="absolute inset-x-0 bottom-0 h-[2px]  bg-pink-950 origin-left transform scale-x-0 transition-transform duration-700  group-hover:scale-x-100">
                     </span>
                 </a>
-                <a href="#about" class="block py-2 text-xl relative group">
+                <a href="/about" class="block py-2 text-xl relative group">
                     <span class="flex justify-between items-center"><p>About</p> <img src="{{asset('icons/rightArrow.svg')}}" alt="" width="15"></span>
 
                     <span
                         class="absolute inset-x-0 bottom-0 h-[2px]  bg-pink-950 origin-left transform scale-x-0 transition-transform duration-700  group-hover:scale-x-100">
                     </span>
                 </a>
-                <a href="#products" class="block py-2 text-xl relative group"">
+                <a href="/products" class="block py-2 text-xl relative group">
                 <span class="flex justify-between items-center"><p>Products</p> <img src="{{asset('icons/rightArrow.svg')}}" alt="" width="15"></span>
 
                 <span
                     class="absolute inset-x-0 bottom-0 h-[2px]  bg-pink-950 origin-left transform scale-x-0 transition-transform duration-700  group-hover:scale-x-100">
                     </span>
                 </a>
-                <a href="#news" class="block py-2 text-xl relative group"">
+                <a href="#news" class="block py-2 text-xl relative group">
                 <span class="flex justify-between items-center"><p>News</p> <img src="{{asset('icons/rightArrow.svg')}}" alt="" width="15"></span>
 
                 <span
                     class="absolute inset-x-0 bottom-0 h-[2px]  bg-pink-950 origin-left transform scale-x-0 transition-transform duration-700  group-hover:scale-x-100">
                     </span>
                 </a>
-                <span class="block py-2 text-xl relative group cursor-pointer">
+                <a href="{{ env('APP_URL') }}/#contact_us" class="block py-2 text-xl relative group cursor-pointer">
                     <span class="flex justify-between items-center"><p>Contacts</p> <img src="{{asset('icons/rightArrow.svg')}}" alt="" width="15"></span>
                     <span
                         class="absolute inset-x-0 bottom-0 h-[2px] bg-black origin-left transform scale-x-0 transition-transform duration-700 group-hover:scale-x-100">
                     </span>
-                </span>
+                </a>
             </div>
         </div>
     </div>

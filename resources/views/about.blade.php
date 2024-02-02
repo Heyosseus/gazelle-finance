@@ -1,6 +1,6 @@
 <x-layout>
     <x-header></x-header>
-    <div class="w-full items-center justify-center mt-4  px-32 py-8  rounded-lg  flex flex-col cursor-pointer">
+    <div class="w-full items-center justify-center mt-4  px-4 lg:px-32 py-8  rounded-lg  flex flex-col cursor-pointer">
         <h1 class="text-3xl">About <span class="font-bold text-pink-950">Us</span></h1>
         <div class="w-20 h-[1px] bg-gray-950 mx-auto mt-2"></div>
 
@@ -9,11 +9,11 @@
                 <div class="flex flex-col rounded-xl border border-black py-2 px-5">
                     <h1 class="text-xl text-center">Our <span class="font-bold text-pink-950">Story</span></h1>
                 </div>
-                <div class="w-px h-32 bg-black  mx-auto"></div>
+                <div class="w-[0.5px] h-32 bg-black  mx-auto"></div>
                 <div class="flex flex-col rounded-xl border border-black py-2 px-5">
                     <h1 class="text-xl">Our <span class="font-bold text-pink-950">Mission</span></h1>
                 </div>
-                <div class="w-px h-32 bg-black  mx-auto"></div>
+                <div class="w-[0.5px]  h-32 bg-black  mx-auto"></div>
                 <div class="flex flex-col rounded-xl border border-black py-2 px-5">
                     <h1 class="text-xl">Our <span class="font-bold text-pink-950">Vision</span></h1>
                 </div>
