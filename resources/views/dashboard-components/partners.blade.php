@@ -1,4 +1,4 @@
-<div class=" flex justify-around items-center lg:p-20" id="partners">
+<div class=" flex justify-around items-center lg:p-20 mt-20" id="partners">
     <div class="flex flex-col items-center lg:items-start">
         <h1 class="text-3xl  lg:text-5xl border-b-2 py-2 border-pink-950 ">Our <span class="text-pink-950 font-bold">Partners</span>
         </h1>

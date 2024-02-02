@@ -1,5 +1,5 @@
 <div class="flex lg:flex-col xl:flex-row p-4 lg:p-20 justify-between xl:space-x-4">
-    <div class="block lg:w-full  xl:w-[700px] lg:h-[400px] rounded-md bg-amber-950"></div>
+    <div class="block lg:w-full  xl:w-[700px]  rounded-md bg-amber-950"></div>
 
     <div class="w-full xl:w-[700px] px-4 py-8 lg:p-10 rounded-lg shadow-xl flex flex-col justify-between ">
         <h1 class="text-2xl lg:text-3xl  lg:text-center xl:text-start [text-shadow:_0_1px_0_rgb(0_0_0_/_60%)]">
