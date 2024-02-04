@@ -3,8 +3,17 @@
         <a href="/"><img src="{{asset('assets/gazzele-logo.png')}}" alt="logo" class="lg:pl-12"></a>
         <div class="hidden lg:flex justify-around lg:w-[800px] items-center">
             <nav class="flex space-x-8 text-white">
+                <a href="/" class=" transition-colors duration-300 text-lg">Home
+                    @if(request()->is('/'))
+                        <div class=" bg-white rounded-full w-1 h-1 mx-auto"></div>
+                    @endif
+                </a>
                 <div class="group relative">
-                    <div id="services" class="transition-colors duration-300 cursor-pointer text-lg">Services</div>
+                    <div id="services" class="transition-colors duration-300 cursor-pointer text-lg">Services
+                        @if(request()->is('/services'))
+                            <div class=" bg-white rounded-full w-1 h-1 mx-auto"></div>
+                        @endif
+                    </div>
                     <div id="servicesDropdown"
                          class="hidden absolute left-0 mt-2 bg-white items-center space-x-6 shadow-md text-black rounded-md text-sm w-[460px]  transition-all ">
                         <div class="p-5 space-y-1">
@@ -23,17 +32,30 @@
 
                     </div>
                 </div>
-                <a href="/about" class=" transition-colors duration-300 text-lg">About</a>
-                <a href="/products" class=" transition-colors duration-300 text-lg">Products</a>
-                <a href="/news" class=" transition-colors duration-300 text-lg">News</a>
+                <a href="/about" class=" transition-colors duration-300 text-lg">About
+                    @if(request()->is('about'))
+                        <div class=" bg-white rounded-full w-1 h-1 mx-auto"></div>
+                    @endif
+                </a>
+                <a href="/products" class=" transition-colors duration-300 text-lg">Products
+                    @if(request()->is('products'))
+                        <div class=" bg-white rounded-full w-1 h-1 mx-auto"></div>
+                    @endif
+                </a>
+                <a href="/news" class=" transition-colors duration-300 text-lg">News
+                    @if(request()->is('news'))
+                        <div class=" bg-white rounded-full w-1 h-1 mx-auto"></div>
+                    @endif
+                </a>
                 <div class="group relative">
-                    <div id="contact" class="transition-colors duration-300 cursor-pointer text-lg">Contact</div>
+                    <div id="contact" class="transition-colors duration-300 cursor-pointer text-lg">Contact
+                    </div>
                     <div id="contactDropdown"
                          class="hidden align-center absolute left-0 mt-2 bg-white space-x-6 shadow-md text-black rounded-md text-sm w-[120px]  ml-[-10px] opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300">
                         <div class="p-4 space-y-1">
-                            <a href="{{ env('APP_URL') }}/#portfolio" class="block  hover:text-pink-950 transition-colors">Portfolio</a>
-                            <a href="{{ env('APP_URL') }}/#partners" class="block py-2 hover:text-pink-950 transition-colors">Partners</a>
-                            <a href="{{ env('APP_URL') }}/#contact_us" class="block pt-2 hover:text-pink-950 transition-colors">Contact us</a>
+                            <a href="{{ env('APP_URL') }}#portfolio" class="block  hover:text-pink-950 transition-colors">Portfolio</a>
+                            <a href="{{ env('APP_URL') }}#partners" class="block py-2 hover:text-pink-950 transition-colors">Partners</a>
+                            <a href="{{ env('APP_URL') }}#contact_us" class="block pt-2 hover:text-pink-950 transition-colors">Contact us</a>
                         </div>
                     </div>
                 </div>
