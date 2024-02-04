@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 Route::view('/about', 'about');
 Route::view('/products', 'products');
+Route::view('/news', 'news');

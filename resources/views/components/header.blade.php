@@ -25,7 +25,7 @@
                 </div>
                 <a href="/about" class=" transition-colors duration-300 text-lg">About</a>
                 <a href="/products" class=" transition-colors duration-300 text-lg">Products</a>
-                <a href="#" class=" transition-colors duration-300 text-lg">News</a>
+                <a href="/news" class=" transition-colors duration-300 text-lg">News</a>
                 <div class="group relative">
                     <div id="contact" class="transition-colors duration-300 cursor-pointer text-lg">Contact</div>
                     <div id="contactDropdown"
