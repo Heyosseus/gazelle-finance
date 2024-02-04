@@ -2,7 +2,7 @@
     <x-header></x-header>
     <div class="flex flex-col h-full justify-between space-y-20">
         <div class="flex flex-col items-center justify-around">
-            <div class="p-20 mt-10">
+            <div class="p-10 lg:p-20 mt-10">
                 <h1 class="text-3xl text-center">Our <span class="font-bold text-pink-950">Products</span></h1>
                 <div class="w-20 h-px bg-black mx-auto mt-2"></div>
                 <p class="w-full xl:w-[800px] leading-6 tracking-wide mt-10 text-center mx-auto">Our products are
@@ -14,7 +14,7 @@
             </div>
             <div
                 class="flex flex-col px-10 xl:px-0 xl:flex-row items-center xl:items-stretch lg:justify-around w-full space-y-6 lg:space-y-0 xl:space-x-4 ">
-                <div class="bg-gray-950 px-20 py-10 w-full xl:w-[800px] rounded-xl shadow-2xl ">
+                <div class="bg-gray-950 px-8 lg:px-20 py-5 lg:py-10 w-full xl:w-[800px] rounded-xl shadow-2xl ">
                     <h1 class="text-white text-2xl text-center">Income Participation Loan (IPL)</h1>
                     <p class="text-white text-sm mt-10 text-start leading-8">Repayment schedule tailored to the
                         projected
@@ -36,7 +36,7 @@
 
                         USD denomination</p>
                 </div>
-                <div class="px-20 py-10 w-full xl:w-[800px] rounded-xl shadow-2xl ">
+                <div class="px-8 lg:px-20 py-5 lg:py-10 w-full xl:w-[800px] rounded-xl shadow-2xl ">
                     <h1 class="text-gray-950 text-2xl text-center">Equity participation</h1>
                     <p class="text-gray-950 text-sm mt-10 text-start leading-8 ">
                         Minority equity stake in the company (typically up to 35%).
@@ -56,7 +56,7 @@
                 </div>
             </div>
 
-            <div class="h-screen w-full p-20">
+            <div class="h-screen w-full p-10 lg:p-20">
 
                 <h1 class=" text-2xl lg:text-3xl text-center mt-10">Why <span
                         class="text-pink-950 font-bold">Gazelle Finance?</span>
