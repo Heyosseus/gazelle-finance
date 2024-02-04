@@ -115,7 +115,7 @@
                             dedicated entrepreneurs and management team
                         </div>
                     </div>
-                    <div class="flex justify-center xl:justify-between  items-center w-full">
+                    <div class="flex justify-center xl:justify-between  items-center w-full pb-20 lg:pb-0">
                         <div class="p-5 w-52 border border-gray-950 text-center hidden xl:flex justify-between">
                             Standards
                             <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">

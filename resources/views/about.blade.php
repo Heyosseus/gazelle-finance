@@ -20,7 +20,7 @@
             </div>
 
             <div>
-                <div class="w-full xl:w-[800px]  shadow-xl p-10 leading-8 rounded-xl">
+                <div class="w-full xl:w-[800px]  shadow-xl p-5 md:p-10 leading-8 rounded-xl">
                     <div class="block xl:hidden text-2xl text-center mb-6">Our <span class="font-bold text-pink-950">Story</span></div>
                     Gazelle Finance, launched in 2013 with Eurasia Foundation's support, targets high-growth SMEs in
                     Eurasia. The 2017 closure of Gazelle Fund LP, totaling $31M,
@@ -31,13 +31,13 @@
                     The fund prioritizes diverse sectors and growth stages, fostering lasting partnerships for sustained
                     expansion.
                 </div>
-                <div class="w-full xl:w-[800px]  shadow-xl p-10 leading-8 rounded-xl">
+                <div class="w-full xl:w-[800px]  shadow-xl  p-5 md:p-10 leading-8 rounded-xl">
                     <div class="block xl:hidden text-2xl text-center mb-6">Our <span class="font-bold text-pink-950">Mission</span>
                     </div>
                     Our mission is to create a better financial future for capable entrepreneurs and communities they
                     serve.
                 </div>
-                <div class="w-full xl:w-[800px] shadow-xl p-10 leading-8 rounded-xl">
+                <div class="w-full xl:w-[800px] shadow-xl  p-5 md:p-10 leading-8 rounded-xl">
                     <div class="block xl:hidden text-2xl text-center mb-6">Our <span class="font-bold text-pink-950">Vision</span></div>
                     To serve those markets with populations of entrepreneurs who are underserved by the local capital
                     markets, and then provide them with access to well - structured
