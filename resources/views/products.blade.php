@@ -13,7 +13,7 @@
                     performance-based features. Given our higher risk profile, we also expect higher returns.</p>
             </div>
             <div
-                class="flex flex-col px-10 xl:px-0 xl:flex-row items-center xl:items-stretch lg:justify-around w-full space-y-6 lg:space-y-0 xl:space-x-4 ">
+                class="flex flex-col px-10 xl:flex-row items-center xl:items-stretch lg:justify-around w-full space-y-6 lg:space-y-0 xl:space-x-4 ">
                 <div class="bg-gray-950 px-8 lg:px-20 py-5 lg:py-10 w-full xl:w-[800px] rounded-xl shadow-2xl ">
                     <h1 class="text-white text-2xl text-center">Income Participation Loan (IPL)</h1>
                     <p class="text-white text-sm mt-10 text-start leading-8">Repayment schedule tailored to the
@@ -56,7 +56,7 @@
                 </div>
             </div>
 
-            <div class="h-screen w-full p-10 lg:p-20">
+            <div class="w-full p-10 lg:p-20">
 
                 <h1 class=" text-2xl lg:text-3xl text-center mt-10">Why <span
                         class="text-pink-950 font-bold">Gazelle Finance?</span>
@@ -71,7 +71,8 @@
 
                 <div
                     class="flex flex-col space-y-4 w-full  justify-center items-center xl:mr-auto   mt-10  cursor-pointer">
-                    <h1 class="my-10 text-2xl lg:text-3xl">Is <span class="text-pink-950 font-semibold">Gazelle Finance</span> a good fit for
+                    <h1 class="my-10 text-2xl lg:text-3xl">Is <span
+                            class="text-pink-950 font-semibold">Gazelle Finance</span> a good fit for
                         my
                         company?</h1>
                     <div class="flex justify-center xl:justify-between items-center w-full">
@@ -79,7 +80,8 @@
                             Revenues
                             <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
                         </div>
-                        <div class="p-5 w-[800px] border border-gray-950 text-center flex flex-col lg:flex-row justify-center">
+                        <div
+                            class="p-5 w-[800px] border border-gray-950 text-center flex flex-col lg:flex-row justify-center">
                             <span class="text-pink-950 font-bold flex xl:hidden mr-auto">Revenues:</span> $200,000 - $4
                             million in annual revenues at time of investment
                         </div>
@@ -90,7 +92,8 @@
                             Track Record
                             <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
                         </div>
-                        <div class="p-5 w-[800px] border border-gray-950 text-center flex flex-col lg:flex-row justify-center ">
+                        <div
+                            class="p-5 w-[800px] border border-gray-950 text-center flex flex-col lg:flex-row justify-center ">
                             <span class="text-pink-950 font-bold flex xl:hidden mr-auto">Track Record:</span> Typically,
                             at least 1-3 years of successful operations
                         </div>
@@ -100,7 +103,8 @@
                             Business Plan
                             <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
                         </div>
-                        <div class="p-5 w-[800px] border border-gray-950 text-center flex flex-col lg:flex-row justify-center ">
+                        <div
+                            class="p-5 w-[800px] border border-gray-950 text-center flex flex-col lg:flex-row justify-center ">
                             <span class="text-pink-950 font-bold flex xl:hidden mr-auto">Business Plan:</span> Clear and
                             well justified vision/plan for expansion
                         </div>
@@ -110,7 +114,8 @@
                             Team
                             <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
                         </div>
-                        <div class="p-5 w-[800px] border border-gray-950 text-center flex flex-col lg:flex-row justify-center ">
+                        <div
+                            class="p-5 w-[800px] border border-gray-950 text-center flex flex-col lg:flex-row justify-center ">
                             <span class="text-pink-950 font-bold flex xl:hidden mr-auto">Team:</span>Competent and
                             dedicated entrepreneurs and management team
                         </div>
@@ -131,8 +136,6 @@
             </div>
         </div>
 
-        <div class="hidden lg:block">
-            <x-footer></x-footer>
-        </div>
+        <x-footer></x-footer>
     </div>
 </x-layout>
