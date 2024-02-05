@@ -19,9 +19,9 @@
                         <div class="p-5 space-y-1">
                             <h1 class="text-lg font-bold pb-2">Our work</h1>
                             <a href="#" class="block py-2 hover:text-pink-950 transition-colors">Gazelle finance</a>
-                            <a href="#" class="block py-2 hover:text-pink-950 transition-colors">Ukrainian bridge
+                            <a href="/ukraine-bridge-facility" class="block py-2 hover:text-pink-950 transition-colors">Ukrainian bridge
                                 facility</a>
-                            <a href="#" class="block pt-2 hover:text-pink-950 transition-colors">Social impacts</a>
+                            <a href="/social-impacts" class="block pt-2 hover:text-pink-950 transition-colors">Social impacts</a>
                         </div>
                         <div class="p-5 space-y-1">
                             <h1 class="text-lg font-bold pb-2">Company</h1>

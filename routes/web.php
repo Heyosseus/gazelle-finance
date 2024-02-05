@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::view('/about', 'about');
 Route::view('/products', 'products');
 Route::view('/news', 'news');
+Route::view('/social-impacts', 'services/social-impacts');
+Route::view('/ukraine-bridge-facility', 'services/ukraine-bridge-facility');
