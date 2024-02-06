@@ -2,7 +2,7 @@
     <div class="flex flex-col items-center lg:items-start">
         <h1 class="text-3xl  lg:text-5xl border-b-2 py-2 border-pink-950 ">Our <span class="text-pink-950 font-bold">Partners</span>
         </h1>
-        <p class="mt-10 p-4 lg:p-0 text-center lg:text-start w-fit lg:w-[601px] leading-8"><span
+        <p class="mt-10 p-4 lg:p-0 text-center lg:text-start w-fit lg:w-[600px] leading-8"><span
                 class="text-pink-950 font-semibold"> Empowering </span> success through strategic partnerships, we
             collaborate to drive innovation and achieve shared
             goals. </p>
