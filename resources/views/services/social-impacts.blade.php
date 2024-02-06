@@ -1,13 +1,12 @@
 <x-layout>
     <x-header></x-header>
     <div class="p-5 md:p-10 ">
-        <div class="space-y-4">
+        <div class="space-y-3">
             <h1 class="text-2xl md:text-4xl text-center">Our <span class="font-bold text-pink-950">Impact Stories</span></h1>
-            <div class="w-36 h-0.5 bg-black mx-auto "></div>
-            <p class="text-start sm:text-center text-sm">Gazelles constitute only 5-10 percent of all private companies, yet in
-                typical years they create 50-80 percents of all net new jobs.</p>
+            <div class="w-36 h-0.5 bg-gray-500 mx-auto "></div>
         </div>
-
+        <p class="text-start sm:text-center text-sm mt-10">Gazelles constitute only 5-10 percent of all private companies, yet in
+            typical years they create 50-80 percents of all net new jobs.</p>
         <div class="mt-20 flex flex-col lg:flex-row justify-between space-y-6 lg:items-end lg:space-x-5">
             <div class="bg-pink-950 w-full lg:w-1/3 h-[220px] rounded">
 

@@ -23,8 +23,8 @@
                            placeholder="Enter your company name">
                 </div>
                 <div class="flex flex-col w-full lg:w-1/2">
-                    <label for="phone" class="text-sm text-pink-950 font-bold mb-1">Subject</label>
-                    <input type="text" name="phone" id="phone" class="border border-gray-300 p-3 rounded-md"
+                    <label for="subject" class="text-sm text-pink-950 font-bold mb-1">Subject</label>
+                    <input type="text" name="subject" id="subject" class="border border-gray-300 p-3 rounded-md"
                            placeholder="Share your ideas">
                 </div>
 

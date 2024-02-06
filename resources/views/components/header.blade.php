@@ -10,7 +10,7 @@
                 </a>
                 <div class="group relative">
                     <div id="services" class="transition-colors duration-300 cursor-pointer text-lg">Services
-                        @if(request()->is('/services'))
+                        @if(request()->is('social-impacts') || request()->is('ukraine-bridge-facility') || request()->is('careers'))
                             <div class=" bg-white rounded-full w-1 h-1 mx-auto"></div>
                         @endif
                     </div>
@@ -18,10 +18,10 @@
                          class="hidden absolute left-0 mt-2 bg-white items-center space-x-6 shadow-md text-black rounded-md text-sm w-[460px]  transition-all ">
                         <div class="p-5 space-y-1">
                             <h1 class="text-lg font-bold pb-2">Our work</h1>
-                            <a href="#" class="block py-2 hover:text-pink-950 transition-colors">Gazelle finance</a>
                             <a href="/ukraine-bridge-facility" class="block py-2 hover:text-pink-950 transition-colors">Ukrainian bridge
                                 facility</a>
-                            <a href="/social-impacts" class="block pt-2 hover:text-pink-950 transition-colors">Social impacts</a>
+                            <a href="/social-impacts" class="block py-2 hover:text-pink-950 transition-colors">Social impacts</a>
+                            <a href="/careers" class="block pt-2 hover:text-pink-950 transition-colors">Careers</a>
                         </div>
                         <div class="p-5 space-y-1">
                             <h1 class="text-lg font-bold pb-2">Company</h1>
