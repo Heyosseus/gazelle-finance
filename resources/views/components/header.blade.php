@@ -15,7 +15,7 @@
                         @endif
                     </div>
                     <div id="servicesDropdown"
-                         class="hidden absolute left-0 mt-2 bg-white items-center space-x-6 shadow-md text-black rounded-md text-sm w-[460px]  transition-all ">
+                         class="hidden absolute z-10 left-0 mt-2 bg-white items-center space-x-6 shadow-md text-black rounded-md text-sm w-[460px]  transition-all ">
                         <div class="p-5 space-y-1">
                             <h1 class="text-lg font-bold pb-2">Our work</h1>
                             <a href="/ukraine-bridge-facility" class="block py-2 hover:text-pink-950 transition-colors">Ukrainian bridge
@@ -51,7 +51,7 @@
                     <div id="contact" class="transition-colors duration-300 cursor-pointer text-lg">Contact
                     </div>
                     <div id="contactDropdown"
-                         class="hidden align-center absolute left-0 mt-2 bg-white space-x-6 shadow-md text-black rounded-md text-sm w-[120px]  ml-[-10px] opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300">
+                         class="hidden align-center absolute z-20 left-0 mt-2 bg-white space-x-6 shadow-md text-black rounded-md text-sm w-[120px]  ml-[-10px] opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300">
                         <div class="p-4 space-y-1">
                             <a href="{{ env('APP_URL') }}#portfolio" class="block  hover:text-pink-950 transition-colors">Portfolio</a>
                             <a href="{{ env('APP_URL') }}#partners" class="block py-2 hover:text-pink-950 transition-colors">Partners</a>
