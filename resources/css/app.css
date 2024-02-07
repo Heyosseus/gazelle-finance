@@ -12,15 +12,15 @@ body {
 }
 
 /* Custom Scrollbar Styles for Webkit/Blink Browsers */
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 6px;
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: #4f240e;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
