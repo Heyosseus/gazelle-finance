@@ -1,4 +1,4 @@
-<div class="flex flex-col w-full lg:flex-row justify-around items-center px-4 space-x-4 lg:p-20 mt-20" id="partners">
+<div class="flex flex-col w-full lg:flex-row justify-around items-center px-4 space-x-4 lg:p-20 mt-10" id="partners">
     <div class="flex flex-col lg:w-1/2 items-center lg:items-start">
         <h1 class="text-3xl  lg:text-5xl border-b-2 py-2 border-pink-950 ">Our <span class="text-pink-950 font-bold">Partners</span>
         </h1>
@@ -15,7 +15,7 @@
     <img src="{{asset('assets/community/gazelle-partners.png')}}" alt="" class="flex w-full lg:w-1/2 mt-10 xl:mt-0  h-auto rounded-md shadow-xl lg:ml-0 lg:mr-10">
 </div>
 <div
-    class="carousel-container bg-gray-100 p-4 mt-20 lg:px-20 flex-col lg:flex lg:flex-row lg:justify-between items-center border-t-2 border-b-2 border-gray-200">
+    class="carousel-container bg-gray-100 p-4 mt-10 lg:px-20 lg:flex lg:flex-row lg:justify-between items-center border-t-2 border-b-2 border-gray-200">
     <div class="flex items-center justify-between w-full carousel-track">
         <div class="w-40 carousel-card"><img src="{{asset('logos/nout.png')}}" alt=""></div>
         <div class="w-28 carousel-card "><img src="{{asset('logos/larar.png')}}" alt=""></div>

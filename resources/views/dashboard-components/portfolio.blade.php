@@ -1,4 +1,4 @@
-<div id="portfolio" class="flex flex-col justify-between h-full px-4 mt-32 lg:px-16 ">
+<div id="portfolio" class="flex flex-col justify-between h-full px-4 mt-20 lg:px-16 ">
     <div class="flex lg:w-full mb-10 justify-center items-center">
         <h1 class="text-3xl lg:text-5xl border-b-2 py-2 w-fit border-pink-950 text-center">Our <span
                 class="text-pink-950 font-bold">Gazelles</span></h1>
@@ -76,32 +76,3 @@
 
 </div>
 <div class="w-full h-px bg-gray-300 mt-10"></div>
-
-{{--<script>--}}
-{{--    function bounceAnimation() {--}}
-{{--        const info = document.getElementById('info');--}}
-{{--        info.classList.add('bounce-animate');--}}
-{{--        info.addEventListener('animationend', () => {--}}
-{{--            info.classList.remove('bounce-animate');--}}
-{{--        }, {once: true});--}}
-{{--    }--}}
-
-{{--    setInterval(bounceAnimation, 30000)--}}
-{{--</script>--}}
-{{--<style>--}}
-{{--    @keyframes bounce {--}}
-{{--        0%, 20%, 50%, 80%, 100% {--}}
-{{--            transform: translateY(0);--}}
-{{--        }--}}
-{{--        40% {--}}
-{{--            transform: translateY(-40px) scale(1.1);--}}
-{{--        }--}}
-{{--        60% {--}}
-{{--            transform: translateY(-15px) scale(1.05);--}}
-{{--        }--}}
-{{--    }--}}
-
-{{--    .bounce-animate {--}}
-{{--        animation: bounce 1s ease-in-out;--}}
-{{--    }--}}
-{{--</style>--}}

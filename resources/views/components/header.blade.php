@@ -74,7 +74,7 @@
         {{--        Mobile Menu--}}
 
         <div id="sidebar"
-             class=" lg:hidden fixed top-0 left-[-10px] w-[80vw] h-full bg-white shadow-xl transform -translate-x-full overflow-y-auto transition-transform duration-300 ease-in-out">
+             class=" lg:hidden fixed top-0 left-[-10px] w-[80vw] h-full bg-white shadow-xl transform -translate-x-full overflow-y-auto transition-transform duration-300 ease-in-out z-40">
             <div class="px-10 py-7 md:px-20 md:py-10 select-none">
                 <div class="flex items-start justify-between">
                     <h1 class="font-bold mb-4 text-3xl">Links</h1>
