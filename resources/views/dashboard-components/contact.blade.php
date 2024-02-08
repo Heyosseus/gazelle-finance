@@ -1,6 +1,7 @@
-<div id="contact_us" class="flex flex-col  lg:flex-row justify-around bg-white px-4 lg:px-20 py-5 mb-20 mt-10 lg:mt-16">
+<div id="contact_us" class="flex flex-col  lg:flex-row justify-around bg-white px-4 lg:px-20 py-5 mb-20 mt-6 lg:mt-16">
     <div class="px-8 lg:px-5">
         <h1 class="uppercase tracking-wide text-center lg:text-start">connect with us</h1>
+        <div class="w-16 m-auto lg:m-1 lg:w-1/4 h-[1px] bg-pink-950 "></div>
         <h1 class="text-4xl font-bold text-pink-950 tracking-wide mt-10">Turning Dreams into Reality</h1>
 
         <form action="">
@@ -40,7 +41,7 @@
     </div>
     <div class="px-6">
         <h1 class="uppercase tracking-wide mt-10 text-center lg:text-start lg:mt-0">contact us</h1>
-        <div class="w-16 m-auto lg:m-0 lg:w-full h-[1px] bg-pink-950 "></div>
+        <div class="w-16 m-auto lg:m-1 lg:w-1/3 h-[1px] bg-pink-950 "></div>
         <div class="mt-10 sm:flex sm:flex-row items-center sm:justify-around lg:flex-col lg:items-start">
             <h1 class="text-4xl">Our <span class="font-bold text-pink-950 ">Email</span></h1>
             <div class="mt-6 ">

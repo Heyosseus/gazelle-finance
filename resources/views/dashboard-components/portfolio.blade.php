@@ -4,10 +4,11 @@
                 class="text-pink-950 font-bold">Gazelles</span></h1>
     </div>
 
-    <div class="flex flex-col xl:flex-row items-end space-x-4 justify-around xl:mt-10">
+    <div class="flex flex-col xl:flex-row items-center space-x-4 justify-around xl:mt-10">
         <div class="flex flex-col space-y-8">
-            <div class="hidden lg:flex flex-col items-start">
+            <div class="hidden lg:flex flex-row items-center space-x-2">
                 <h1 class="text-2xl">If you're unfamiliar with <span class="text-pink-950 font-bold">Gazelles</span></h1>
+                <img src="{{asset('icons/arrowDownIcon.svg')}}" alt="" width="20" style="filter: invert(100%);">
             </div>
             <div id="info"
                  class=" w-full  bg-gray-950 text-white text-md  xl:w-[600px] px-6 py-10 lg:py-6 lg:pb-12 lg:px-10 rounded-lg shadow-2xl flex-col justify-start">

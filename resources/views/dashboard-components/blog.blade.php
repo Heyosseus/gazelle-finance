@@ -9,9 +9,10 @@
                 <div class="p-6">
                     <div class="border py-2 px-4 w-fit mb-2 rounded-full border-pink-950 text-pink-950 hover:bg-pink-950 hover:text-white transition-colors cursor-pointer">Finance</div>
                     <h2 class="font-bold text-2xl text-gray-800 h-14">Gazelle Women in Business  </h2>
-                    <div class="flex justify-end mt-4">
-                        <a href="#" class="text-xl font-medium text-pink-950 hover:text-pink-700 transition-colors">Read article</a>
-                    </div>
+                    <a href="#" class="text-pink-950 font-semibold  mt-4 justify-end flex items-center space-x-2">
+                        <p>See more </p>
+                        <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
+                    </a>
                 </div>
             </div>
         </div>
@@ -23,9 +24,10 @@
 
                     <h2 class="font-bold text-2xl text-gray-800 h-14">
                         Ukraine bridge facility</h2>
-                    <div class="flex justify-end mt-4">
-                        <a href="#" class="text-xl font-medium text-pink-950 hover:text-pink-700 transition-colors">Read article</a>
-                    </div>
+                    <a href="#" class="text-pink-950 font-semibold  mt-4 flex justify-end items-center space-x-2">
+                        <p>See more </p>
+                        <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
+                    </a>
                 </div>
             </div>
         </div>
@@ -37,9 +39,10 @@
 
                     <h2 class="font-bold text-2xl text-gray-800 h-14">
                         Development Impact Stories</h2>
-                    <div class="flex justify-end mt-4">
-                        <a href="#" class="text-xl font-medium  text-pink-950 hover:text-pink-700 transition-colors">Read article</a>
-                    </div>
+                    <a href="#" class="text-pink-950 font-semibold mt-4 flex justify-end items-center space-x-2">
+                        <p>See more </p>
+                        <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
+                    </a>
                 </div>
             </div>
         </div>
