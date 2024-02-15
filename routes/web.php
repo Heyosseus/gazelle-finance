@@ -24,3 +24,7 @@ Route::view('/social-impacts', 'services/social-impacts');
 Route::view('/ukraine-bridge-facility', 'services/ukraine-bridge-facility');
 Route::view('/careers', 'services/careers');
 Route::view('/ge-office', 'services/georgia-office');
+
+Route::fallback(function () {
+    return view('error');
+});
