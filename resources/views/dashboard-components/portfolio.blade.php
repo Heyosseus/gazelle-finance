@@ -4,7 +4,7 @@
                 class="text-pink-950 font-bold">Gazelles</span></h1>
     </div>
 
-    <div class="flex flex-col xl:flex-row items-center space-x-4 justify-around xl:mt-10">
+    <div class="flex flex-col xl:flex-row items-center space-x-4 justify-around xl:mt-8">
         <div class="flex flex-col space-y-8">
             <div class="hidden lg:flex flex-row items-center space-x-2">
                 <h1 class="text-2xl">If you're unfamiliar with <span class="text-pink-950 font-bold">Gazelles</span></h1>
