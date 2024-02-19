@@ -1,9 +1,9 @@
 <x-layout>
     <x-header></x-header>
        @include('dashboard-components.content')
-    @include('dashboard-components.blog')
     @include('dashboard-components.partners')
     @include('dashboard-components.portfolio')
+    @include('dashboard-components.blog')
     @include('dashboard-components.contact')
     <x-home-footer></x-home-footer>
 
