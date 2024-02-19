@@ -52,9 +52,9 @@
         </div>
 
         @if (count($articles) > 0)
-            <div class="modal fade" id="kt_modal_facs" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
+            <div class="modal fade" id="kt_modal_facs" tabindex="-1" aria-hidden="true" >
+                <div class="modal-dialog modal-dialog-centered" >
+                    <div class="modal-content" >
 
                             <div class="modal-header" id="kt_modal_facs_header">
                                 <h2 class="fw-bolder">Facilities</h2>
@@ -85,7 +85,7 @@
                     @csrf
 
                     <div class="modal-dialog">
-                        <div class="modal-content">
+                        <div class="modal-content w-650px">
                             <div class="modal-header">
                                 <h5 class="modal-title">New Article</h5>
                                 <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal"
@@ -107,8 +107,8 @@
                                     </div>
 
                                     <div class="fv-row mb-7">
-                                        <label class="fs-6 fw-bold mb-2">Select category</label>
-                                        <select name="category[]" id="category" class="form-control form-control-solid" multiple>
+                                        <label class="fs-6 fw-bold mb-2 required">Select category</label>
+                                        <select name="category[]" id="category" class="form-control form-control-solid " multiple required>
                                             @foreach ($categories as $cat)
                                                 <option name="{{ $cat->title }}" value="{{$cat->id}}">{{ $cat->title }}</option>
                                             @endforeach
@@ -116,13 +116,15 @@
                                     </div>
 
                                     <div class="fv-row mb-7 ">
-                                        <label class="fs-6 fw-bold mb-2">Description</label>
+                                        <label class="fs-6 fw-bold mb-2 required">Description</label>
                                         <textarea class="form-control form-control-solid required" placeholder="Description text..." name="description" rows="8" required></textarea>
                                     </div>
 
                                     <div class="fv-row mb-10 images">
                                         <label class="required fs-6 fw-bold mb-2">Images</label>
-                                        <input class="pictures required" type="file" name="images" accept="image" required>
+                                        <div>
+                                            <input class="pictures required" type="file" name="images" accept="image" required>
+                                        </div>
                                     </div>
 
                                 </div>

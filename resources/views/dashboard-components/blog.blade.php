@@ -47,6 +47,6 @@
             </div>
         </div>
     </div>
-    <a href="#" class="rounded-full px-5 py-2 border bg-pink-950 text-white hover:bg-white hover:text-pink-950 hover:border-pink-950">See more</a>
+    <a href="/news" class="rounded-full px-5 py-2 border bg-pink-950 text-white hover:bg-white hover:text-pink-950 hover:border-pink-950">See more</a>
 </div>
 <div class="w-full h-px bg-gray-300 mt-10"></div>

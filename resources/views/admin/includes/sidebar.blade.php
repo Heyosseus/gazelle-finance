@@ -1,10 +1,10 @@
-<div id="kt_aside" class="aside pb-5 pt-5 pt-lg-0" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'80px', '300px': '100px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
+<div id="kt_aside" class="aside w-175px"  data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true"  data-kt-drawer-toggle="#kt_aside_mobile_toggle">
     <!--begin::Brand-->
-    <div class="aside-logo py-8" id="kt_aside_logo">
+    <div class="aside-logo p-0" id="kt_aside_logo">
         <!--begin::Logo-->
-        <a href="/admin" class="d-flex align-items-center">
+        <a href="/admin" class="d-flex align-items-center fs-2" >
 {{--            <img alt="Logo" src="/assets/media/logos/logo-demo6.svg" class="h-45px logo" />--}}
-            Gazlle Finance
+            Gazelle Finance
         </a>
         <!--end::Logo-->
     </div>
@@ -12,7 +12,7 @@
     <!--begin::Aside menu-->
     <div class="aside-menu flex-column-fluid" id="kt_aside_menu">
         <!--begin::Aside Menu-->
-        <div class="hover-scroll-overlay-y my-2 my-lg-5 pe-lg-n1" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside, #kt_aside_menu" data-kt-scroll-offset="5px">
+        <div class="hover-scroll-overlay-y my-2 my-lg-5 pe-lg-n1" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside, #kt_aside_menu" data-kt-scroll-offset="1px">
             <!--begin::Menu-->
             <div class="menu menu-column menu-title-gray-700 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500 fw-bold" id="#kt_aside_menu" data-kt-menu="true">
                 {{-- <div class="menu-item py-2">
@@ -33,11 +33,11 @@
                     </span>
                 </a>
                 <a href="{{ route('categories.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'categories.home' ? 'here' : '' }}">
-                    <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                    <span class="menu-link menu-center" style="width: fit-content; padding: 0;" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
                         </span>
-                        <span class="menu-title">Articles - Categories</span>
+                        <span class="menu-title" >Articles - Categories</span>
                     </span>
                 </a>
                 <a  class="menu-item py-2 {{ Request::route()->getName() === 'cars' ? 'here' : '' }}">
@@ -65,7 +65,7 @@
                     </span>
                 </a>
                 <a  class="menu-item py-2 {{ Request::route()->getName() === 'users' ? 'here' : '' }}">
-                    <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                    <span class="menu-link menu-center" style="width: fit-content; padding: 0;" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
                         </span>
@@ -121,11 +121,11 @@
                     </span>
                 </a>
                 <a  class="menu-item py-2 {{ Request::route()->getName() === 'categories' ? 'here' : '' }}">
-                    <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                    <span class="menu-link menu-center" style="width: fit-content; padding: 0;" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
                         </span>
-                        <span class="menu-title">Vacancy Response</span>
+                        <span class="menu-title" >Vacancy Response</span>
                     </span>
                 </a>
             </div>
@@ -139,3 +139,16 @@
 
     <!--end::Footer-->
 </div>
+<style>
+    #kt_aside_menu_wrapper::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+    }
+
+    #kt_aside_menu_wrapper {
+        -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+        scrollbar-width: none; /* Hide scrollbar for Firefox */
+    }
+    .menu-title{
+        font-size: 13px;
+    }
+</style>

@@ -30,13 +30,8 @@
                     <div class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold my-5 my-lg-0 align-items-stretch"
                         id="#kt_header_menu" data-kt-menu="true">
                         <div class="menu-item menu-lg-down-accordion me-lg-1">
-                            <a class="menu-link py-3" href="/admin">
-                                <span class="menu-title">Dashboards</span>
-                            </a>
-                        </div>
-                        <div class="menu-item menu-lg-down-accordion me-lg-1">
-                            <a href="/" class="menu-link py-3">
-                                <span class="menu-title">See website</span>
+                            <a class="menu-link py-3 " href="/">
+                                <span class="menu-title">Dashboard</span>
                             </a>
                         </div>
                     </div>
@@ -47,7 +42,7 @@
                     <div class="d-flex align-items-center ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
                         <div class="cursor-pointer symbol symbol-30px symbol-md-40px" data-kt-menu-trigger="click"
                             data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
-                            <img src="/assets/media/avatars/150-26.jpg" alt="image" />
+                            <img src="{{asset('assets/media/avatars/blank.png')}}" alt="image" class="rounded-circle"/>
                         </div>
                         <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-primary fw-bold py-4 fs-6 w-275px"
                             data-kt-menu="true">
@@ -55,22 +50,14 @@
                                 <div class="menu-content px-4">
                                     <div class="d-flex flex-column">
                                         <div class="fw-bolder d-flex align-items-center fs-5">{{ Auth::user()->name }}
-                                            <span class="badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2">Role:
-                                                {{ Auth::user()->role }}</span>
+                                            <span class="badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2">Role: Admin</span>
                                         </div>
-                                        <a href="#"
-                                            class="fw-bold text-muted text-hover-primary fs-7">{{ Auth::user()->name }}</a>
+                                        <p
+                                            class="fw-bold text-muted text-hover-primary fs-7 cursor-pointer">{{ Auth::user()->name }}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="separator my-2"></div>
-                            <div class="menu-item px-5">
-                                <a href="../../demo6/dist/account/overview.html" class="menu-link px-5">My Profile</a>
-                            </div>
-                            <div class="menu-item px-5 my-1">
-                                <a href="../../demo6/dist/account/settings.html" class="menu-link px-5">Account
-                                    Settings</a>
-                            </div>
                             <div class="menu-item px-5">
                                 <a href="{{ route('admin.logout') }}" class="menu-link px-5">Sign Out</a>
                             </div>
