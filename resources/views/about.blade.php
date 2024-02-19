@@ -1,7 +1,7 @@
 <x-layout>
     <x-header></x-header>
     <div class="w-full items-center justify-center mt-4  px-4 lg:px-32 py-8  rounded-lg  flex flex-col cursor-pointer">
-        <h1 class="text-3xl">About <span class="font-bold text-pink-950">Us</span></h1>
+        <h1 class="text-4xl">About <span class="font-bold text-pink-950">Us</span></h1>
         <div class="w-20 h-[1px] bg-gray-950 mx-auto mt-2"></div>
 
         <div class="flex items-center justify-center xl:justify-between w-full mt-3">
@@ -21,7 +21,8 @@
 
             <div>
                 <div class="w-full xl:w-[800px]  shadow-xl p-5 md:p-10 leading-8 rounded-xl">
-                    <div class="block xl:hidden text-2xl text-center mb-6">Our <span class="font-bold text-pink-950">Story</span></div>
+                    <div class="block xl:hidden text-2xl text-center mb-6">Our <span class="font-bold text-pink-950">Story</span>
+                    </div>
                     Gazelle Finance, launched in 2013 with Eurasia Foundation's support, targets high-growth SMEs in
                     Eurasia. The 2017 closure of Gazelle Fund LP, totaling $31M,
                     focuses on underserved SMEs with $200,000 to $1.0M in growth capital.
@@ -38,12 +39,123 @@
                     serve.
                 </div>
                 <div class="w-full xl:w-[800px] shadow-xl  p-5 md:p-10 leading-8 rounded-xl">
-                    <div class="block xl:hidden text-2xl text-center mb-6">Our <span class="font-bold text-pink-950">Vision</span></div>
+                    <div class="block xl:hidden text-2xl text-center mb-6">Our <span class="font-bold text-pink-950">Vision</span>
+                    </div>
                     To serve those markets with populations of entrepreneurs who are underserved by the local capital
                     markets, and then provide them with access to well - structured
                     financial instruments and know how to enable their companies not to just grow, but achieve their
                     ambitions to dominate their market segment.
                 </div>
+            </div>
+
+        </div>
+
+        <div class="h-full mt-20">
+            <h1 class="text-4xl text-center">Find out more <span class="font-bold text-pink-950"> About Us</span></h1>
+            <div class="w-60 h-[1px] bg-gray-950 mx-auto mt-2"></div>
+
+            <div class="flex mt-10">
+                <div class="w-full lg:w-1/3 shadow-xl space-y-10  p-5 py-10  justify-between  rounded-xl">
+                    <div class="flex justify-between items-center">
+                        <h1 class="text-pink-950 text-2xl font-bold">CAREERS AT GAZELLE</h1>
+                        <div class="rounded-full bg-gray-300 p-3">
+                            <img src="{{asset('icons/briefcase-arrow-right.svg')}}" alt="" width="20" >
+                        </div>
+                    </div>
+                    <p class="">Explore exciting career opportunities to join our dynamic team and discover your next
+                        career move at Gazelle.
+                    </p>
+                    <div class="">
+                        <a href="/careers" class="text-sm shadow border p-2 rounded  hover:text-gray-500">Join Us</a>
+                        <a href="/careers" class="text-sm shadow border p-2  rounded   hover:text-gray-500">Explore
+                            Opportunities</a>
+                        <a href="/careers" class="text-sm shadow border p-2 rounded mt-10   hover:text-gray-500">Job
+                            Openings</a>
+                    </div>
+
+                </div>
+                <div class="w-full lg:w-1/3 shadow-xl space-y-10  p-5 py-10  justify-between  rounded-xl">
+                    <div class="flex justify-between">
+                        <h1 class="text-pink-950 text-2xl font-bold">READ OUR NEWS</h1>
+                        <div class="rounded-full bg-gray-300 p-3">
+                            <img src="{{asset('icons/videoconference.svg')}}" alt="" width="20" >
+                        </div>
+
+                    </div>
+                    <p>Stay updated with Gazelle's latest insights and industry news. Explore our articles  to see how we're shaping SME investment and business growth.</p>
+                    <div class="">
+                        <a href="/careers" class="text-sm shadow border p-2 rounded  hover:text-gray-500">Gazelles</a>
+                        <a href="/careers" class="text-sm shadow border p-2  rounded   hover:text-gray-500">Partners</a>
+                        <a href="/careers"
+                           class="text-sm shadow border p-2 rounded mt-10   hover:text-gray-500">SMEs</a>
+                        <a href="/careers" class="text-sm shadow border p-2 rounded mt-10   hover:text-gray-500">Accelerate
+                            with Us</a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/3 shadow-xl space-y-10  p-5 py-10  justify-between  rounded-xl">
+                    <div class="flex justify-between">
+                        <h1 class="text-pink-950 text-2xl font-bold">WE ARE HERE FOR YOU</h1>
+                        <div class="rounded-full bg-gray-300 p-3">
+                            <img src="{{asset('icons/employees.svg')}}" alt="" width="20" >
+                        </div>
+                    </div>
+                    <p class="">We are a team of seasoned professionals with significant global
+                        and local business knowledge and deep SME investment expertise.</p>
+                    <div class="">
+                        <a href="/team" class="text-sm shadow border p-2  rounded   hover:text-gray-500">Our
+                            Expertise</a>
+                        <a href="/team" class="text-sm shadow border p-2 rounded mt-10   hover:text-gray-500">Global
+                            Insight</a>
+                        <a href="/team" class="text-sm shadow border p-2 rounded mt-10   hover:text-gray-500">Local
+                            Knowledge</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-10 flex justify-between">
+                <div class="w-full lg:w-1/2 shadow-xl space-y-10  p-5 py-10  justify-between  rounded-xl">
+                    <div class="flex justify-between">
+                        <h1 class="text-pink-950 text-2xl font-bold">OUR PRODUCTS</h1>
+                        <div class="rounded-full bg-gray-300 p-3">
+                            <img src="{{asset('icons/selling.svg')}}" alt="" width="20" >
+                        </div>
+                    </div>
+                    <p class="">Our products are similar to private equity than bank financing, with terms appropriate
+                        for gazelles, including risk-sharing, performance-based features. Given our higher risk profile,
+                        we also expect higher returns.</p>
+                    <div class="">
+                        <a href="/products" class="text-sm shadow border p-2 rounded  hover:text-gray-500">Private
+                            Equity-like Financing</a>
+                        <a href="/products" class="text-sm shadow border p-2 rounded mt-10   hover:text-gray-500">Risk-sharing
+                            Features</a>
+                        <a href="/products" class="text-sm shadow border p-2 rounded mt-10   hover:text-gray-500">Higher
+                            Returns</a>
+                    </div>
+
+                </div>
+                <div
+                    class="w-full lg:w-1/3 shadow-xl space-y-10  p-5 py-10  justify-between bg-gray-950 rounded-xl">
+                    <div class="flex justify-between">
+                        <h1 class="text-white text-2xl font-bold">GET IN TOUCH</h1>
+                        <div class="rounded-full bg-gray-300 p-3">
+                            <img src="{{asset('icons/attribution-pencil.svg')}}" alt="" width="20" >
+                        </div>
+
+                    </div>
+                    <p class="text-gray-200">Reach out to us to learn more about our services and how we can help your business thrive. Whether you're looking to partner with us, explore investment
+                        opportunities, or simply have a question, we're here to help.</p>
+                    <div class="">
+                        <a href="{{ env('APP_URL') }}#contact_us" class="text-sm shadow border p-2 rounded text-white hover:text-gray-500">Contact
+                            Us</a>
+                        <a href="{{ env('APP_URL') }}#contact_us" class="text-sm shadow border p-2  rounded text-white  hover:text-gray-500">Request
+                            More Information</a>
+                        <a href="{{ env('APP_URL') }}#contact_us"
+                           class="text-sm shadow border p-2 rounded mt-10 text-white  hover:text-gray-500">Join Our
+                            Network</a>
+                    </div>
+                </div>
+
             </div>
 
         </div>
