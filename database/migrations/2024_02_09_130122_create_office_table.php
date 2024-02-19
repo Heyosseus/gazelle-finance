@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('image');
-            $table->timestamp('created_at');
+            $table->timestamps();
             $table->timestamp('deleted_at');
         });
     }

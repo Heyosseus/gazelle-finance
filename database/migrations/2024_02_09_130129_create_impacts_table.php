@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('author');
             $table->text('description');
             $table->string('image');
-            $table->timestamp('created_at');
+            $table->timestamps();
             $table->timestamp('deleted_at');
         });
     }

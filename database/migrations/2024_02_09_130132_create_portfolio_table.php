@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('website_url');
             $table->string('logo');
             $table->string('image');
-            $table->timestamp('created_at')->nullable();
+            $table->timestamps();
             $table->timestamp('deleted_at')->nullable();
         });
     }

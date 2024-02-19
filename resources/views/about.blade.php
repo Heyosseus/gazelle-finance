@@ -54,9 +54,9 @@
             <h1 class="text-4xl text-center">Find out more <span class="font-bold text-pink-950"> About Us</span></h1>
             <div class="w-60 h-[1px] bg-gray-950 mx-auto mt-2"></div>
 
-            <div class="flex mt-10">
-                <div class="w-full lg:w-1/3 shadow-xl space-y-10  p-5 py-10  justify-between  rounded-xl">
-                    <div class="flex justify-between items-center">
+            <div class="flex flex-col lg:flex-row justify-between mt-10 ">
+                <div class="w-full  xl:w-1/3 shadow-xl flex flex-col spac-y-3   p-5 py-10  justify-between  rounded-xl">
+                    <div class="flex justify-between  items-start">
                         <h1 class="text-pink-950 text-2xl font-bold">CAREERS AT GAZELLE</h1>
                         <div class="rounded-full bg-gray-300 p-3">
                             <img src="{{asset('icons/briefcase-arrow-right.svg')}}" alt="" width="20" >
@@ -65,17 +65,19 @@
                     <p class="">Explore exciting career opportunities to join our dynamic team and discover your next
                         career move at Gazelle.
                     </p>
-                    <div class="">
-                        <a href="/careers" class="text-sm shadow border p-2 rounded  hover:text-gray-500">Join Us</a>
-                        <a href="/careers" class="text-sm shadow border p-2  rounded   hover:text-gray-500">Explore
+                    <div class="flex flex-col items-center w-full space-y-2 xl:flex-row xl:space-y-0 xl:space-x-2">
+
+                    <a href="/careers" class="text-sm shadow border p-2 rounded w-full xl:w-fit  hover:text-gray-500 ">Join Us</a>
+                        <a href="/careers" class="text-sm shadow border p-2  rounded w-full xl:w-fit  hover:text-gray-500">Explore
                             Opportunities</a>
-                        <a href="/careers" class="text-sm shadow border p-2 rounded mt-10   hover:text-gray-500">Job
+                        <a href="/careers" class="text-sm shadow border p-2 rounded w-full xl:w-fit    hover:text-gray-500">Job
                             Openings</a>
                     </div>
 
+
                 </div>
-                <div class="w-full lg:w-1/3 shadow-xl space-y-10  p-5 py-10  justify-between  rounded-xl">
-                    <div class="flex justify-between">
+                <div class="w-full   xl:w-1/3 shadow-xl flex flex-col space-y-3  p-5 py-10  justify-between  rounded-xl">
+                    <div class="flex justify-between  items-start">
                         <h1 class="text-pink-950 text-2xl font-bold">READ OUR NEWS</h1>
                         <div class="rounded-full bg-gray-300 p-3">
                             <img src="{{asset('icons/videoconference.svg')}}" alt="" width="20" >
@@ -83,17 +85,16 @@
 
                     </div>
                     <p>Stay updated with Gazelle's latest insights and industry news. Explore our articles  to see how we're shaping SME investment and business growth.</p>
-                    <div class="">
-                        <a href="/careers" class="text-sm shadow border p-2 rounded  hover:text-gray-500">Gazelles</a>
-                        <a href="/careers" class="text-sm shadow border p-2  rounded   hover:text-gray-500">Partners</a>
-                        <a href="/careers"
-                           class="text-sm shadow border p-2 rounded mt-10   hover:text-gray-500">SMEs</a>
-                        <a href="/careers" class="text-sm shadow border p-2 rounded mt-10   hover:text-gray-500">Accelerate
+                    <div class="flex flex-col items-center w-full space-y-2 xl:flex-row xl:space-y-0 xl:space-x-2">
+
+                    <a href="/careers" class="text-sm shadow border p-2 rounded w-full xl:w-fit    hover:text-gray-500">Gazelles</a>
+                        <a href="/careers" class="text-sm shadow border p-2  rounded w-full xl:w-fit  hover:text-gray-500">Partners</a>
+                        <a href="/careers" class="text-sm shadow border p-2 rounded w-full xl:w-fit     hover:text-gray-500">Accelerate
                             with Us</a>
                     </div>
                 </div>
-                <div class="w-full lg:w-1/3 shadow-xl space-y-10  p-5 py-10  justify-between  rounded-xl">
-                    <div class="flex justify-between">
+                <div class="w-full  xl:w-1/3 shadow-xl flex flex-col space-y-3  p-5 py-10  justify-between  rounded-xl">
+                    <div class="flex justify-between  items-start">
                         <h1 class="text-pink-950 text-2xl font-bold">WE ARE HERE FOR YOU</h1>
                         <div class="rounded-full bg-gray-300 p-3">
                             <img src="{{asset('icons/employees.svg')}}" alt="" width="20" >
@@ -101,20 +102,20 @@
                     </div>
                     <p class="">We are a team of seasoned professionals with significant global
                         and local business knowledge and deep SME investment expertise.</p>
-                    <div class="">
-                        <a href="/team" class="text-sm shadow border p-2  rounded   hover:text-gray-500">Our
+                    <div class="flex flex-col items-center w-full space-y-2 xl:flex-row xl:space-y-0 xl:space-x-2">
+                        <a href="/team" class="text-sm shadow border p-2  rounded w-full  hover:text-gray-500">Our
                             Expertise</a>
-                        <a href="/team" class="text-sm shadow border p-2 rounded mt-10   hover:text-gray-500">Global
+                        <a href="/team" class="text-sm shadow border p-2 rounded  w-full  hover:text-gray-500">Global
                             Insight</a>
-                        <a href="/team" class="text-sm shadow border p-2 rounded mt-10   hover:text-gray-500">Local
+                        <a href="/team" class="text-sm shadow border p-2 rounded   w-full hover:text-gray-500">Local
                             Knowledge</a>
                     </div>
                 </div>
 
             </div>
 
-            <div class="mt-10 flex justify-between">
-                <div class="w-full lg:w-1/2 shadow-xl space-y-10  p-5 py-10  justify-between  rounded-xl">
+            <div class="mt-10 flex justify-between  flex-col lg:flex-row">
+                <div class="w-full lg:w-1/2 shadow-xl flex flex-col space-y-3  p-5 py-10  justify-between  rounded-xl">
                     <div class="flex justify-between">
                         <h1 class="text-pink-950 text-2xl font-bold">OUR PRODUCTS</h1>
                         <div class="rounded-full bg-gray-300 p-3">
@@ -124,18 +125,18 @@
                     <p class="">Our products are similar to private equity than bank financing, with terms appropriate
                         for gazelles, including risk-sharing, performance-based features. Given our higher risk profile,
                         we also expect higher returns.</p>
-                    <div class="">
-                        <a href="/products" class="text-sm shadow border p-2 rounded  hover:text-gray-500">Private
+                    <div class="flex flex-col items-center w-full space-y-2 xl:flex-row xl:space-y-0 xl:space-x-2">
+                    <a href="/products" class="text-sm shadow border p-2 rounded w-full  hover:text-gray-500">
                             Equity-like Financing</a>
-                        <a href="/products" class="text-sm shadow border p-2 rounded mt-10   hover:text-gray-500">Risk-sharing
+                        <a href="/products" class="text-sm shadow border p-2 rounded w-full    hover:text-gray-500">Risk-sharing
                             Features</a>
-                        <a href="/products" class="text-sm shadow border p-2 rounded mt-10   hover:text-gray-500">Higher
+                        <a href="/products" class="text-sm shadow border p-2 rounded w-full  hover:text-gray-500">Higher
                             Returns</a>
                     </div>
 
                 </div>
                 <div
-                    class="w-full lg:w-1/3 shadow-xl space-y-10  p-5 py-10  justify-between bg-gray-950 rounded-xl">
+                    class="w-full  lg:w-1/3 shadow-xl flex flex-col space-y-3 p-5 py-10  justify-between bg-gray-950 rounded-xl">
                     <div class="flex justify-between">
                         <h1 class="text-white text-2xl font-bold">GET IN TOUCH</h1>
                         <div class="rounded-full bg-gray-300 p-3">
@@ -145,13 +146,13 @@
                     </div>
                     <p class="text-gray-200">Reach out to us to learn more about our services and how we can help your business thrive. Whether you're looking to partner with us, explore investment
                         opportunities, or simply have a question, we're here to help.</p>
-                    <div class="">
-                        <a href="{{ env('APP_URL') }}#contact_us" class="text-sm shadow border p-2 rounded text-white hover:text-gray-500">Contact
+                    <div class="flex flex-col items-center w-full space-y-2 xl:flex-row xl:space-y-0 xl:space-x-2">
+                        <a href="{{ env('APP_URL') }}#contact_us" class="text-sm shadow border p-2 w-full rounded text-white hover:text-gray-500">Contact
                             Us</a>
-                        <a href="{{ env('APP_URL') }}#contact_us" class="text-sm shadow border p-2  rounded text-white  hover:text-gray-500">Request
+                        <a href="{{ env('APP_URL') }}#contact_us" class="text-sm shadow border p-2 w-full  rounded text-white  hover:text-gray-500">
                             More Information</a>
                         <a href="{{ env('APP_URL') }}#contact_us"
-                           class="text-sm shadow border p-2 rounded mt-10 text-white  hover:text-gray-500">Join Our
+                           class="text-sm shadow border p-2 rounded  text-white w-full hover:text-gray-500">Join Our
                             Network</a>
                     </div>
                 </div>

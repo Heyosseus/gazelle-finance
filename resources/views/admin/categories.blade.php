@@ -80,8 +80,8 @@
                         @csrf
 
                         <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
+                            <div class="modal-content w-550px" >
+                            <div class="modal-header">
                                     <h5 class="modal-title">New Category</h5>
                                     <div class="btn btn-icon btn-sm btn-active-light-primary ms-2"
                                          data-bs-dismiss="modal"

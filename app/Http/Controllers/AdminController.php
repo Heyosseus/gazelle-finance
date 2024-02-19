@@ -39,13 +39,14 @@ class AdminController extends Controller
             'images' => 'image|mimes:jpeg,png,jpg,gif,svg,webp',
         ]);
 
-        $cat_ids = '';
+
+        $category_ids = '';
         if (isset($validator['category'])){
-            foreach ($validator['category'] as $cats) {
-                $category = Category::where('id', $cats)->first();
+            foreach ($validator['category'] as $c) {
+                $category = Category::where('id', $c)->first();
 
                 if ($category) {
-                    $cat_ids .= ' ' . $category->id;
+                    $category_ids .=  $category->id;
                 }
             }
         }
@@ -54,12 +55,14 @@ class AdminController extends Controller
         $path = $request->file('images')->store('public/uploads');
         $image_path = Storage::url($path);
 
+
         $car = Article::create([
             'title' => $validator['name'],
             'photo' => $image_path,
             'description' => $request->input('description'),
             'author' => Auth::user()->id,
-            'categories_id' => json_encode($cat_ids),
+            'date' => now(),
+            'categories_id' => $category_ids,
         ]);
 
 

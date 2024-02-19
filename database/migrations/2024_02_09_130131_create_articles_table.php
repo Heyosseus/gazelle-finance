@@ -19,7 +19,7 @@ return new class extends Migration
             $table->date('date');
             $table->string('photo');
             $table->smallInteger('categories_id')->nullable();
-            $table->timestamp('created_at')->nullable();
+            $table->timestamps();
             $table->timestamp('deleted_at')->nullable();
         });
     }

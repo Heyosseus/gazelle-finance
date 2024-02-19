@@ -1,5 +1,5 @@
-<div class="flex flex-col items-center justify-center mt-10">
-    <h1 class="text-4xl">Our <span class="font-bold text-pink-950">Blog</span>  </h1>
+<div class="flex flex-col items-center justify-center mt-12">
+    <h1 class="text-3xl lg:text-5xl">Our <span class="font-bold text-pink-950">Blog</span>  </h1>
     <div class="w-20 h-0.5 bg-black mt-4"></div>
 
     <div class="flex flex-wrap justify-center p-4 lg:p-16">
@@ -47,6 +47,6 @@
             </div>
         </div>
     </div>
-    <a href="#" class="rounded-full px-5 py-2 border bg-pink-950 text-white hover:bg-white hover:text-pink-950 hover:border-pink-950">See more</a>
+    <a href="/news" class="rounded-full px-5 py-2 border bg-pink-950 text-white hover:bg-white hover:text-pink-950 hover:border-pink-950">See more</a>
 </div>
 <div class="w-full h-px bg-gray-300 mt-10"></div>

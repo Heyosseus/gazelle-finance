@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('company');
             $table->text('text');
-            $table->timestamp('created_at');
+            $table->timestamps();
         });
     }
 
