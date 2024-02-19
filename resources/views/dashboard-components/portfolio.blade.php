@@ -70,7 +70,7 @@
 
 
     <div class="mt-20">
-        <h1 class="rounded-full px-5 w-fit flex mx-auto py-2 border mt-4 bg-pink-950 text-white hover:bg-white hover:text-pink-950 hover:border-pink-950 cursor-pointer">
+        <h1 class="rounded-full px-5 w-fit flex mx-auto py-2 border border-pink-950 mt-4 bg-white text-pink-950 hover:bg-pink-950 hover:text-white cursor-pointer">
             See More</h1>
     </div>
 

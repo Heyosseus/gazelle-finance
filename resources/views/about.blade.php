@@ -87,7 +87,7 @@
                     <p>Stay updated with Gazelle's latest insights and industry news. Explore our articles  to see how we're shaping SME investment and business growth.</p>
                     <div class="flex flex-col items-center w-full space-y-2 xl:flex-row xl:space-y-0 xl:space-x-2">
 
-                    <a href="/careers" class="text-sm shadow border p-2 rounded w-full xl:w-fit   hover:bg-gray-950 hover:text-white transition-colors">Gazelles</a>
+                    <a href="/careers" class="text-sm shadow border p-2 rounded w-full xl:w-fit    hover:text-gray-500">Gazelles</a>
                         <a href="/careers" class="text-sm shadow border p-2  rounded w-full xl:w-fit  hover:text-gray-500">Partners</a>
                         <a href="/careers" class="text-sm shadow border p-2 rounded w-full xl:w-fit     hover:text-gray-500">Accelerate
                             with Us</a>

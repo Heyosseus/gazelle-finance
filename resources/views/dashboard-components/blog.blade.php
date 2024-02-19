@@ -1,5 +1,5 @@
-<div class="flex flex-col items-center justify-center mt-10">
-    <h1 class="text-4xl">Our <span class="font-bold text-pink-950">Blog</span>  </h1>
+<div class="flex flex-col items-center justify-center mt-12">
+    <h1 class="text-3xl lg:text-5xl">Our <span class="font-bold text-pink-950">Blog</span>  </h1>
     <div class="w-20 h-0.5 bg-black mt-4"></div>
 
     <div class="flex flex-wrap justify-center p-4 lg:p-16">
