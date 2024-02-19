@@ -54,3 +54,6 @@ Route::view('/ge-office', 'services/georgia-office');
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::fallback(function () {
+    return view('error');
+});
