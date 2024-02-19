@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->smallIncrements('id')->foreign('Articles.categories_id');
             $table->string('title');
-            $table->timestamp('created_at')->nullable();
+            $table->timestamps();
             $table->timestamp('deleted_at')->nullable();
         });
     }

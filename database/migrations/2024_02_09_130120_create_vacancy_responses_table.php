@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('position')->nullable();
             $table->string('CV');
-            $table->timestamp('created_at')->nullable();
+            $table->timestamps();
             $table->timestamp('deleted_at')->nullable();
         });
     }
