@@ -46,7 +46,7 @@ class AdminController extends Controller
                 $category = Category::where('id', $c)->first();
 
                 if ($category) {
-                    $category_ids .=  $category->id;
+                    $category_ids .=  ' ' . $category->id;
                 }
             }
         }
@@ -61,8 +61,7 @@ class AdminController extends Controller
             'photo' => $image_path,
             'description' => $request->input('description'),
             'author' => Auth::user()->id,
-            'date' => now(),
-            'categories_id' => $category_ids,
+            'categories_id' => json_encode($category_ids),
         ]);
 
 

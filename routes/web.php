@@ -33,9 +33,33 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/categories', [CategoryController::class, 'index'])->name('categories.home');
     Route::get('/categories/delete/{id}', [CategoryController::class, 'deleteCategories'])->name('categories.delete');
     Route::post('/categories/create', [CategoryController::class, 'createCategories'])->name('categories.create');
+
+//    Products
+    Route::get('/productsAdmin', [ProductsController::class, 'index'])->name('products.home');
+    Route::get('/products/delete/{id}', [ProductsController::class, 'deleteProducts'])->name('products.delete');
+    Route::post('/products/create', [ProductsController::class, 'createProducts'])->name('products.create');
+
+//    Portfolio
+    Route::get('/portfolioAdmin', [PortfolioController::class, 'index'])->name('portfolio.home');
+    Route::get('/portfolio/delete/{id}', [PortfolioController::class, 'deletePortfolio'])->name('portfolio.delete');
+    Route::post('/portfolio/create', [PortfolioController::class, 'createPortfolio'])->name('portfolio.create');
+
+//    News
+    Route::get('/newsAdmin', [NewsController::class, 'index'])->name('news.home');
+    Route::get('/news/delete/{id}', [NewsController::class, 'deleteNews'])->name('news.delete');
+    Route::post('/news/create', [NewsController::class, 'createNews'])->name('news.create');
+
+//    Impacts
+    Route::get('/impactsAdmin', [ImpactController::class, 'index'])->name('impacts.home');
+    Route::get('/impacts/delete/{id}', [ImpactController::class, 'deleteImpacts'])->name('impacts.delete');
+    Route::post('/impacts/create', [ImpactController::class, 'createImpacts'])->name('impacts.create');
+
+//    Impacts
+    Route::get('/ukraine_bridge_facilityAdmin', [UkraineBridgeFacilityController::class, 'index'])->name('ukraine_bridge_facility.home');
+    Route::get('/ukraine_bridge_facility/delete/{id}', [UkraineBridgeFacilityController::class, 'deleteUkraine_bridge_facility'])->name('ukraine_bridge_facility.delete');
+    Route::post('/ukraine_bridge_facility/create', [UkraineBridgeFacilityController::class, 'createUkraine_bridge_facility'])->name('ukraine_bridge_facility.create');
+
 });
-
-
 
 
 Route::get('/', function () {
