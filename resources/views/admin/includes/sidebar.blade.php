@@ -40,7 +40,7 @@
                         <span class="menu-title" >Articles - Categories</span>
                     </span>
                 </a>
-                <a  class="menu-item py-2 {{ Request::route()->getName() === 'cars' ? 'here' : '' }}">
+                <a href="{{ route('products.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'products.home' ? 'here' : '' }}">
                     <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
@@ -56,7 +56,7 @@
                         <span class="menu-title">About</span>
                     </span>
                 </a>
-                <a  class="menu-item py-2 {{ Request::route()->getName() === 'locations' ? 'here' : '' }}">
+                <a href="{{ route('portfolio.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'portfolio.home' ? 'here' : '' }}">
                     <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
@@ -64,7 +64,7 @@
                         <span class="menu-title">Portfolio</span>
                     </span>
                 </a>
-                <a  class="menu-item py-2 {{ Request::route()->getName() === 'users' ? 'here' : '' }}">
+                <a href="{{ route('ukraine_bridge_facility.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'ukraine_bridge_facility.home' ? 'here' : '' }}">
                     <span class="menu-link menu-center" style="width: fit-content; padding: 0;" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
@@ -80,7 +80,7 @@
                         <span class="menu-title">Employees</span>
                     </span>
                 </a>
-                <a  class="menu-item py-2 {{ Request::route()->getName() === 'categories' ? 'here' : '' }}">
+                <a href="{{ route('impacts.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'impacts.home' ? 'here' : '' }}">
                     <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
@@ -96,7 +96,7 @@
                         <span class="menu-title">Contact</span>
                     </span>
                 </a>
-                <a  class="menu-item py-2 {{ Request::route()->getName() === 'categories' ? 'here' : '' }}">
+                <a href="{{ route('news.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'news.home' ? 'here' : '' }}">
                     <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
