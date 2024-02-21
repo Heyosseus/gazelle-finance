@@ -18,8 +18,8 @@
                             <h1 class="text-lg sm:text-xl font-bold">{{ $article->title }}</h1>
                             <div class="w-full h-px bg-gray-300 mt-2 text-center"></div>
                         </div>
-                        <p class="w-full text-sm">{{ $article->description }}</p>
-                        <a href="#" class="text-pink-950 font-semibold  flex items-center space-x-2">
+                        <p class="w-full text-sm">{{ \Illuminate\Support\Str::limit($article->description, 100) }}</p>
+                        <a href="{{ route('news.show', ['news' => $article->id]) }}" class="text-pink-950 font-semibold  flex items-center space-x-2">
                             <p>See more </p>
                             <img src="{{ asset('icons/longRightArrow.svg') }}" alt="" width="15">
                         </a>

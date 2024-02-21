@@ -32,8 +32,7 @@ class AdminController extends Controller
     public function news(Article $article): View
     {
         $links = News::all();
-        $articles = $article->paginate(2);
-
+        $articles = Article::latest()->paginate(2);
         return view('news', compact('articles' , 'links'));
     }
 

@@ -47,6 +47,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 //    News
     Route::get('/newsAdmin', [NewsController::class, 'index'])->name('news.home');
+    Route::get('/news/{news}', [NewsController::class, 'show'])->name('news.show');
     Route::get('/news/delete/{id}', [NewsController::class, 'deleteNews'])->name('news.delete');
     Route::post('/news/create', [NewsController::class, 'createNews'])->name('news.create');
 

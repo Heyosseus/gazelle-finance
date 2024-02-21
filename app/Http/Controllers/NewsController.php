@@ -2,19 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\News;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class NewsController extends Controller
 {
-    public function index()
+    public function index() : View
     {
         $news = News::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
 
         return view('admin.news', ['news' => $news]);
     }
 
-    public function deleteNews($id)
+    public function show($id) : View
+    {
+        $article = Article::findOrFail($id);
+        return view('show-news', ['article' => $article]);
+    }
+    public function deleteNews($id) : RedirectResponse
     {
         $News = News::find($id);
 
@@ -25,7 +33,7 @@ class NewsController extends Controller
         return redirect()->back();
     }
 
-    public function createNews(Request $request)
+    public function createNews(Request $request) : RedirectResponse
     {
         $validator = $request->validate([
             'name' => 'required|string',

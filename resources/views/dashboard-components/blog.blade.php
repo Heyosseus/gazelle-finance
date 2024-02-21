@@ -11,7 +11,7 @@
                 <div class="p-6">
                     <div class="border py-2 px-4 w-fit mb-2 rounded-full border-pink-950 text-pink-950 hover:bg-pink-950 hover:text-white transition-colors cursor-pointer">{{$blog->category->title}}</div>
                     <h2 class="font-bold text-2xl text-gray-800 h-14">{{$blog->title}} </h2>
-                    <a href="#" class="text-pink-950 font-semibold  mt-4 justify-end flex items-center space-x-2">
+                    <a href="{{ route('news.show', ['news' => $blog->id]) }}" class="text-pink-950 font-semibold  mt-4 justify-end flex items-center space-x-2">
                         <p>Read more </p>
                         <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
                     </a>
