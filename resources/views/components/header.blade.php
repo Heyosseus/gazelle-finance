@@ -20,7 +20,7 @@
                             <h1 class="text-lg font-bold pb-2">Our work</h1>
                             <a href="/ukraine-bridge-facility" class="block py-2 hover:text-pink-950 transition-colors">Ukrainian bridge
                                 facility</a>
-                            <a href="/social-impacts" class="block py-2 hover:text-pink-950 transition-colors">Social impacts</a>
+                            <a href="/testimonials" class="block py-2 hover:text-pink-950 transition-colors">Testimonials</a>
                             <a href="/careers" class="block pt-2 hover:text-pink-950 transition-colors">Careers</a>
                         </div>
                         <div class="p-5 space-y-1">

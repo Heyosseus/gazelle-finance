@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('impacts', function (Blueprint $table) {
             $table->smallIncrements('id');
-            $table->string('title');
             $table->string('author');
+            $table->string('position');
             $table->text('description');
             $table->string('image');
             $table->timestamps();
-            $table->timestamp('deleted_at');
+            $table->timestamp('deleted_at')->nullable();
         });
     }
 

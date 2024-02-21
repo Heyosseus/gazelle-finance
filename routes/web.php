@@ -55,7 +55,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/impactsAdmin', [ImpactController::class, 'index'])->name('impacts.home');
     Route::get('/impacts/delete/{id}', [ImpactController::class, 'deleteImpacts'])->name('impacts.delete');
     Route::post('/impacts/create', [ImpactController::class, 'createImpacts'])->name('impacts.create');
-
+    Route::get('/testimonials', [ImpactController::class, 'impact_stories'])->name('social-impacts');
 //    Impacts
     Route::get('/ukraine_bridge_facilityAdmin', [UkraineBridgeFacilityController::class, 'index'])->name('ukraine_bridge_facility.home');
     Route::get('/ukraine_bridge_facility/delete/{id}', [UkraineBridgeFacilityController::class, 'deleteUkraine_bridge_facility'])->name('ukraine_bridge_facility.delete');
@@ -66,8 +66,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::view('/about', 'about');
 Route::view('/products', 'products');
-//Route::view('/news', 'news');
-Route::view('/social-impacts', 'services/social-impacts');
 Route::view('/ukraine-bridge-facility', 'services/ukraine-bridge-facility');
 Route::view('/careers', 'services/careers');
 Route::view('/ge-office', 'services/georgia-office');

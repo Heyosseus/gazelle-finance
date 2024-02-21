@@ -6,6 +6,7 @@ use App\Models\Impact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\View\View;
 
 class ImpactController extends Controller
 {
@@ -14,6 +15,13 @@ class ImpactController extends Controller
         $impacts = Impact::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
 
         return view('admin.impacts', ['impacts' => $impacts]);
+    }
+
+    public function impact_stories() : View
+    {
+        $impacts = Impact::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+
+        return view('services.social-impacts', ['impacts' => $impacts]);
     }
 
     public function deleteImpacts($id)
@@ -39,12 +47,12 @@ class ImpactController extends Controller
         $path = $request->file('image')->store('public/uploads');
         $image_path = Storage::url($path);
 
-
-        $car = Impact::create([
-            'title' => $validator['name'],
+//        dd($request->all());
+        Impact::create([
             'image' => $image_path,
             'description' => $request->input('description'),
-            'author' => Auth::user()->id,
+            'author' => $request->input('name'),
+            'position' => $request->input('position'),
         ]);
 
 

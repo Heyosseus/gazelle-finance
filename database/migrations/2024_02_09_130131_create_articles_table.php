@@ -18,6 +18,7 @@ return new class extends Migration
             $table->smallInteger('author');
             $table->string('photo');
             $table->smallInteger('categories_id')->nullable();
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade');
             $table->timestamps();
             $table->timestamp('deleted_at')->nullable();
         });
