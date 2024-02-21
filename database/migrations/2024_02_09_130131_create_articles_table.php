@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('title');
             $table->longText('description');
             $table->smallInteger('author');
-            $table->date('date');
             $table->string('photo');
             $table->smallInteger('categories_id')->nullable();
             $table->timestamps();

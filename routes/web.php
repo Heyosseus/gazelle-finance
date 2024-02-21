@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Session;
 |
 */
 Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/', [AdminController::class, 'index'])->name('admin');
+//    Route::get('/', [AdminController::class, 'index'])->name('admin');
 
     Route::get('/signout', function (){
         Session::flush();
@@ -28,7 +28,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.home');
     Route::get('/articles/delete/{id}', [AdminController::class, 'deleteArticle'])->name('articles.delete');
     Route::post('/articles/create', [AdminController::class, 'createArticle'])->name('articles.create');
-
+    Route::get('/news', [AdminController::class, 'news'])->name('news');
 //    Categories
     Route::get('/categories', [CategoryController::class, 'index'])->name('categories.home');
     Route::get('/categories/delete/{id}', [CategoryController::class, 'deleteCategories'])->name('categories.delete');
@@ -68,7 +68,7 @@ Route::get('/', function () {
 
 Route::view('/about', 'about');
 Route::view('/products', 'products');
-Route::view('/news', 'news');
+//Route::view('/news', 'news');
 Route::view('/social-impacts', 'services/social-impacts');
 Route::view('/ukraine-bridge-facility', 'services/ukraine-bridge-facility');
 Route::view('/careers', 'services/careers');

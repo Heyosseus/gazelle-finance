@@ -32,12 +32,11 @@
                                 <td>{{ $article->title }}</td>
                                 <td>{{ $article->description }}</td>
                                 <td>
-                                @php($ExplodedCategories = explode(' ' , $article->categories_id))
-                                @foreach($ExplodedCategories as $cat_id)
-                                    @if(App\Models\Category::whereId(intval($cat_id))->first() !== null)
-                                        {{App\Models\Category::whereId(intval($cat_id))->first()->title . ','}}
-                                    @endif
-                                @endforeach
+                                    @foreach(explode(' ', $article->categories_id) as $cat_id)
+                                        @if(isset($categories[$cat_id]))
+                                            {{ $categories[$cat_id] }}
+                                        @endif
+                                    @endforeach
                                 </td>
                                 <td>{{ App\Models\User::whereId($article->author)->select('name')->first()->name }}</td>
                                 <td><img style="max-width: 120px ; max-height: 120px;" src="{{$article->photo}}" alt=""></td>
@@ -108,9 +107,9 @@
 
                                     <div class="fv-row mb-7">
                                         <label class="fs-6 fw-bold mb-2 required">Select category</label>
-                                        <select name="category[]" id="category" class="form-control form-control-solid " multiple required>
-                                            @foreach ($categories as $cat)
-                                                <option name="{{ $cat->title }}" value="{{$cat->id}}">{{ $cat->title }}</option>
+                                        <select name="category[]" id="category" class="form-control form-control-solid" multiple required>
+                                            @foreach ($categories as $id => $title)
+                                                <option value="{{ $id }}">{{ $title }}</option>
                                             @endforeach
                                         </select>
                                     </div>
