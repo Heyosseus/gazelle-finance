@@ -16,7 +16,7 @@ class AdminController extends Controller
 {
     public function getArticlesAndCategories(): array
     {
-        $articles = Article::orderBy('id', 'DESC');
+        $articles = Article::with('category')->latest()->get();
         $categories = Category::pluck('title', 'id')->toArray();
 
         return compact('articles', 'categories');
@@ -29,11 +29,10 @@ class AdminController extends Controller
         return view('admin.articles', $data);
     }
 
-    public function news(): View
+    public function news(Article $article): View
     {
-        $data = $this->getArticlesAndCategories();
         $links = News::all();
-        $articles = $data['articles']->paginate(2);
+        $articles = $article->paginate(2);
 
         return view('news', compact('articles' , 'links'));
     }
