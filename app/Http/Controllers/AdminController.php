@@ -32,7 +32,8 @@ class AdminController extends Controller
     public function news(Article $article): View
     {
         $links = News::all();
-        $articles = Article::latest()->paginate(2);
+        $articles = Article::with('user')->latest()->paginate(2);
+
         return view('news', compact('articles' , 'links'));
     }
 
@@ -77,6 +78,7 @@ class AdminController extends Controller
             'photo' => $image_path,
             'description' => $request->input('description'),
             'author' => Auth::user()->id,
+            'user_id' => Auth::user()->id,
             'categories_id' => $category_ids,
         ]);
 
