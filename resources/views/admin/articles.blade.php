@@ -32,11 +32,7 @@
                                 <td>{{ $article->title }}</td>
                                 <td>{{ $article->description }}</td>
                                 <td>
-                                    @foreach(explode(' ', $article->categories_id) as $cat_id)
-                                        @if(isset($categories[$cat_id]))
-                                            {{ $categories[$cat_id] }}
-                                        @endif
-                                    @endforeach
+                                    {{ $article->category->title}}
                                 </td>
                                 <td>{{ App\Models\User::whereId($article->author)->select('name')->first()->name }}</td>
                                 <td><img style="max-width: 120px ; max-height: 120px;" src="{{$article->photo}}" alt=""></td>
@@ -111,6 +107,7 @@
                                             @foreach ($categories as $id => $title)
                                                 <option value="{{ $id }}">{{ $title }}</option>
                                             @endforeach
+
                                         </select>
                                     </div>
 

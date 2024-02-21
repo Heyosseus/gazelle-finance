@@ -29,6 +29,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/articles/delete/{id}', [AdminController::class, 'deleteArticle'])->name('articles.delete');
     Route::post('/articles/create', [AdminController::class, 'createArticle'])->name('articles.create');
     Route::get('/news', [AdminController::class, 'news'])->name('news');
+    Route::get('/blog', [AdminController::class, 'blog'])->name('blog');
 //    Categories
     Route::get('/categories', [CategoryController::class, 'index'])->name('categories.home');
     Route::get('/categories/delete/{id}', [CategoryController::class, 'deleteCategories'])->name('categories.delete');
@@ -61,11 +62,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 });
 
-
-Route::get('/', function () {
-    return view('home');
-});
-
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::view('/about', 'about');
 Route::view('/products', 'products');
 //Route::view('/news', 'news');

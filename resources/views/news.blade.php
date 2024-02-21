@@ -7,12 +7,10 @@
             @foreach ($articles as $article)
                 <div class="flex flex-col sm:flex-row justify-between md:mt-5 w-full sm:space-x-10 shadow-lg p-2 sm:p-6">
                     <div>
-                        <img src="{{ $article->photo }}" alt="" class="w-full h-auto sm:h-40 object-fill">
-
-
+                        <img src="{{ $article->photo }}" alt="" class="w-full md:w-52 h-auto sm:h-40 object-fill">
                         <div class="flex items-center justify-between mt-4 sm:flex-col sm:items-start sm:mt-0">
                             <p class="mt-0 text-xs sm:mt-2 sm:text-sm"><strong>Author:</strong> {{ $article->author }}</p>
-                            <p class="text-xs sm:text-sm"><strong>Date:</strong> {{ $article->created_at }}</p>
+                            <p class="text-xs sm:text-sm"><strong>Date:</strong> {{ substr($article->created_at, 0, 11) }}</p>
                         </div>
                     </div>
                     <div class="flex flex-col mt-8 sm:mt-0 space-y-10 w-full">
