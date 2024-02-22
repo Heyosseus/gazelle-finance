@@ -20,14 +20,15 @@
                             <h1 class="text-lg font-bold pb-2">Our work</h1>
                             <a href="/ukraine-bridge-facility" class="block py-2 hover:text-pink-950 transition-colors">Ukrainian bridge
                                 facility</a>
-                            <a href="/testimonials" class="block py-2 hover:text-pink-950 transition-colors">Testimonials</a>
+                            <a href="/portfolio" class="block  pt-2 hover:text-pink-950 transition-colors">Portfolio / Gazelles</a>
                             <a href="/careers" class="block pt-2 hover:text-pink-950 transition-colors">Careers</a>
                         </div>
                         <div class="p-5 space-y-1">
                             <h1 class="text-lg font-bold pb-2">Company</h1>
                             <a href="/ge-office" class="block  py-2 hover:text-pink-950 transition-colors">Georgia's office</a>
-                            <a href="https://gazellefinance.am/language/en/home/" target="_blank" class="block  py-2 hover:text-pink-950 transition-colors">Armenia's office</a>
-                            <a href="#" class="block  pt-2 hover:text-pink-950 transition-colors">Team</a>
+                            <a href="https://gazellefinance.am/language/en/home/" target="_blank" class="block  pt-2 hover:text-pink-950 transition-colors">Armenia's office</a>
+                            <a href="/testimonials" class="block pt-2 hover:text-pink-950 transition-colors">Testimonials</a>
+
                         </div>
 
                     </div>
@@ -53,7 +54,7 @@
                     <div id="contactDropdown"
                          class="hidden align-center absolute z-20 left-0 mt-2 bg-white space-x-6 shadow-md text-black rounded-md text-sm w-[120px]  ml-[-10px] opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300">
                         <div class="p-4 space-y-1">
-                            <a href="{{ env('APP_URL') }}#portfolio" class="block  hover:text-pink-950 transition-colors">Portfolio</a>
+                            <a href="/team" class="block  hover:text-pink-950 transition-colors">Team</a>
                             <a href="{{ env('APP_URL') }}#partners" class="block py-2 hover:text-pink-950 transition-colors">Partners</a>
                             <a href="{{ env('APP_URL') }}#contact_us" class="block pt-2 hover:text-pink-950 transition-colors">Contact us</a>
                         </div>

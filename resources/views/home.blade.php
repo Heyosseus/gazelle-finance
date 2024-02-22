@@ -1,7 +1,7 @@
 <x-layout>
     <x-header></x-header>
        @include('dashboard-components.content')
-    @include('dashboard-components.partners')
+    @include('dashboard-components.partners', ['logos' => $logos])
     @include('dashboard-components.portfolio')
     @include('dashboard-components.blog', ['articles' => $articles])
     @include('dashboard-components.contact')
