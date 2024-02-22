@@ -73,7 +73,7 @@ Route::get('/blog', [AdminController::class, 'blog'])->name('blog');
 Route::get('/portfolio', [PortfolioController::class, 'portfolio'])->name('portfolio');
 Route::get('/news/{news}', [NewsController::class, 'show'])->name('news.show');
 Route::get('/testimonials', [ImpactController::class, 'impact_stories'])->name('social-impacts');
-
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::fallback(function () {

@@ -4,7 +4,8 @@
         <div class="w-16 m-auto lg:m-1 lg:w-1/4 h-[1px] bg-pink-950 "></div>
         <h1 class="text-4xl font-bold text-pink-950 tracking-wide mt-10">Turning Dreams into Reality</h1>
 
-        <form action="">
+        <form action="{{route('contact.store')}}" method="post">
+            @csrf
             <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 mt-10">
                 <div class="flex flex-col w-full lg:w-1/2">
                     <label for="name" class="text-sm text-pink-950 font-bold mb-1">Name</label>
@@ -24,14 +25,15 @@
                            placeholder="Enter your company name">
                 </div>
                 <div class="flex flex-col w-full lg:w-1/2">
-                    <label for="subject" class="text-sm text-pink-950 font-bold mb-1">Subject</label>
-                    <input type="text" name="subject" id="subject" class="border border-gray-300 p-3 rounded-md"
+                    <label for="text" class="text-sm text-pink-950 font-bold mb-1">Subject</label>
+                    <input type="text" name="text" id="text" class="border border-gray-300 p-3 rounded-md"
                            placeholder="Share your ideas">
                 </div>
 
             </div>
 
             <button
+                type="submit"
                 class="group flex items-center space-x-2 rounded-full px-5 py-2 border border-pink-950 text-pink-950 hover:bg-pink-950 hover:text-white mt-10">
                 <span>Send</span>
             </button>
