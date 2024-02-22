@@ -70,8 +70,8 @@
 
 
     <div class="mt-20">
-        <h1 class="rounded-full px-5 w-fit flex mx-auto py-2 border border-pink-950 mt-4 bg-white text-pink-950 hover:bg-pink-950 hover:text-white cursor-pointer">
-            See More</h1>
+        <a href="/portfolio" class="rounded-full px-5 w-fit flex mx-auto py-2 border border-pink-950 mt-4 bg-white text-pink-950 hover:bg-pink-950 hover:text-white cursor-pointer">
+            See More</a>
     </div>
 
 

@@ -17,12 +17,9 @@
 <div
     class="carousel-container bg-gray-100 p-4 mt-10 lg:px-20 lg:flex lg:flex-row lg:justify-between items-center border-t-2 border-b-2 border-gray-200">
     <div class="flex items-center justify-between w-full carousel-track">
-        <div class="w-40 carousel-card"><img src="{{asset('logos/nout.png')}}" alt=""></div>
-        <div class="w-28 carousel-card "><img src="{{asset('logos/larar.png')}}" alt=""></div>
-        <div class="w-40 carousel-card"><img src="{{asset('logos/sonati.png')}}" alt=""></div>
-        <div class="w-32 carousel-card"><img src="{{asset('logos/apaga.jpg')}}" alt=""></div>
-        <div class="w-36 carousel-card"><img src="{{asset('logos/gp.png')}}" alt=""></div>
-        <div class="w-28 carousel-card"><img src="{{asset('logos/inpreso.png')}}" alt=""></div>
+        @foreach($logos as $logo)
+            <div class="w-40 carousel-card"><img src="{{$logo}}" alt=""></div>
+        @endforeach
     </div>
 </div>
 <style>
@@ -41,9 +38,7 @@
         justify-content: space-between;
         &:hover {
             transform: scale(0.9);
-            box-shadow: 5px 5px 8px rgba(222, 222, 222, 0.362),
-            10px 10px 8px rgba(152, 133, 133, 0.392),
-            15px 15px 8px rgba(139, 154, 139, 0.303);
+            cursor:pointer;
         }
         border-radius: 20%;
     }

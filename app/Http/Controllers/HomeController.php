@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
+use App\Models\Category;
+use App\Models\Portfolio;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {
@@ -13,7 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('guest');
     }
 
     /**
@@ -21,8 +25,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index() : View
     {
-        return view('home');
+        $articles = Article::with('category')->orderBy('id', 'DESC')->limit(3)->get();
+        $logos = Portfolio::where('deleted_at' , null)->pluck('logo')->toArray();
+
+        return view('home', compact('articles', 'logos'));
     }
 }

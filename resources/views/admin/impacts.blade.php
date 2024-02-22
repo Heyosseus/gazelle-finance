@@ -7,7 +7,7 @@
     <div id="kt_content_container" class="container-fluid">
         <div class="card">
             <div class="card-header border-0 pt-6">
-                <h2>Impacts</h2>
+                <h2>Testimonials / impact stories</h2>
             </div>
             <div class="card-header border-0 pt-6">
                 <button type="button" class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#kt_modal_add_customer">Add new Impact</button>
@@ -17,9 +17,9 @@
                     <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
                         <thead>
                             <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
-                                <th class="min-w-125px">Title</th>
                                 <th class="min-w-125px">Description</th>
                                 <th class="min-w-125px">Author</th>
+                                <th class="min-w-125px">Position</th>
                                 <th class="min-w-125px">Photo</th>
                                 <th class="min-w-125px">Created at</th>
                                 <th class="min-w-125px">Action</th>
@@ -28,9 +28,9 @@
                         <tbody class="fw-bold text-gray-600">
                             @foreach ($impacts as $impact)
                             <tr>
-                                <td>{{ $impact->title }}</td>
                                 <td>{{ $impact->description }}</td>
-                                <td>{{ App\Models\User::whereId($impact->author)->select('name')->first()->name }}</td>
+                                <td>{{ $impact->author }}</td>
+                                <td>{{ $impact->position }}</td>
                                 <td><img style="max-width: 120px ; max-height: 120px;" src="{{$impact->image}}" alt=""></td>
                                 <td>{{ $impact->created_at }}</td>
                                 <td><a href="{{ route('impacts.delete', $impact->id) }}" class="text-danger">Delete</a></td>
@@ -91,12 +91,6 @@
                                      data-kt-scroll-dependencies="#kt_modal_add_customer_header"
                                      data-kt-scroll-wrappers="#kt_modal_add_customer_scroll" data-kt-scroll-offset="300px">
 
-                                    <div class="fv-row mb-7">
-                                        <label class="required fs-6 fw-bold mb-2">Name</label>
-                                        <input type="text" class="form-control form-control-solid"
-                                               placeholder="Enter Impact title" name="name" required />
-                                    </div>
-
 
                                     <div class="fv-row mb-7 ">
                                         <label class="fs-6 fw-bold mb-2 required">Description</label>
@@ -108,6 +102,17 @@
                                         <div>
                                             <input class="pictures required" type="file" name="image" accept="image" required>
                                         </div>
+                                    </div>
+                                    <div class="fv-row mb-7">
+                                        <label class="required fs-6 fw-bold mb-2">Author</label>
+                                        <input type="text" class="form-control form-control-solid"
+                                               placeholder="Enter author name" name="author" required />
+                                    </div>
+
+                                    <div class="fv-row mb-7">
+                                        <label class="required fs-6 fw-bold mb-2">Position</label>
+                                        <input type="text" class="form-control form-control-solid"
+                                               placeholder="Enter author position" name="position" required />
                                     </div>
 
                                 </div>

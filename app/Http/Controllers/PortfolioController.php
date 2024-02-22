@@ -6,17 +6,25 @@ use App\Models\Portfolio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\View\View;
 
 class PortfolioController extends Controller
 {
-    public function index()
+    public function index() : View
     {
         $portfolio = Portfolio::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
 
         return view('admin.portfolio', ['portfolio' => $portfolio]);
     }
 
-    public function deletePortfolio($id)
+    public function portfolio() : View
+    {
+        $portfolio = Portfolio::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+
+        return view('gazelles', ['portfolio' => $portfolio]);
+    }
+
+    public function deletePortfolio($id) : \Illuminate\Http\RedirectResponse
     {
         $portfolio = Portfolio::find($id);
 
@@ -27,7 +35,7 @@ class PortfolioController extends Controller
         return redirect()->back();
     }
 
-    public function createPortfolio(Request $request)
+    public function createPortfolio(Request $request) : \Illuminate\Http\RedirectResponse
     {
         $validator = $request->validate([
             'name' => 'required|string',
@@ -57,7 +65,6 @@ class PortfolioController extends Controller
             'website_url' => $request->input('website'),
             'image' => $image_path,
             'logo' => $image_path1,
-            'author' => Auth::user()->id,
         ]);
 
 

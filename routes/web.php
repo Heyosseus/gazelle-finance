@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Session;
 |
 */
 Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/', [AdminController::class, 'index'])->name('admin');
+//    Route::get('/', [AdminController::class, 'index'])->name('admin');
 
     Route::get('/signout', function (){
         Session::flush();
@@ -43,7 +43,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/portfolioAdmin', [PortfolioController::class, 'index'])->name('portfolio.home');
     Route::get('/portfolio/delete/{id}', [PortfolioController::class, 'deletePortfolio'])->name('portfolio.delete');
     Route::post('/portfolio/create', [PortfolioController::class, 'createPortfolio'])->name('portfolio.create');
-
 //    News
     Route::get('/newsAdmin', [NewsController::class, 'index'])->name('news.home');
     Route::get('/news/delete/{id}', [NewsController::class, 'deleteNews'])->name('news.delete');
@@ -53,7 +52,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/impactsAdmin', [ImpactController::class, 'index'])->name('impacts.home');
     Route::get('/impacts/delete/{id}', [ImpactController::class, 'deleteImpacts'])->name('impacts.delete');
     Route::post('/impacts/create', [ImpactController::class, 'createImpacts'])->name('impacts.create');
-
 //    Impacts
     Route::get('/ukraine_bridge_facilityAdmin', [UkraineBridgeFacilityController::class, 'index'])->name('ukraine_bridge_facility.home');
     Route::get('/ukraine_bridge_facility/delete/{id}', [UkraineBridgeFacilityController::class, 'deleteUkraine_bridge_facility'])->name('ukraine_bridge_facility.delete');
@@ -61,23 +59,23 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 });
 
-
-Route::get('/', function () {
-    return view('home');
-});
-
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::view('/about', 'about');
 Route::view('/products', 'products');
-Route::view('/news', 'news');
-Route::view('/social-impacts', 'services/social-impacts');
 Route::view('/ukraine-bridge-facility', 'services/ukraine-bridge-facility');
 Route::view('/careers', 'services/careers');
 Route::view('/ge-office', 'services/georgia-office');
 
 
 Auth::routes();
+Route::get('/news', [AdminController::class, 'news'])->name('news');
+Route::get('/blog', [AdminController::class, 'blog'])->name('blog');
+Route::get('/portfolio', [PortfolioController::class, 'portfolio'])->name('portfolio');
+Route::get('/news/{news}', [NewsController::class, 'show'])->name('news.show');
+Route::get('/testimonials', [ImpactController::class, 'impact_stories'])->name('social-impacts');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::fallback(function () {
     return view('error');
 });

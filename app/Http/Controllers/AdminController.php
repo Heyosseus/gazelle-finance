@@ -4,23 +4,40 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\News;
 use App\Models\Products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\View\View;
 
 class AdminController extends Controller
 {
-    public function index()
+    public function getArticlesAndCategories(): array
     {
-        $articles = Article::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
-        $categories = Category::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+        $articles = Article::with('category')->latest()->get();
+        $categories = Category::pluck('title', 'id')->toArray();
 
-        return view('admin.articles', ['articles' => $articles , 'categories' => $categories]);
+        return compact('articles', 'categories');
     }
 
-    public function deleteArticle($id)
+    public function index(): View
+    {
+        $data = $this->getArticlesAndCategories();
+
+        return view('admin.articles', $data);
+    }
+
+    public function news(Article $article): View
+    {
+        $links = News::all();
+        $articles = Article::with('user')->latest()->paginate(2);
+
+        return view('news', compact('articles' , 'links'));
+    }
+
+    public function deleteArticle($id) : \Illuminate\Http\RedirectResponse
     {
         $articles = Article::find($id);
 
@@ -31,7 +48,7 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    public function createArticle(Request $request)
+    public function createArticle(Request $request) : \Illuminate\Http\RedirectResponse
     {
         $validator = $request->validate([
             'name' => 'required|string',
@@ -61,7 +78,8 @@ class AdminController extends Controller
             'photo' => $image_path,
             'description' => $request->input('description'),
             'author' => Auth::user()->id,
-            'categories_id' => json_encode($category_ids),
+            'user_id' => Auth::user()->id,
+            'categories_id' => $category_ids,
         ]);
 
 

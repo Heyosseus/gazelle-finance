@@ -23,7 +23,6 @@
                                 <th class="min-w-125px">Industry</th>
                                 <th class="min-w-125px">Location</th>
                                 <th class="min-w-125px">Website</th>
-                                <th class="min-w-125px">Author</th>
                                 <th class="min-w-125px">Logo</th>
                                 <th class="min-w-125px">Image</th>
                                 <th class="min-w-125px">Created at</th>
@@ -39,7 +38,6 @@
                                 <td>{{ $portfolio->industry }}</td>
                                 <td>{{ $portfolio->location }}</td>
                                 <td>{{ $portfolio->website_url }}</td>
-                                <td>{{ App\Models\User::whereId($portfolio->author)->select('name')->first()->name }}</td>
                                 <td><img style="max-width: 120px ; max-height: 120px;" src="{{$portfolio->image}}" alt=""></td>
                                 <td><img style="max-width: 120px ; max-height: 120px;" src="{{$portfolio->logo}}" alt=""></td>
                                 <td>{{ $portfolio->created_at }}</td>
