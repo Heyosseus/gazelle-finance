@@ -59,7 +59,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 });
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index']);
 Route::view('/about', 'about');
 Route::view('/products', 'products');
 Route::view('/ukraine-bridge-facility', 'services/ukraine-bridge-facility');
@@ -75,7 +75,7 @@ Route::get('/news/{news}', [NewsController::class, 'show'])->name('news.show');
 Route::get('/testimonials', [ImpactController::class, 'impact_stories'])->name('social-impacts');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index']);
 Route::fallback(function () {
     return view('error');
 });
