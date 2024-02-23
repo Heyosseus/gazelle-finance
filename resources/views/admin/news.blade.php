@@ -30,7 +30,7 @@
                                     <td>{{ $news->title }}</td>
                                     <td>{{ $news->url }}</td>
                                     <td>{{ $news->created_at }}</td>
-                                    <td><a href="{{ route('news.delete', $news->id) }}" class="text-danger">Delete</a>
+                                    <td><a href="{{ route('admin.news.delete', $news->id) }}" class="text-danger">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -78,7 +78,7 @@
 
             <div class="modal fade" id="kt_modal_add_customer" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
-                    <form action="{{ route('news.create') }}" enctype="multipart/form-data" method="post">
+                    <form action="{{ route('admin.news.store') }}" enctype="multipart/form-data" method="post">
                         @csrf
 
                         <div class="modal-dialog">

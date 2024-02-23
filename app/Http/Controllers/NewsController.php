@@ -22,18 +22,9 @@ class NewsController extends Controller
         $article = Article::findOrFail($id);
         return view('show-news', ['article' => $article]);
     }
-    public function deleteNews($id) : RedirectResponse
-    {
-        $News = News::find($id);
 
-        if ($News) {
-            $News->update(['deleted_at' => now()]);
-        }
 
-        return redirect()->back();
-    }
-
-    public function createNews(Request $request) : RedirectResponse
+    public function store(Request $request) : RedirectResponse
     {
         $validator = $request->validate([
             'name' => 'required|string',
@@ -45,6 +36,17 @@ class NewsController extends Controller
             'url' => $validator['url'],
         ]);
 
+
+        return redirect()->back();
+    }
+
+    public function destroy($id) : RedirectResponse
+    {
+        $News = News::find($id);
+
+        if ($News) {
+            $News->update(['deleted_at' => now()]);
+        }
 
         return redirect()->back();
     }

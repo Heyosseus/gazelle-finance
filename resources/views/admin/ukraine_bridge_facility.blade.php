@@ -19,7 +19,7 @@
                             <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
                                 <th class="min-w-125px">Title</th>
                                 <th class="min-w-125px">Description</th>
-                                <th class="min-w-125px">Author</th>
+{{--                                <th class="min-w-125px">Author</th>--}}
                                 <th class="min-w-125px">Photo</th>
                                 <th class="min-w-125px">Created at</th>
                                 <th class="min-w-125px">Action</th>
@@ -30,10 +30,10 @@
                             <tr>
                                 <td>{{ $oneUkraineBridgeFacility->title }}</td>
                                 <td>{{ $oneUkraineBridgeFacility->description }}</td>
-                                <td>{{ App\Models\User::whereId($oneUkraineBridgeFacility->author)->select('name')->first()->name }}</td>
+{{--                                <td>{{ App\Models\User::whereId($oneUkraineBridgeFacility->author)->select('name')->first()->name }}</td>--}}
                                 <td><img style="max-width: 120px ; max-height: 120px;" src="{{$oneUkraineBridgeFacility->image}}" alt=""></td>
                                 <td>{{ $oneUkraineBridgeFacility->created_at }}</td>
-                                <td><a href="{{ route('ukraine_bridge_facility.delete', $oneUkraineBridgeFacility->id) }}" class="text-danger">Delete</a></td>
+                                <td><a href="{{ route('admin.ukraine_bridge_facility.delete', $oneUkraineBridgeFacility->id) }}" class="text-danger">Delete</a></td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -70,7 +70,7 @@
 
         <div class="modal fade" id="kt_modal_add_customer" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered mw-650px">
-                <form action="{{ route('ukraine_bridge_facility.create') }}" enctype="multipart/form-data" method="post">
+                <form action="{{ route('admin.ukraine_bridge_facility.store') }}" enctype="multipart/form-data" method="post">
                     @csrf
 
                     <div class="modal-dialog">

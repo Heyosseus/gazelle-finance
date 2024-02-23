@@ -37,7 +37,7 @@
                                 <td>{{ App\Models\User::whereId($article->author)->select('name')->first()->name }}</td>
                                 <td><img style="max-width: 120px ; max-height: 120px;" src="{{$article->photo}}" alt=""></td>
                                 <td>{{ $article->created_at }}</td>
-                                <td><a href="{{ route('articles.delete', $article->id) }}" class="text-danger">Delete</a></td>
+                                <td><a href="{{ route('admin.articles.delete', $article->id) }}" class="text-danger">Delete</a></td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -76,7 +76,7 @@
 
         <div class="modal fade" id="kt_modal_add_customer" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered mw-650px">
-                <form action="{{ route('articles.create') }}" enctype="multipart/form-data" method="post">
+                <form action="{{ route('admin.articles.store') }}" enctype="multipart/form-data" method="post">
                     @csrf
 
                     <div class="modal-dialog">

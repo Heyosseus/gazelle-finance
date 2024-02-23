@@ -37,18 +37,7 @@ class AdminController extends Controller
         return view('news', compact('articles' , 'links'));
     }
 
-    public function deleteArticle($id) : \Illuminate\Http\RedirectResponse
-    {
-        $articles = Article::find($id);
-
-        if ($articles) {
-            $articles->update(['deleted_at' => now()]);
-        }
-
-        return redirect()->back();
-    }
-
-    public function createArticle(Request $request) : \Illuminate\Http\RedirectResponse
+    public function store(Request $request) : \Illuminate\Http\RedirectResponse
     {
         $validator = $request->validate([
             'name' => 'required|string',
@@ -86,12 +75,22 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    public function destroy($id) : \Illuminate\Http\RedirectResponse
+    {
+        $articles = Article::find($id);
+
+        if ($articles) {
+            $articles->update(['deleted_at' => now()]);
+        }
+
+        return redirect()->back();
+    }
     public function logout(): \Illuminate\Foundation\Application|\Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse|\Illuminate\Contracts\Foundation\Application
     {
         Session::flush();
         Auth::logout();
 
-        return redirect(route('admin'));
+        return redirect()->route('login');
 
     }
 }

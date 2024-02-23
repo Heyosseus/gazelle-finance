@@ -19,7 +19,7 @@ class ProductsController extends Controller
         return view('admin.products', ['products' => $products]);
     }
 
-    public function deleteProducts($id)
+    public function destroy($id) : \Illuminate\Http\RedirectResponse
     {
         $products = Products::find($id);
 
@@ -30,7 +30,7 @@ class ProductsController extends Controller
         return redirect()->back();
     }
 
-    public function createProducts(Request $request)
+    public function store(Request $request) : \Illuminate\Http\RedirectResponse
     {
         $validator = $request->validate([
             'name' => 'required|string',
