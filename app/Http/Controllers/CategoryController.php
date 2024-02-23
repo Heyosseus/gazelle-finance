@@ -17,18 +17,9 @@ class CategoryController extends Controller
         return view('admin.categories', ['categories' => $categories]);
     }
 
-    public function deleteCategories($id)
-    {
-        $Category = Category::find($id);
 
-        if ($Category) {
-            $Category->update(['deleted_at' => now()]);
-        }
 
-        return redirect()->back();
-    }
-
-    public function createCategories(Request $request)
+    public function store(Request $request) : \Illuminate\Http\RedirectResponse
     {
         $validator = $request->validate([
             'name' => 'required|string',
@@ -41,4 +32,15 @@ class CategoryController extends Controller
 
         return redirect()->back();
     }
+    public function destroy($id) : \Illuminate\Http\RedirectResponse
+    {
+        $Category = Category::find($id);
+
+        if ($Category) {
+            $Category->update(['deleted_at' => now()]);
+        }
+
+        return redirect()->back();
+    }
+
 }

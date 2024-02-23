@@ -32,7 +32,7 @@
                         <span class="menu-title">Articles</span>
                     </span>
                 </a>
-                <a href="{{ route('categories.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'categories.home' ? 'here' : '' }}">
+                <a href="{{ route('admin.categories.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'categories.home' ? 'here' : '' }}">
                     <span class="menu-link menu-center" style="width: fit-content; padding: 0;" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
@@ -40,7 +40,7 @@
                         <span class="menu-title" >Articles - Categories</span>
                     </span>
                 </a>
-                <a href="{{ route('products.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'products.home' ? 'here' : '' }}">
+                <a href="{{ route('admin.products.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'products.home' ? 'here' : '' }}">
                     <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
@@ -56,7 +56,7 @@
                         <span class="menu-title">About</span>
                     </span>
                 </a>
-                <a href="{{ route('portfolio.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'portfolio.home' ? 'here' : '' }}">
+                <a href="{{ route('admin.portfolio.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'portfolio.home' ? 'here' : '' }}">
                     <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
@@ -64,7 +64,7 @@
                         <span class="menu-title">Portfolio</span>
                     </span>
                 </a>
-                <a href="{{ route('ukraine_bridge_facility.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'ukraine_bridge_facility.home' ? 'here' : '' }}">
+                <a href="{{ route('admin.ukraine_bridge_facility.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'ukraine_bridge_facility.home' ? 'here' : '' }}">
                     <span class="menu-link menu-center" style="width: fit-content; padding: 0;" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
@@ -80,7 +80,7 @@
                         <span class="menu-title">Employees</span>
                     </span>
                 </a>
-                <a href="{{ route('impacts.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'impacts.home' ? 'here' : '' }}">
+                <a href="{{ route('admin.impacts.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'impacts.home' ? 'here' : '' }}">
                     <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
@@ -96,7 +96,7 @@
                         <span class="menu-title">Contact</span>
                     </span>
                 </a>
-                <a href="{{ route('news.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'news.home' ? 'here' : '' }}">
+                <a href="{{ route('admin.news.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'news.home' ? 'here' : '' }}">
                     <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
@@ -150,5 +150,15 @@
     }
     .menu-title{
         font-size: 13px;
+    }
+    #kt_aside {
+        height: calc(100vh); /* Set the height of the sidebar to 100% of the viewport height minus the height of the top bar */
+        overflow-y: scroll; /* Enable vertical scrolling */
+        scrollbar-width: none; /* Hide the scrollbar in Firefox */
+        -ms-overflow-style: none; /* Hide the scrollbar in Internet Explorer and Edge */
+    }
+
+    #kt_aside::-webkit-scrollbar {
+        display: none; /* Hide the scrollbar in WebKit browsers */
     }
 </style>

@@ -17,18 +17,9 @@ class UkraineBridgeFacilityController extends Controller
         return view('admin.ukraine_bridge_facility', ['UkraineBridgeFacility' => $UkraineBridgeFacility]);
     }
 
-    public function deleteUkraine_bridge_facility($id)
-    {
-        $UkraineBridgeFacility = UkraineBridgeFacility::find($id);
 
-        if ($UkraineBridgeFacility) {
-            $UkraineBridgeFacility->update(['deleted_at' => now()]);
-        }
 
-        return redirect()->back();
-    }
-
-    public function createUkraine_bridge_facility(Request $request)
+    public function store(Request $request) : \Illuminate\Http\RedirectResponse
     {
         $validator = $request->validate([
             'name' => 'required|string',
@@ -45,9 +36,20 @@ class UkraineBridgeFacilityController extends Controller
             'title' => $validator['name'],
             'image' => $image_path,
             'description' => $request->input('description'),
-            'author' => Auth::user()->id,
+//            'author' => Auth::user()->id,
         ]);
 
+
+        return redirect()->back();
+    }
+
+    public function destroy($id) : \Illuminate\Http\RedirectResponse
+    {
+        $UkraineBridgeFacility = UkraineBridgeFacility::find($id);
+
+        if ($UkraineBridgeFacility) {
+            $UkraineBridgeFacility->update(['deleted_at' => now()]);
+        }
 
         return redirect()->back();
     }

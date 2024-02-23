@@ -28,7 +28,7 @@
                                 <tr>
                                     <td>{{ $category->title }}</td>
                                     <td>{{ $category->created_at }}</td>
-                                    <td><a href="{{ route('categories.delete', $category->id) }}" class="text-danger">Delete</a>
+                                    <td><a href="{{ route('admin.categories.delete', $category->id) }}" class="text-danger">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -76,7 +76,7 @@
 
             <div class="modal fade" id="kt_modal_add_customer" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
-                    <form action="{{ route('categories.create') }}" enctype="multipart/form-data" method="post">
+                    <form action="{{ route('admin.categories.store') }}" enctype="multipart/form-data" method="post">
                         @csrf
 
                         <div class="modal-dialog">

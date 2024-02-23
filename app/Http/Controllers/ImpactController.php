@@ -10,7 +10,7 @@ use Illuminate\View\View;
 
 class ImpactController extends Controller
 {
-    public function index()
+    public function index() : View
     {
         $impacts = Impact::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
 
@@ -24,18 +24,8 @@ class ImpactController extends Controller
         return view('services.social-impacts', ['impacts' => $impacts]);
     }
 
-    public function deleteImpacts($id)
-    {
-        $impacts = Impact::find($id);
 
-        if ($impacts) {
-            $impacts->update(['deleted_at' => now()]);
-        }
-
-        return redirect()->back();
-    }
-
-    public function createImpacts(Request $request)
+    public function store(Request $request) : \Illuminate\Http\RedirectResponse
     {
         $validator = $request->validate([
             'name' => 'required|string',
@@ -47,7 +37,7 @@ class ImpactController extends Controller
         $path = $request->file('image')->store('public/uploads');
         $image_path = Storage::url($path);
 
-//        dd($request->all());
+        dd($validator);
         Impact::create([
             'image' => $image_path,
             'description' => $request->input('description'),
@@ -56,6 +46,18 @@ class ImpactController extends Controller
         ]);
 
 
+//        return redirect()->back();
+    }
+
+    public function destroy($id) : \Illuminate\Http\RedirectResponse
+    {
+        $impacts = Impact::find($id);
+
+        if ($impacts) {
+            $impacts->update(['deleted_at' => now()]);
+        }
+
         return redirect()->back();
     }
+
 }

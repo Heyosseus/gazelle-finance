@@ -33,7 +33,7 @@
                                 <td>{{ $impact->position }}</td>
                                 <td><img style="max-width: 120px ; max-height: 120px;" src="{{$impact->image}}" alt=""></td>
                                 <td>{{ $impact->created_at }}</td>
-                                <td><a href="{{ route('impacts.delete', $impact->id) }}" class="text-danger">Delete</a></td>
+                                <td><a href="{{ route('admin.impacts.delete', $impact->id) }}" class="text-danger">Delete</a></td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -72,7 +72,7 @@
 
         <div class="modal fade" id="kt_modal_add_customer" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered mw-650px">
-                <form action="{{ route('impacts.create') }}" enctype="multipart/form-data" method="post">
+                <form action="{{ route('admin.impacts.store') }}" enctype="multipart/form-data" method="post">
                     @csrf
 
                     <div class="modal-dialog">

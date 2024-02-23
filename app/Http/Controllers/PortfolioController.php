@@ -24,18 +24,9 @@ class PortfolioController extends Controller
         return view('gazelles', ['portfolio' => $portfolio]);
     }
 
-    public function deletePortfolio($id) : \Illuminate\Http\RedirectResponse
-    {
-        $portfolio = Portfolio::find($id);
 
-        if ($portfolio) {
-            $portfolio->update(['deleted_at' => now()]);
-        }
 
-        return redirect()->back();
-    }
-
-    public function createPortfolio(Request $request) : \Illuminate\Http\RedirectResponse
+    public function store(Request $request) : \Illuminate\Http\RedirectResponse
     {
         $validator = $request->validate([
             'name' => 'required|string',
@@ -67,6 +58,17 @@ class PortfolioController extends Controller
             'logo' => $image_path1,
         ]);
 
+
+        return redirect()->back();
+    }
+
+    public function destroy($id) : \Illuminate\Http\RedirectResponse
+    {
+        $portfolio = Portfolio::find($id);
+
+        if ($portfolio) {
+            $portfolio->update(['deleted_at' => now()]);
+        }
 
         return redirect()->back();
     }

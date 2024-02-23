@@ -1,6 +1,14 @@
 <?php
-namespace App\Http\Controllers;
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ImpactController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\UkraineBridgeFacilityController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
@@ -15,57 +23,48 @@ use Illuminate\Support\Facades\Session;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::middleware(['auth', 'admin'])->group(function () {
-//    Route::get('/', [AdminController::class, 'index'])->name('admin');
+    Route::prefix('admin')->name('admin.')->group(function () {
+        Route::get('/', [AdminController::class, 'index'])->name('home');
+        Route::get('/signout', [AdminController::class, 'logout'])->name('logout');
 
-    Route::get('/signout', function (){
-        Session::flush();
-        Auth::logout();
-        return redirect(route('admin.home'));
-    })->name('admin.logout');
+        Route::get('/articles/delete/{id}', [AdminController::class, 'destroy'])->name('articles.delete');
+        Route::post('/articles/store', [AdminController::class, 'store'])->name('articles.store');
 
-//    Articles
-    Route::get('/admin', [AdminController::class, 'index'])->name('admin.home');
-    Route::get('/articles/delete/{id}', [AdminController::class, 'deleteArticle'])->name('articles.delete');
-    Route::post('/articles/create', [AdminController::class, 'createArticle'])->name('articles.create');
+        Route::get('/categories', [CategoryController::class, 'index'])->name('categories.home');
+        Route::get('/categories/delete/{id}', [CategoryController::class, 'destroy'])->name('categories.delete');
+        Route::post('/categories/store', [CategoryController::class, 'store'])->name('categories.store');
 
-//    Categories
-    Route::get('/categories', [CategoryController::class, 'index'])->name('categories.home');
-    Route::get('/categories/delete/{id}', [CategoryController::class, 'deleteCategories'])->name('categories.delete');
-    Route::post('/categories/create', [CategoryController::class, 'createCategories'])->name('categories.create');
+        Route::get('/products', [ProductsController::class, 'index'])->name('products.home');
+        Route::get('/products/delete/{id}', [ProductsController::class, 'destroy'])->name('products.delete');
+        Route::post('/products/store', [ProductsController::class, 'store'])->name('products.store');
 
-//    Products
-    Route::get('/productsAdmin', [ProductsController::class, 'index'])->name('products.home');
-    Route::get('/products/delete/{id}', [ProductsController::class, 'deleteProducts'])->name('products.delete');
-    Route::post('/products/create', [ProductsController::class, 'createProducts'])->name('products.create');
+        Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio.home');
+        Route::get('/portfolio/delete/{id}', [PortfolioController::class, 'destroy'])->name('portfolio.delete');
+        Route::post('/portfolio/store', [PortfolioController::class, 'store'])->name('portfolio.store');
 
-//    Portfolio
-    Route::get('/portfolioAdmin', [PortfolioController::class, 'index'])->name('portfolio.home');
-    Route::get('/portfolio/delete/{id}', [PortfolioController::class, 'deletePortfolio'])->name('portfolio.delete');
-    Route::post('/portfolio/create', [PortfolioController::class, 'createPortfolio'])->name('portfolio.create');
-//    News
-    Route::get('/newsAdmin', [NewsController::class, 'index'])->name('news.home');
-    Route::get('/news/delete/{id}', [NewsController::class, 'deleteNews'])->name('news.delete');
-    Route::post('/news/create', [NewsController::class, 'createNews'])->name('news.create');
+        Route::get('/newsAdmin', [NewsController::class, 'index'])->name('news.home');
+        Route::get('/news/delete/{id}', [NewsController::class, 'destroy'])->name('news.delete');
+        Route::post('/news/store', [NewsController::class, 'store'])->name('news.store');
 
-//    Impacts
-    Route::get('/impactsAdmin', [ImpactController::class, 'index'])->name('impacts.home');
-    Route::get('/impacts/delete/{id}', [ImpactController::class, 'deleteImpacts'])->name('impacts.delete');
-    Route::post('/impacts/create', [ImpactController::class, 'createImpacts'])->name('impacts.create');
-//    Impacts
-    Route::get('/ukraine_bridge_facilityAdmin', [UkraineBridgeFacilityController::class, 'index'])->name('ukraine_bridge_facility.home');
-    Route::get('/ukraine_bridge_facility/delete/{id}', [UkraineBridgeFacilityController::class, 'deleteUkraine_bridge_facility'])->name('ukraine_bridge_facility.delete');
-    Route::post('/ukraine_bridge_facility/create', [UkraineBridgeFacilityController::class, 'createUkraine_bridge_facility'])->name('ukraine_bridge_facility.create');
+        Route::get('/impacts', [ImpactController::class, 'index'])->name('impacts.home');
+        Route::get('/impacts/delete/{id}', [ImpactController::class, 'destroy'])->name('impacts.delete');
+        Route::post('/impacts/store', [ImpactController::class, 'store'])->name('impacts.store');
 
+        Route::get('/ukraine_bridge_facility', [UkraineBridgeFacilityController::class, 'index'])->name('ukraine_bridge_facility.home');
+        Route::get('/ukraine_bridge_facility/delete/{id}', [UkraineBridgeFacilityController::class, 'destroy'])->name('ukraine_bridge_facility.delete');
+        Route::post('/ukraine_bridge_facility/store', [UkraineBridgeFacilityController::class, 'store'])->name('ukraine_bridge_facility.store');
+    });
 });
 
+// Other routes
 Route::get('/', [HomeController::class, 'index']);
 Route::view('/about', 'about');
 Route::view('/products', 'products');
 Route::view('/ukraine-bridge-facility', 'services/ukraine-bridge-facility');
 Route::view('/careers', 'services/careers');
 Route::view('/ge-office', 'services/georgia-office');
-
 
 Auth::routes();
 Route::get('/news', [AdminController::class, 'news'])->name('news');
@@ -75,7 +74,6 @@ Route::get('/news/{news}', [NewsController::class, 'show'])->name('news.show');
 Route::get('/testimonials', [ImpactController::class, 'impact_stories'])->name('social-impacts');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
-Route::get('/', [HomeController::class, 'index']);
 Route::fallback(function () {
     return view('error');
 });
