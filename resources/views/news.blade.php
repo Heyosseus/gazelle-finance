@@ -1,6 +1,6 @@
 <x-layout>
     <x-header></x-header>
-    <div class="p-8 lg:p-16 flex flex-col xl:flex-row justify-between space-y-5 xl:space-x-5">
+    <div  class="p-8 lg:p-16 flex flex-col xl:flex-row justify-between space-y-5 xl:space-x-5 ">
         <div class="w-full xl:w-1/2 flex flex-col">
             <h1 class="text-4xl text-left py-4">Our <span class="font-bold text-pink-950">Articles</span></h1>
             <div class="w-full h-px bg-gray-300 text-center "></div>
@@ -9,8 +9,8 @@
                     <div>
                         <img src="{{ $article->photo }}" alt="" class="w-full md:w-52 h-auto sm:h-40 object-fill">
                         <div class="flex items-center justify-between mt-4 sm:flex-col sm:items-start sm:mt-0">
-                            <p class="mt-0 text-xs sm:mt-2 sm:text-sm"><strong>Author:</strong>  {{ $article->user?->name ?? 'Gazelle Finance' }}</p>
-                            <p class="text-xs sm:text-sm"><strong>Date:</strong> {{ substr($article->created_at, 0, 11) }}</p>
+                            <p class="mt-0 text-xs sm:mt-2 "><strong>Author:</strong>  {{ $article->user?->name ?? 'Gazelle Finance' }}</p>
+                            <p class="text-xs "><strong>Date:</strong> {{ substr($article->created_at, 0, 11) }}</p>
                         </div>
                     </div>
                     <div class="flex flex-col mt-8 sm:mt-0 space-y-10 w-full">
