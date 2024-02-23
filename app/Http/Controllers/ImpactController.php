@@ -37,7 +37,6 @@ class ImpactController extends Controller
         $path = $request->file('image')->store('public/uploads');
         $image_path = Storage::url($path);
 
-        dd($validator);
         Impact::create([
             'image' => $image_path,
             'description' => $request->input('description'),

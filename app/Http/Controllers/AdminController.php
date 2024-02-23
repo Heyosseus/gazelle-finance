@@ -90,7 +90,7 @@ class AdminController extends Controller
         Session::flush();
         Auth::logout();
 
-        return redirect(route('admin'));
+        return redirect()->route('login');
 
     }
 }

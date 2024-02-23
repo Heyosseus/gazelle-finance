@@ -44,7 +44,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
         Route::get('/portfolio/delete/{id}', [PortfolioController::class, 'destroy'])->name('portfolio.delete');
         Route::post('/portfolio/store', [PortfolioController::class, 'store'])->name('portfolio.store');
 
-        Route::get('/newsAdmin', [NewsController::class, 'index'])->name('news.home');
+        Route::get('/news', [NewsController::class, 'index'])->name('news.home');
         Route::get('/news/delete/{id}', [NewsController::class, 'destroy'])->name('news.delete');
         Route::post('/news/store', [NewsController::class, 'store'])->name('news.store');
 
