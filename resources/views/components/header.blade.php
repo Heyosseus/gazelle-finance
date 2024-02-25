@@ -18,7 +18,7 @@
                          class="hidden absolute z-10 left-0 mt-2 bg-white items-center space-x-6 shadow-md text-black rounded-md text-sm w-[460px]  transition-all ">
                         <div class="p-5 space-y-1">
                             <h1 class="text-lg font-bold pb-2">Our work</h1>
-                            <a href="/ukraine-bridge-facility" class="block py-2 hover:text-pink-950 transition-colors">Ukrainian bridge
+                            <a href="/uk_facility" class="block py-2 hover:text-pink-950 transition-colors">Ukrainian bridge
                                 facility</a>
                             <a href="/portfolio" class="block  pt-2 hover:text-pink-950 transition-colors">Portfolio / Gazelles</a>
                             <a href="/careers" class="block pt-2 hover:text-pink-950 transition-colors">Careers</a>

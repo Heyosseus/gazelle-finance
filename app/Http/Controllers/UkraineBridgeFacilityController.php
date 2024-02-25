@@ -10,14 +10,25 @@ use Illuminate\Support\Facades\Storage;
 
 class UkraineBridgeFacilityController extends Controller
 {
-    public function index()
+    public function index() : \Illuminate\View\View
     {
         $UkraineBridgeFacility = UkraineBridgeFacility::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
 
         return view('admin.ukraine_bridge_facility', ['UkraineBridgeFacility' => $UkraineBridgeFacility]);
     }
 
+    public function uk_facility() : \Illuminate\View\View
+    {
+        $UkraineBridgeFacility = UkraineBridgeFacility::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+        return view('services.ukraine-bridge-facility', ['UkraineBridgeFacility' => $UkraineBridgeFacility]);
 
+    }
+
+    public function show($id) : \Illuminate\View\View
+    {
+        $UkraineBridgeFacility = UkraineBridgeFacility::findOrFail($id);
+        return view('services.show-uk_facility', ['facility' => $UkraineBridgeFacility]);
+    }
 
     public function store(Request $request) : \Illuminate\Http\RedirectResponse
     {
