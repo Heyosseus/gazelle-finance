@@ -1,50 +1,66 @@
 <x-layout>
     <x-header></x-header>
-    <div class="p-6 lg:p-20">
-        <h1 class="text-2xl md:text-4xl ">Georgia <span class="font-bold text-pink-950">Office</span></h1>
-        <div class="w-20 h-0.5 bg-black mt-4"></div>
+    <div class="p-6 lg:p-10">
+        <h1 class="text-2xl md:text-4xl text-center mt-2">Our <span class="font-bold text-pink-950">Offices</span></h1>
+        <div class="w-20 h-0.5 bg-black mt-4 mx-auto"></div>
 
-        <div class="flex flex-col xl:flex-row space-y-5 xl:space-y-0 xl:space-x-10 mt-10">
-            <div class="xl:w-1/3 shadow-2xl p-10 ">
-                <h1 class="uppercase text-xl font-bold ">Why gazelle finance</h1>
-                <p class="text-sm leading-7 mt-10">We provide tailored financial solutions for strong fast-growing small and medium enterprises - companies that we call “gazelles” - that are in need of capital to further expand their businesses. Our financing and partnership-oriented approach
-                    enables entrepreneurs to take their businesses through the next stage of revenue growth and achieve their full potential.</p>
-            </div>
-            <div class="xl:w-1/3 shadow-2xl p-10">
-                <h1 class="uppercase text-xl font-bold">sectors in which gazelle finance invests</h1>
-                <p class="text-sm leading-7 mt-10">We invest across all sectors aside from certain negative-impact business activities such as gambling and tobacco.
-                    The sectors we typically focus on are the following</p>
-            </div>
-            <div class="xl:w-1/3 shadow-2xl p-10">
-                <h1 class="uppercase text-xl font-bold">a thriving ecosystem</h1>
-                <div class="text-sm leading-7 mt-10">Gazelle Finance is strategically located in the South Caucasus region, which provides many unique advantages. Gazelle Finance maintains operations in Armenia and Georgia, countries with deep economic and cultural ties to the famous ancient East - West trade route, the Silk Road. Not only is the Silk Road historically significant, but the Silk Road has long been a gateway to Europe and the Mediterranean Sea for Asian Markets.
-                    <br><br>
-                    <span class="additional-text" style="display: none;">Through its two offices in Tbilisi and Yerevan, Gazelle Finance provides services not only in the capital cities, but also country - wide. Gazelle Finance has investment professionals within a six - hour drive of almost any point in either country.</span>
-                    <a href="#" class="read-more text-pink-950 font-semibold mt-5 flex items-center space-x-2">
-                        <p>Read more </p>
-                        <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
-                    </a>
+        <div class="flex flex-col-reverse xl:flex-row justify-around space-y-3 xl:space-y-0 xl:space-x-10 mt-12">
+
+            <div class="xl:w-1/2 shadow-2xl px-10 py-1 bg-gray-50 ">
+                <h1 class="uppercase text-xl font-bold text-pink-950">PLEASE CONTACT US AT OUR RELEVANT COUNTRY
+                    OFFICE:</h1>
+                <div class="space-y-1">
+                    <p class="text-xl font-bold text-pink-950 leading-7 mt-10">Tbilisi, Georgia.</p>
+                    <p class="text-sm  mt-10 italic">- 8a Petre Melikishvili/1 Erekle Tatishvili Street, 0179
+                        Melikishvili Business Center, 7th Floor</p>
+                    <p class="text-sm leading-7 mt-10">- +995 32 2 243 432</p>
+                    <p class="text-sm leading-7 mt-10">- +995 591 117 936</p>
+                    <div>
+                        <a href="mailto:admin@gazellefinance.com" class="font-bold text-blue-500 text-sm"><span class="text-black font-normal">-</span> admin@gazellefinance.com </a>
+                    </div>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-xl font-bold text-pink-950 leading-7 mt-10">Yerevan, Armenia.</p>
+                    <p class="text-sm  mt-10 italic">- Teryan St., 105/1 Buidling, 5th Floor, Office 505, Citadel
+                        Business Center, Kentron adm.district </p>
+                    <p class="text-sm leading-7 mt-10">- +374-12-883880 </p>
+                    <div><a href="mailto:armenia@gazellefinance.com" class="font-bold text-blue-500 text-sm"><span class="text-black font-normal">-</span> armenia@gazellefinance.com </a>
+                    </div>
                 </div>
             </div>
+            <div class="w-full h-[500px] mx-auto z-10">
+                <div class="w-full h-full" id="mapid"></div>
+            </div>
         </div>
+
+
     </div>
     <x-footer></x-footer>
 </x-layout>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+      integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+      crossorigin=""/>
+
+
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+        integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+        crossorigin=""></script>
+
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var readMoreLink = document.querySelector('.read-more');
-        var additionalText = document.querySelector('.additional-text');
+    var map = L.map('mapid').setView([41.70718712284052, 44.78507985407697], 7);
 
-        readMoreLink.addEventListener('click', function(event) {
-            event.preventDefault();
+    var marker1 = L.marker([41.70718712284052, 44.78507985407697], {color: 'red'}).addTo(map);
+    var marker2 = L.marker([40.189924815327025, 44.521968018359935]).addTo(map);
+    var baseUrl = "{{ url('/') }}";
 
-            if (additionalText.style.display === 'none') {
-                additionalText.style.display = 'inline';
-                readMoreLink.textContent = 'Read less';
-            } else {
-                additionalText.style.display = 'none';
-                readMoreLink.textContent = 'Read more';
-            }
-        });
-    });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        minZoom: 2, // Set a minimum zoom level
+        maxZoom: 18, // Set a maximum zoom level
+        tileSize: 512, // Set tile size to 512x512 for better performance
+        zoomOffset: -1, // Adjust zoom offset
+        detectRetina: true, // Detect retina displays
+    }).addTo(map);
+
 </script>
+

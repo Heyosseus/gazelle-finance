@@ -63,7 +63,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::view('/about', 'about');
 Route::view('/products', 'products');
 Route::view('/careers', 'services/careers');
-Route::view('/ge-office', 'services/georgia-office');
+Route::view('/offices', 'services/georgia-office');
 
 Auth::routes();
 Route::get('/news', [AdminController::class, 'news'])->name('news');

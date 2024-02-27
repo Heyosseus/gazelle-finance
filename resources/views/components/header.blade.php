@@ -25,7 +25,7 @@
                         </div>
                         <div class="p-5 space-y-1">
                             <h1 class="text-lg font-bold pb-2">Company</h1>
-                            <a href="/ge-office" class="block  py-2 hover:text-pink-950 transition-colors">Georgia's office</a>
+                            <a href="/offices" class="block  py-2 hover:text-pink-950 transition-colors">Georgia's office</a>
                             <a href="https://gazellefinance.am/language/en/home/" target="_blank" class="block  pt-2 hover:text-pink-950 transition-colors">Armenia's office</a>
                             <a href="/testimonials" class="block pt-2 hover:text-pink-950 transition-colors">Testimonials</a>
 
