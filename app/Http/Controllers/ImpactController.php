@@ -7,19 +7,24 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Cache;
 
 class ImpactController extends Controller
 {
     public function index() : View
     {
-        $impacts = Impact::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+        $impacts = Cache::remember('impacts', now()->addDay(), function () {
+            return Impact::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+        });
 
         return view('admin.impacts', ['impacts' => $impacts]);
     }
 
     public function impact_stories() : View
     {
-        $impacts = Impact::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+        $impacts = Cache::remember('impacts', now()->addDay(), function () {
+            return Impact::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+        });
 
         return view('services.social-impacts', ['impacts' => $impacts]);
     }
@@ -44,8 +49,9 @@ class ImpactController extends Controller
             'position' => $request->input('position'),
         ]);
 
+        Cache::forget('impacts');
 
-//        return redirect()->back();
+        return redirect()->back();
     }
 
     public function destroy($id) : \Illuminate\Http\RedirectResponse
@@ -54,6 +60,7 @@ class ImpactController extends Controller
 
         if ($impacts) {
             $impacts->update(['deleted_at' => now()]);
+            Cache::forget('impacts');
         }
 
         return redirect()->back();

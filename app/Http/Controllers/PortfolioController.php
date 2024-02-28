@@ -7,12 +7,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Cache;
 
 class PortfolioController extends Controller
 {
     public function index() : View
     {
-        $portfolio = Portfolio::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+        $portfolio = Cache::remember('portfolio', now()->addDay(), function () {
+            return Portfolio::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+        });
 
         return view('admin.portfolio', ['portfolio' => $portfolio]);
     }
@@ -58,7 +61,7 @@ class PortfolioController extends Controller
             'logo' => $image_path1,
         ]);
 
-
+        Cache::forget('portfolio');
         return redirect()->back();
     }
 
@@ -68,6 +71,7 @@ class PortfolioController extends Controller
 
         if ($portfolio) {
             $portfolio->update(['deleted_at' => now()]);
+            Cache::forget('portfolio');
         }
 
         return redirect()->back();

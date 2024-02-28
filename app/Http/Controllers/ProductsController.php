@@ -8,27 +8,20 @@ use App\Models\Products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Cache;
 
 class ProductsController extends Controller
 {
 
     public function index()
     {
-        $products = Products::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+        $products = Cache::remember('products', now()->addDay(), function () {
+            return Products::orderBy('id', 'DESC')->where('deleted_at', null)->get();
+        });
 
         return view('admin.products', ['products' => $products]);
     }
 
-    public function destroy($id) : \Illuminate\Http\RedirectResponse
-    {
-        $products = Products::find($id);
-
-        if ($products) {
-            $products->update(['deleted_at' => now()]);
-        }
-
-        return redirect()->back();
-    }
 
     public function store(Request $request) : \Illuminate\Http\RedirectResponse
     {
@@ -50,6 +43,18 @@ class ProductsController extends Controller
             'author' => Auth::user()->id,
         ]);
 
+        Cache::forget('products');
+        return redirect()->back();
+    }
+
+    public function destroy($id) : \Illuminate\Http\RedirectResponse
+    {
+        $products = Products::find($id);
+
+        if ($products) {
+            $products->update(['deleted_at' => now()]);
+            Cache::forget('products');
+        }
 
         return redirect()->back();
     }

@@ -7,15 +7,32 @@ use App\Models\News;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Cache;
 
 class NewsController extends Controller
 {
     public function index() : View
     {
-        $news = News::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+        $news = Cache::remember('news_links', now()->addDay(), function () {
+            return News::orderBy('id', 'DESC')->where('deleted_at', null)->get();
+        });
 
         return view('admin.news', ['news' => $news]);
     }
+
+    public function news(Article $article): View
+    {
+        $links = Cache::remember('news_links', now()->addDay(), function () {
+            return News::all();
+        });
+        $articles = Cache::remember('articles-page' . request('page', 1), now()->addDay(), function () {
+            return Article::with('user')->paginate(2);
+        });
+
+
+        return view('news', compact('articles' , 'links'));
+    }
+
 
     public function show($id) : View
     {
@@ -36,6 +53,7 @@ class NewsController extends Controller
             'url' => $validator['url'],
         ]);
 
+        Cache::forget('news_links');
 
         return redirect()->back();
     }
@@ -46,6 +64,7 @@ class NewsController extends Controller
 
         if ($News) {
             $News->update(['deleted_at' => now()]);
+            Cache::forget('news_links');
         }
 
         return redirect()->back();
