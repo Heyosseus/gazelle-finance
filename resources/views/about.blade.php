@@ -54,8 +54,8 @@
             <h1 class="text-4xl text-center">Find out more <span class="font-bold text-pink-950"> About Us</span></h1>
             <div class="w-60 h-[1px] bg-gray-950 mx-auto mt-2"></div>
 
-            <div class="flex flex-col lg:flex-row justify-between mt-10 ">
-                <div class="w-full  xl:w-1/3 shadow-xl flex flex-col spac-y-3   p-5 py-10  justify-between  rounded-xl">
+            <div class="flex flex-col lg:flex-row justify-between mt-10 lg:space-x-4">
+                <div class="w-full  xl:w-1/3 shadow-xl flex flex-col space-y-3   p-5 py-10  justify-between  rounded-xl">
                     <div class="flex justify-between  items-start">
                         <h1 class="text-pink-950 text-2xl font-bold">CAREERS AT GAZELLE</h1>
                         <div class="rounded-full bg-gray-300 p-3">
@@ -103,11 +103,11 @@
                     <p class="">We are a team of seasoned professionals with significant global
                         and local business knowledge and deep SME investment expertise.</p>
                     <div class="flex flex-col items-center w-full space-y-2 xl:flex-row xl:space-y-0 xl:space-x-2">
-                        <a href="/team" class="text-sm shadow border p-2  rounded w-full  hover:text-gray-500">Our
+                        <a href="/team" class="text-sm shadow border p-2  rounded w-full xl:w-fit  hover:text-gray-500">Our
                             Expertise</a>
-                        <a href="/team" class="text-sm shadow border p-2 rounded  w-full  hover:text-gray-500">Global
+                        <a href="/team" class="text-sm shadow border p-2 rounded  w-full xl:w-fit  hover:text-gray-500">Global
                             Insight</a>
-                        <a href="/team" class="text-sm shadow border p-2 rounded   w-full hover:text-gray-500">Local
+                        <a href="/team" class="text-sm shadow border p-2 rounded   w-full xl:w-fit hover:text-gray-500">Local
                             Knowledge</a>
                     </div>
                 </div>
@@ -126,11 +126,11 @@
                         for gazelles, including risk-sharing, performance-based features. Given our higher risk profile,
                         we also expect higher returns.</p>
                     <div class="flex flex-col items-center w-full space-y-2 xl:flex-row xl:space-y-0 xl:space-x-2">
-                    <a href="/products" class="text-sm shadow border p-2 rounded w-full  hover:text-gray-500">
+                    <a href="/products" class="text-sm shadow border p-2 rounded w-full xl:w-fit  hover:text-gray-500">
                             Equity-like Financing</a>
-                        <a href="/products" class="text-sm shadow border p-2 rounded w-full    hover:text-gray-500">Risk-sharing
+                        <a href="/products" class="text-sm shadow border p-2 rounded w-full xl:w-fit    hover:text-gray-500">Risk-sharing
                             Features</a>
-                        <a href="/products" class="text-sm shadow border p-2 rounded w-full  hover:text-gray-500">Higher
+                        <a href="/products" class="text-sm shadow border p-2 rounded w-full xl:w-fit  hover:text-gray-500">Higher
                             Returns</a>
                     </div>
 
@@ -147,10 +147,8 @@
                     <p class="text-gray-200">Reach out to us to learn more about our services and how we can help your business thrive. Whether you're looking to partner with us, explore investment
                         opportunities, or simply have a question, we're here to help.</p>
                     <div class="flex flex-col items-center w-full space-y-2 xl:flex-row xl:space-y-0 xl:space-x-2">
-                        <a href="{{ env('APP_URL') }}#contact_us" class="text-sm shadow border p-2 w-full rounded text-white hover:text-gray-500">Contact
+                            <a href="{{ env('APP_URL') }}#contact_us" class="text-sm shadow border p-2 w-full  rounded text-white hover:text-gray-500">Contact
                             Us</a>
-                        <a href="{{ env('APP_URL') }}#contact_us" class="text-sm shadow border p-2 w-full  rounded text-white  hover:text-gray-500">
-                            More Information</a>
                         <a href="{{ env('APP_URL') }}#contact_us"
                            class="text-sm shadow border p-2 rounded  text-white w-full hover:text-gray-500">Join Our
                             Network</a>
