@@ -7,19 +7,25 @@ use App\Models\UkraineBridgeFacility;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Cache;
 
 class UkraineBridgeFacilityController extends Controller
 {
     public function index() : \Illuminate\View\View
     {
-        $UkraineBridgeFacility = UkraineBridgeFacility::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+        $UkraineBridgeFacility = Cache::remember('ukraine_bridge_facility', now()->addHours(24), function () {
+            return UkraineBridgeFacility::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+        });
+
 
         return view('admin.ukraine_bridge_facility', ['UkraineBridgeFacility' => $UkraineBridgeFacility]);
     }
 
     public function uk_facility() : \Illuminate\View\View
     {
-        $UkraineBridgeFacility = UkraineBridgeFacility::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+        $UkraineBridgeFacility = Cache::remember('ukraine_bridge_facility', now()->addHours(24), function () {
+            return UkraineBridgeFacility::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
+        });
         return view('services.ukraine-bridge-facility', ['UkraineBridgeFacility' => $UkraineBridgeFacility]);
 
     }
@@ -50,7 +56,7 @@ class UkraineBridgeFacilityController extends Controller
 //            'author' => Auth::user()->id,
         ]);
 
-
+        Cache::forget('ukraine_bridge_facility');
         return redirect()->back();
     }
 
@@ -60,6 +66,7 @@ class UkraineBridgeFacilityController extends Controller
 
         if ($UkraineBridgeFacility) {
             $UkraineBridgeFacility->update(['deleted_at' => now()]);
+            Cache::forget('ukraine_bridge_facility');
         }
 
         return redirect()->back();

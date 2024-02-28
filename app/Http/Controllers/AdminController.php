@@ -11,31 +11,30 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Cache;
 
 class AdminController extends Controller
 {
-    public function getArticlesAndCategories(): array
+    public function getArticles(): \Illuminate\Support\Collection
     {
-        $articles = Article::with('category')->latest()->get();
-        $categories = Category::pluck('title', 'id')->toArray();
+        return Cache::remember('articles', now()->addHours(24), function () {
+            return Article::with('category')->latest()->get();
+        });
+    }
 
-        return compact('articles', 'categories');
+    public function getCategories(): array
+    {
+        return Category::pluck('title', 'id')->toArray();
     }
 
     public function index(): View
     {
-        $data = $this->getArticlesAndCategories();
+        $articles = $this->getArticles();
+        $categories = $this->getCategories();
 
-        return view('admin.articles', $data);
+        return view('admin.articles', compact('articles', 'categories'));
     }
 
-    public function news(Article $article): View
-    {
-        $links = News::all();
-        $articles = Article::with('user')->latest()->paginate(2);
-
-        return view('news', compact('articles' , 'links'));
-    }
 
     public function store(Request $request) : \Illuminate\Http\RedirectResponse
     {
@@ -71,6 +70,8 @@ class AdminController extends Controller
             'categories_id' => $category_ids,
         ]);
 
+        Cache::forget('articles');
+
 
         return redirect()->back();
     }
@@ -81,6 +82,7 @@ class AdminController extends Controller
 
         if ($articles) {
             $articles->update(['deleted_at' => now()]);
+            Cache::forget('articles');
         }
 
         return redirect()->back();
