@@ -13,7 +13,7 @@ class NewsController extends Controller
 {
     public function index() : View
     {
-        $news = Cache::remember('news_links', now()->addDay(), function () {
+        $news = Cache::remember('news_links', now()->addHours(24), function () {
             return News::orderBy('id', 'DESC')->where('deleted_at', null)->get();
         });
 
@@ -22,11 +22,11 @@ class NewsController extends Controller
 
     public function news(Article $article): View
     {
-        $links = Cache::remember('news_links', now()->addDay(), function () {
+        $links = Cache::remember('news_links', now()->addHours(24), function () {
             return News::all();
         });
         $articles = Cache::remember('articles-page' . request('page', 1), now()->addDay(), function () {
-            return Article::with('user')->paginate(2);
+            return Article::with('user')->latest()->paginate(2);
         });
 
 

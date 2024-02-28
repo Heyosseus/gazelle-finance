@@ -15,7 +15,7 @@ class ProductsController extends Controller
 
     public function index()
     {
-        $products = Cache::remember('products', now()->addDay(), function () {
+        $products = Cache::remember('products', now()->addHours(24), function () {
             return Products::orderBy('id', 'DESC')->where('deleted_at', null)->get();
         });
 

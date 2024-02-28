@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Portfolio;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Cache;
 
 class HomeController extends Controller
 {
@@ -23,7 +24,9 @@ class HomeController extends Controller
      */
     public function index() : View
     {
-        $articles = Article::with('category')->orderBy('id', 'DESC')->limit(3)->get();
+        $articles = Cache::remember('articles', now()->addHours(24), function () {
+            return Article::with('category')->orderBy('id', 'DESC')->limit(3)->get();
+        });
         $logos = Portfolio::where('deleted_at' , null)->pluck('logo')->toArray();
 
         return view('home', compact('articles', 'logos'));

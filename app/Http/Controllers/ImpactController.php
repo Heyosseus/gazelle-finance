@@ -13,7 +13,7 @@ class ImpactController extends Controller
 {
     public function index() : View
     {
-        $impacts = Cache::remember('impacts', now()->addDay(), function () {
+        $impacts = Cache::remember('impacts', now()->addHours(24), function () {
             return Impact::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
         });
 
@@ -22,7 +22,7 @@ class ImpactController extends Controller
 
     public function impact_stories() : View
     {
-        $impacts = Cache::remember('impacts', now()->addDay(), function () {
+        $impacts = Cache::remember('impacts', now()->addHours(24), function () {
             return Impact::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
         });
 

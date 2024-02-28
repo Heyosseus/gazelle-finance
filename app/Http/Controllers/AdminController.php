@@ -17,7 +17,7 @@ class AdminController extends Controller
 {
     public function getArticles(): \Illuminate\Support\Collection
     {
-        return Cache::remember('articles', now()->addDay(), function () {
+        return Cache::remember('articles', now()->addHours(24), function () {
             return Article::with('category')->latest()->get();
         });
     }
@@ -70,7 +70,6 @@ class AdminController extends Controller
             'categories_id' => $category_ids,
         ]);
 
-        Cache::forget('articles');
         Cache::forget('articles');
 
 

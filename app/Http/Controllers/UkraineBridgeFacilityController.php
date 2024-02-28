@@ -13,7 +13,7 @@ class UkraineBridgeFacilityController extends Controller
 {
     public function index() : \Illuminate\View\View
     {
-        $UkraineBridgeFacility = Cache::remember('ukraine_bridge_facility', now()->addDay(), function () {
+        $UkraineBridgeFacility = Cache::remember('ukraine_bridge_facility', now()->addHours(24), function () {
             return UkraineBridgeFacility::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
         });
 
@@ -23,7 +23,7 @@ class UkraineBridgeFacilityController extends Controller
 
     public function uk_facility() : \Illuminate\View\View
     {
-        $UkraineBridgeFacility = Cache::remember('ukraine_bridge_facility', now()->addDay(), function () {
+        $UkraineBridgeFacility = Cache::remember('ukraine_bridge_facility', now()->addHours(24), function () {
             return UkraineBridgeFacility::orderBy('id', 'DESC')->where('deleted_at' , null)->get();
         });
         return view('services.ukraine-bridge-facility', ['UkraineBridgeFacility' => $UkraineBridgeFacility]);
