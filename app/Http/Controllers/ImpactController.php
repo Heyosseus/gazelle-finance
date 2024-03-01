@@ -30,23 +30,23 @@ class ImpactController extends Controller
     }
 
 
-    public function store(Request $request) : \Illuminate\Http\RedirectResponse
+    public function store(Request $request)
     {
         $validator = $request->validate([
             'name' => 'required|string',
             'description' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp',
+            'position' => 'required|string',
         ]);
-
 
         $path = $request->file('image')->store('public/uploads');
         $image_path = Storage::url($path);
 
         Impact::create([
             'image' => $image_path,
-            'description' => $request->input('description'),
-            'author' => $request->input('name'),
-            'position' => $request->input('position'),
+            'description' => $validator['description'],
+            'author' => $validator['name'],
+            'position' => $validator['position'],
         ]);
 
         Cache::forget('impacts');

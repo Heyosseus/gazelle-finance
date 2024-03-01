@@ -19,7 +19,7 @@
                             <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
                                 <th class="min-w-125px">Title</th>
                                 <th class="min-w-125px">Description</th>
-                                <th class="min-w-125px">Author</th>
+{{--                                <th class="min-w-125px">Author</th>--}}
                                 <th class="min-w-125px">Photo</th>
                                 <th class="min-w-125px">Created at</th>
                                 <th class="min-w-125px">Action</th>
@@ -30,7 +30,7 @@
                             <tr>
                                 <td>{{ $product->title }}</td>
                                 <td>{{ $product->description }}</td>
-                                <td>{{ App\Models\User::whereId($product->author)->select('name')->first()->name }}</td>
+{{--                                <td>{{ App\Models\User::whereId($product->author)->select('name')->first()->name }}</td>--}}
                                 <td><img style="max-width: 120px ; max-height: 120px;" src="{{$product->image}}" alt=""></td>
                                 <td>{{ $product->created_at }}</td>
                                 <td><a href="{{ route('admin.products.delete', $product->id) }}" class="text-danger">Delete</a></td>

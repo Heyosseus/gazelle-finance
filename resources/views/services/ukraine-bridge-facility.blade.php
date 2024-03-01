@@ -10,7 +10,7 @@
 
         <h1 class="text-4xl text-center py-4">Ukraine bridge <span class="font-bold text-pink-950">facility</span></h1>
         <div class="w-44 h-px bg-black text-center mx-auto mb-10"></div>
-        <p class="text-center w-1/2 mx-auto mb-20">With the support of its investors, GF will provide bridge financing
+        <p class="text-center w-full lg:w-1/2 mx-auto mb-20">With the support of its investors, GF will provide bridge financing
             and technical support to a select group of Ukrainian companies and their employees</p>
         <div class="flex flex-col lg:flex-row lg:justify-between lg:space-x-20">
 
