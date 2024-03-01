@@ -32,7 +32,7 @@
                                 <td>{{ $article->title }}</td>
                                 <td>{{ $article->description }}</td>
                                 <td>
-                                    {{ $article->category->title}}
+                                    {{ $article->category->title ?? '' }}
                                 </td>
                                 <td>{{ App\Models\User::whereId($article->author)->select('name')->first()->name }}</td>
                                 <td><img style="max-width: 120px ; max-height: 120px;" src="{{$article->photo}}" alt=""></td>

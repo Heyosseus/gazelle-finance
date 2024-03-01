@@ -40,7 +40,7 @@ class ProductsController extends Controller
             'title' => $validator['name'],
             'image' => $image_path,
             'description' => $request->input('description'),
-            'author' => Auth::user()->id,
+//            'author' => Auth::user()->id,
         ]);
 
         Cache::forget('products');

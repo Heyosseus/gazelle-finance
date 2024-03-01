@@ -11,5 +11,6 @@ class Impact extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $table = 'impacts';
     protected $guarded = [];
 }

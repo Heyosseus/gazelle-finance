@@ -27,7 +27,7 @@
                             <h1 class="text-lg font-bold pb-2">Company</h1>
                             <a href="/offices" class="block  py-2 hover:text-pink-950 transition-colors">Georgia's office</a>
                             <a href="https://gazellefinance.am/language/en/home/" target="_blank" class="block  pt-2 hover:text-pink-950 transition-colors">Armenia's office</a>
-                            <a href="/testimonials" class="block pt-2 hover:text-pink-950 transition-colors">Testimonials</a>
+                            <a href="/team" class="block pt-2 hover:text-pink-950 transition-colors">Team</a>
 
                         </div>
 
@@ -54,8 +54,8 @@
                     <div id="contactDropdown"
                          class="hidden align-center absolute z-20 left-0 mt-2 bg-white space-x-6 shadow-md text-black rounded-md text-sm w-[120px]  ml-[-10px] opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300">
                         <div class="p-4 space-y-1">
-                            <a href="/team" class="block  hover:text-pink-950 transition-colors">Team</a>
-                            <a href="{{ env('APP_URL') }}#partners" class="block py-2 hover:text-pink-950 transition-colors">Partners</a>
+                            <a href="/testimonials" class="block  hover:text-pink-950 transition-colors">Testimonials</a>
+                            <a href="{{ env('APP_URL') }}#partners" class="block pt-2 hover:text-pink-950 transition-colors">Partners</a>
                             <a href="{{ env('APP_URL') }}#contact_us" class="block pt-2 hover:text-pink-950 transition-colors">Contact us</a>
                         </div>
                     </div>
@@ -76,18 +76,27 @@
 
         <div id="sidebar"
              class=" lg:hidden fixed top-0 left-[-10px] w-[80vw] h-full bg-white shadow-xl transform -translate-x-full overflow-y-auto transition-transform duration-300 ease-in-out z-40">
-            <div class="px-10 py-7 md:px-20 md:py-10 select-none">
+            <div class="px-10 py-7 md:px-20 md:py-12 select-none">
                 <div class="flex items-start justify-between">
                     <h1 class="font-bold mb-4 text-3xl">Links</h1>
                     <img src="{{ asset('icons/closeIcon.svg') }} " alt="" width="30" id="close" class="cursor-pointer active:rotate-[360deg] duration-300 transition" >
                 </div>
-                <a href="#services" class="block py-2 text-xl relative group">
+                <div id="services-link" class="block py-2 text-xl relative group">
                     <span class="flex justify-between items-center"><p>Services</p> <img src="{{asset('icons/rightArrow.svg')}}" alt="" width="15"></span>
 
                     <span
                         class="absolute inset-x-0 bottom-0 h-[2px]  bg-pink-950 origin-left transform scale-x-0 transition-transform duration-700  group-hover:scale-x-100">
                     </span>
-                </a>
+                    <div class="submenu hidden  py-2 px-4 mt-2">
+                        <a href="/uk_facility" class="block py-2  text-sm hover:text-pink-950 transition-colors">Ukrainian bridge
+                            facility</a>
+                        <a href="/portfolio" class="block  py-2 text-sm  hover:text-pink-950 transition-colors">Portfolio / Gazelles</a>
+                        <a href="/careers" class="block py-2  text-sm hover:text-pink-950 transition-colors">Careers</a>
+                        <a href="/offices" class="block  py-2  text-sm hover:text-pink-950 transition-colors">Georgia's office</a>
+                        <a href="https://gazellefinance.am/language/en/home/" target="_blank" class="block  text-sm  pt-2 hover:text-pink-950 transition-colors">Armenia's office</a>
+                        <a href="/team" class="block pt-2 text-sm  hover:text-pink-950 transition-colors">Team</a>
+                    </div>
+                </div>
                 <a href="/about" class="block py-2 text-xl relative group">
                     <span class="flex justify-between items-center"><p>About</p> <img src="{{asset('icons/rightArrow.svg')}}" alt="" width="15"></span>
 
@@ -114,10 +123,27 @@
                     <span
                         class="absolute inset-x-0 bottom-0 h-[2px] bg-black origin-left transform scale-x-0 transition-transform duration-700 group-hover:scale-x-100">
                     </span>
+                </a><a href="{{ env('APP_URL') }}/testimonials" class="block py-2 text-xl relative group cursor-pointer">
+                    <span class="flex justify-between items-center"><p>Testimonials</p> <img src="{{asset('icons/rightArrow.svg')}}" alt="" width="15"></span>
+                    <span
+                        class="absolute inset-x-0 bottom-0 h-[2px] bg-black origin-left transform scale-x-0 transition-transform duration-700 group-hover:scale-x-100">
+                    </span>
                 </a>
             </div>
         </div>
     </div>
 </x-layout>
 
+<script>
+    document.getElementById('services-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        const submenu = this.querySelector('.submenu');
+        submenu.classList.toggle('hidden');
+    });
 
+    document.querySelectorAll('.submenu a').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.stopPropagation(); // Stop the click event from bubbling up
+        });
+    });
+</script>

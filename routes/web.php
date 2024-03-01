@@ -64,7 +64,7 @@ Route::view('/about', 'about');
 Route::view('/products', 'products');
 Route::view('/careers', 'services/careers');
 Route::view('/offices', 'services/georgia-office');
-
+Route::view('/team', 'services/team');
 Auth::routes();
 Route::get('/news', [NewsController::class, 'news'])->name('news');
 Route::get('/blog', [AdminController::class, 'blog'])->name('blog');
