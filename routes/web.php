@@ -8,6 +8,8 @@ use App\Http\Controllers\ImpactController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\VacancyController;
+use App\Http\Controllers\VacancyResponseController;
 use App\Http\Controllers\UkraineBridgeFacilityController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -55,6 +57,16 @@ Route::middleware(['auth', 'admin'])->group(function () {
         Route::get('/ukraine_bridge_facility', [UkraineBridgeFacilityController::class, 'index'])->name('ukraine_bridge_facility.home');
         Route::get('/ukraine_bridge_facility/delete/{id}', [UkraineBridgeFacilityController::class, 'destroy'])->name('ukraine_bridge_facility.delete');
         Route::post('/ukraine_bridge_facility/store', [UkraineBridgeFacilityController::class, 'store'])->name('ukraine_bridge_facility.store');
+
+        Route::get('/contact', [ContactController::class, 'index'])->name('contact.home');
+        Route::get('/contact/delete/{id}', [ContactController::class, 'destroy'])->name('contact.delete');
+
+        Route::get('/vacancies', [VacancyController::class, 'index'])->name('vacancies.home');
+        Route::post('/vacancies/store', [VacancyController::class, 'store'])->name('vacancies.store');
+        Route::get('/vacancies/delete/{id}', [VacancyController::class, 'destroy'])->name('vacancies.delete');
+
+        Route::get('/vacancy-responses', [VacancyResponseController::class, 'index'])->name('vacancy-responses.home');
+        Route::get('/vacancy-responses/delete/{id}', [VacancyResponseController::class, 'destroy'])->name('vacancy-responses.delete');
     });
 });
 
@@ -62,7 +74,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 Route::get('/', [HomeController::class, 'index']);
 Route::view('/about', 'about');
 Route::view('/products', 'products');
-Route::view('/careers', 'services/careers');
+//Route::view('/careers', 'services/careers');
 Route::view('/offices', 'services/georgia-office');
 Route::view('/team', 'services/team');
 Auth::routes();
@@ -72,8 +84,10 @@ Route::get('/portfolio', [PortfolioController::class, 'portfolio'])->name('portf
 Route::get('/news/{news}', [NewsController::class, 'show'])->name('news.show');
 Route::get('/testimonials', [ImpactController::class, 'impact_stories'])->name('social-impacts');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/vacancy', [VacancyResponseController::class, 'store'])->name('vacancy-response.store');
 Route::get('/uk_facility', [UkraineBridgeFacilityController::class, 'uk_facility'])->name('uk_facility');
 Route::get('/uk_facility/{facility}', [UkraineBridgeFacilityController::class, 'show'])->name('uk_facility.show');
+Route::get('/careers', [VacancyController::class, 'careers'])->name('careers');
 
 Route::fallback(function () {
     return view('error');
