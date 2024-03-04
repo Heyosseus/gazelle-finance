@@ -5,18 +5,23 @@ namespace App\Http\Controllers;
 use App\Models\Vacancy;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class VacancyController extends Controller
 {
     public function index() : \Illuminate\View\View
     {
-        $vacancies = Vacancy::orderBy('id', 'DESC')->get();
+        $vacancies = Cache::remember('vacancies', now()->addHours(24), function () {
+            return Vacancy::orderBy('id', 'DESC')->get();
+        });
         return view('admin.vacancies', compact('vacancies'));
     }
 
-    public function careers()
+    public function careers() : \Illuminate\View\View
     {
-        $vacancies = Vacancy::orderBy('id', 'DESC')->get();
+        $vacancies = Cache::remember('vacancies', now()->addHours(24), function () {
+            return Vacancy::orderBy('id', 'DESC')->get();
+        });
         return view('services.careers', compact('vacancies'));
     }
     public function store(Request $request) : \Illuminate\Http\RedirectResponse
@@ -27,6 +32,7 @@ class VacancyController extends Controller
         ]);
 
         Vacancy::create($attributes);
+        Cache::forget('vacancies');
 
         return redirect()->back()->with('success', 'Your message has been sent successfully.');
     }
@@ -36,6 +42,7 @@ class VacancyController extends Controller
 
         if($vacancy) {
             $vacancy->delete();
+            Cache::forget('vacancies');
         }
         return redirect()->back()->with('success', 'Message has been deleted successfully.');
     }
