@@ -112,7 +112,7 @@
                         <span class="menu-title">Office</span>
                     </span>
                 </a>
-                <a  class="menu-item py-2 {{ Request::route()->getName() === 'categories' ? 'here' : '' }}">
+                <a href="{{route('admin.vacancies.home')}}" class="menu-item py-2 {{ Request::route()->getName() === 'categories' ? 'here' : '' }}">
                     <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
@@ -120,12 +120,20 @@
                         <span class="menu-title">Vacancies</span>
                     </span>
                 </a>
-                <a  class="menu-item py-2 {{ Request::route()->getName() === 'categories' ? 'here' : '' }}">
+                <a href="{{route('admin.vacancy-responses.home')}}"  class="menu-item py-2 {{ Request::route()->getName() === 'vacancy-responses' ? 'here' : '' }}">
                     <span class="menu-link menu-center" style="width: fit-content; padding: 0;" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>
                         </span>
-                        <span class="menu-title" >Vacancy Response</span>
+                        <span class="menu-title" >Vacancy Responses</span>
+                    </span>
+                </a>
+                <a href="{{route('admin.contact.home')}}"  class="menu-item py-2 {{ Request::route()->getName() === 'contact' ? 'here' : '' }}">
+                    <span class="menu-link menu-center" style="width: fit-content; padding: 0;" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                        <span class="menu-icon me-0">
+                            <i class="bi bi-file-text fs-2"></i>
+                        </span>
+                        <span class="menu-title" >Contact Responses</span>
                     </span>
                 </a>
             </div>
