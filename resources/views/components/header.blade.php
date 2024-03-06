@@ -93,8 +93,8 @@
                         <a href="/portfolio" class="block  py-2 text-sm  hover:text-pink-950 transition-colors">Portfolio / Gazelles</a>
                         <a href="/careers" class="block py-2  text-sm hover:text-pink-950 transition-colors">Careers</a>
                         <a href="/offices" class="block  py-2  text-sm hover:text-pink-950 transition-colors">Georgia's office</a>
-                        <a href="https://gazellefinance.am/language/en/home/" target="_blank" class="block  text-sm  pt-2 hover:text-pink-950 transition-colors">Armenia's office</a>
-                        <a href="/team" class="block pt-2 text-sm  hover:text-pink-950 transition-colors">Team</a>
+                        <a href="https://gazellefinance.am/language/en/home/" target="_blank" class="block  text-sm  py-2 hover:text-pink-950 transition-colors">Armenia's office</a>
+                        <a href="/team" class="block py-2 text-sm  hover:text-pink-950 transition-colors">Team</a>
                     </div>
                 </div>
                 <a href="/about" class="block py-2 text-xl relative group">
