@@ -23,5 +23,7 @@
 
         <script>var hostUrl = "assets/";</script>
 		<script src="{{ asset('assets/plugins/global/plugins.bundle.js') }}"></script>
+        <script src="https://cdn.ckeditor.com/ckeditor5/41.2.0/classic/ckeditor.js"></script>
+        @yield('scripts')
     </body>
 </html>
