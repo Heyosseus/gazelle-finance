@@ -33,7 +33,10 @@
                             @foreach ($portfolio as $portfolio)
                             <tr>
                                 <td>{{ $portfolio->title }}</td>
-                                <td>{{ $portfolio->description }}</td>
+                                @php
+                                    $shortDescription = strlen($portfolio->description) > 200 ? substr($portfolio->description, 0, 200) . '...' : $portfolio->description;
+                                @endphp
+                                <td>{{ $shortDescription }}</td>
                                 <td>{{ $portfolio->company }}</td>
                                 <td>{{ $portfolio->industry }}</td>
                                 <td>{{ $portfolio->location }}</td>

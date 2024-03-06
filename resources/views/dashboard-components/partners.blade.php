@@ -13,24 +13,33 @@
     </div>
 
     <img src="{{asset('assets/community/gazelle-partners.png')}}" alt="" class="flex w-full lg:w-1/2 mt-10 xl:mt-0  h-auto rounded-md shadow-xl lg:ml-0 lg:mr-10">
+
+
+
+
+
+
+
+
 </div>
-<div
-    class="carousel-container bg-gray-100 p-4 mt-10 lg:px-20 lg:flex lg:flex-row lg:justify-between items-center border-t-2 border-b-2 border-gray-200">
+<div class="carousel-container bg-black p-4 mt-10 lg:px-20 lg:flex lg:flex-row lg:justify-between items-center border-t-2 border-b-2 border-gray-200">
     <div class="flex items-center justify-between w-full carousel-track">
         @foreach($logos as $logo)
             <div class="w-40 carousel-card"><img src="{{$logo}}" alt=""></div>
         @endforeach
     </div>
 </div>
+
 <style>
     .carousel-container {
         display: flex;
         justify-content: space-between;
         overflow: hidden;
         position: relative;
-        padding: 60px;
+        padding: 100px;
         border-color: #4b5563;
         width: 100%;
+        background-color: #500724;
     }
 
     .carousel-card {
@@ -41,6 +50,10 @@
             cursor:pointer;
         }
         border-radius: 20%;
+    }
+
+    .carousel-card > img {
+        border-radius: 15px;
     }
 
 
@@ -60,7 +73,7 @@
 
     @keyframes slide {
         0% {
-            transform: translateX(calc(100% + 16px));
+            transform: translateX(0);
         }
         100% {
             transform: translateX(-100%);

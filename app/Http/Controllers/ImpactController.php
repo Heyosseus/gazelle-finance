@@ -32,8 +32,10 @@ class ImpactController extends Controller
 
     public function store(Request $request)
     {
+//        dd($request->all());
+
         $validator = $request->validate([
-            'name' => 'required|string',
+            'author' => 'required|string',
             'description' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp',
             'position' => 'required|string',
@@ -42,16 +44,17 @@ class ImpactController extends Controller
         $path = $request->file('image')->store('public/uploads');
         $image_path = Storage::url($path);
 
-        Impact::create([
+        $impact = Impact::create([
             'image' => $image_path,
             'description' => $validator['description'],
-            'author' => $validator['name'],
+            'author' => $validator['author'],
             'position' => $validator['position'],
         ]);
 
+
         Cache::forget('impacts');
 
-        return redirect()->back();
+//        return redirect()->back();
     }
 
     public function destroy($id) : \Illuminate\Http\RedirectResponse

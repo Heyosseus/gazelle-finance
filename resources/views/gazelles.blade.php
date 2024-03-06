@@ -16,7 +16,19 @@
                     <div class="shadow-xl bg-gray-50 flex flex-col w-full lg:w-1/2 justify-around items-start rounded-xl p-4">
                         <img src="{{asset('assets/quotes.png')}}" alt="quotes">
                         <p class="mt-2 text-2xl font-bold">{{$p->title}}</p>
-                        <p class="text-left py-4 text-wrap">"{{$p->description}}"</p>
+                        @php
+                            $shortDescription = strlen($p->description) > 200 ? substr($p->description, 0, 200) . '...' : $p->description;
+                        @endphp
+
+                        <div class="description-container">
+                            <p class="text-left py-4 text-wrap">
+                                <span class="short-description">{{$shortDescription}}</span>
+                                @if(strlen($p->description) > 250)
+                                    <span class="full-description hidden">{{$p->description}}</span>
+                                    <button class="read-more text-blue-600 cursor-pointer">Read More</button>
+                                @endif
+                            </p>
+                        </div>
                         <div class="flex items-center w-full justify-between">
                             <div class="flex flex-col items-start text-sm">
                                 <h1 class="text-pink-950 mt-2  text-center">Name: <span class="font-bold">{{$p->company}}</span> </h1>
@@ -36,3 +48,23 @@
     </div>
     <x-footer></x-footer>
 </x-layout>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.read-more').forEach(function (button) {
+            button.addEventListener('click', function () {
+                const shortDescription = this.parentNode.querySelector('.short-description');
+                const fullDescription = this.parentNode.querySelector('.full-description');
+
+                if (shortDescription.style.display === 'inline' || shortDescription.style.display === '') {
+                    shortDescription.style.display = 'none';
+                    fullDescription.style.display = 'inline';
+                    this.textContent = 'Read Less';
+                } else {
+                    shortDescription.style.display = 'inline';
+                    fullDescription.style.display = 'none';
+                    this.textContent = 'Read More';
+                }
+            });
+        });
+    });
+</script>

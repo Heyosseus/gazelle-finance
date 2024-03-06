@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <div class="w-full xl:w-1/3 max-h-[500px] shadow flex flex-col  bg-gray-100 xl:bg-gray-50 ">
+        <div class="w-full xl:w-1/3  shadow flex flex-col  bg-gray-100 xl:bg-gray-50 ">
             <div class="group cursor-pointer p-4">
                 <h1 class="text-xl sm:text-3xl text-left ml-2 group-hover:text-pink-950 group-hover:font-bold group-hover:transition-colors">Gazelle <span class="group-hover:transition-colors font-bold text-pink-950 group-hover:text-black group-hover:font-light"> News</span></h1>
             </div>
