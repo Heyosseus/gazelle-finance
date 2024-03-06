@@ -29,7 +29,10 @@
                             @foreach ($UkraineBridgeFacility as $oneUkraineBridgeFacility)
                             <tr>
                                 <td>{{ $oneUkraineBridgeFacility->title }}</td>
-                                <td>{{ $oneUkraineBridgeFacility->description }}</td>
+                                @php
+                                    $shortDescription = strlen($oneUkraineBridgeFacility->description) > 200 ? substr($oneUkraineBridgeFacility->description, 0, 400) . '...' : $oneUkraineBridgeFacility->description;
+                                @endphp
+                                <td>{{ $shortDescription }}</td>
 {{--                                <td>{{ App\Models\User::whereId($oneUkraineBridgeFacility->author)->select('name')->first()->name }}</td>--}}
                                 <td><img style="max-width: 120px ; max-height: 120px;" src="{{$oneUkraineBridgeFacility->image}}" alt=""></td>
                                 <td>{{ $oneUkraineBridgeFacility->created_at }}</td>

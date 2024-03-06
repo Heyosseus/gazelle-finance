@@ -18,14 +18,14 @@
                          class="hidden absolute z-10 left-0 mt-2 bg-white items-center space-x-6 shadow-md text-black rounded-md text-sm w-[460px]  transition-all ">
                         <div class="p-5 space-y-1">
                             <h1 class="text-lg font-bold pb-2">Our work</h1>
-                            <a href="/uk_facility" class="block py-2 hover:text-pink-950 transition-colors">Ukrainian bridge
+                            <a href="/uk_facility" class="block hover:text-pink-950 transition-colors">Ukrainian bridge
                                 facility</a>
                             <a href="/portfolio" class="block  pt-2 hover:text-pink-950 transition-colors">Portfolio / Gazelles</a>
                             <a href="/careers" class="block pt-2 hover:text-pink-950 transition-colors">Careers</a>
                         </div>
                         <div class="p-5 space-y-1">
                             <h1 class="text-lg font-bold pb-2">Company</h1>
-                            <a href="/offices" class="block  py-2 hover:text-pink-950 transition-colors">Georgia's office</a>
+                            <a href="/offices" class="block hover:text-pink-950 transition-colors">Georgia's office</a>
                             <a href="https://gazellefinance.am/language/en/home/" target="_blank" class="block  pt-2 hover:text-pink-950 transition-colors">Armenia's office</a>
                             <a href="/team" class="block pt-2 hover:text-pink-950 transition-colors">Team</a>
 

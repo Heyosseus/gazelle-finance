@@ -48,14 +48,14 @@
                         <span class="menu-title">Products</span>
                     </span>
                 </a>
-                <a  class="menu-item py-2 {{ Request::route()->getName() === 'admin.messages' ? 'here' : '' }}">
-                    <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-                        <span class="menu-icon me-0">
-                            <i class="bi bi-file-text fs-2"></i>
-                        </span>
-                        <span class="menu-title">About</span>
-                    </span>
-                </a>
+{{--                <a  class="menu-item py-2 {{ Request::route()->getName() === 'admin.messages' ? 'here' : '' }}">--}}
+{{--                    <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">--}}
+{{--                        <span class="menu-icon me-0">--}}
+{{--                            <i class="bi bi-file-text fs-2"></i>--}}
+{{--                        </span>--}}
+{{--                        <span class="menu-title">About</span>--}}
+{{--                    </span>--}}
+{{--                </a>--}}
                 <a href="{{ route('admin.portfolio.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'portfolio.home' ? 'here' : '' }}">
                     <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
@@ -88,14 +88,14 @@
                         <span class="menu-title">Impacts</span>
                     </span>
                 </a>
-                <a  class="menu-item py-2 {{ Request::route()->getName() === 'categories' ? 'here' : '' }}">
-                    <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-                        <span class="menu-icon me-0">
-                            <i class="bi bi-file-text fs-2"></i>
-                        </span>
-                        <span class="menu-title">Contact</span>
-                    </span>
-                </a>
+{{--                <a  class="menu-item py-2 {{ Request::route()->getName() === 'categories' ? 'here' : '' }}">--}}
+{{--                    <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">--}}
+{{--                        <span class="menu-icon me-0">--}}
+{{--                            <i class="bi bi-file-text fs-2"></i>--}}
+{{--                        </span>--}}
+{{--                        <span class="menu-title">Contact</span>--}}
+{{--                    </span>--}}
+{{--                </a>--}}
                 <a href="{{ route('admin.news.home') }}" class="menu-item py-2 {{ Request::route()->getName() === 'news.home' ? 'here' : '' }}">
                     <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
@@ -104,14 +104,14 @@
                         <span class="menu-title">News</span>
                     </span>
                 </a>
-                <a  class="menu-item py-2 {{ Request::route()->getName() === 'categories' ? 'here' : '' }}">
-                    <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-                        <span class="menu-icon me-0">
-                            <i class="bi bi-file-text fs-2"></i>
-                        </span>
-                        <span class="menu-title">Office</span>
-                    </span>
-                </a>
+{{--                <a  class="menu-item py-2 {{ Request::route()->getName() === 'categories' ? 'here' : '' }}">--}}
+{{--                    <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">--}}
+{{--                        <span class="menu-icon me-0">--}}
+{{--                            <i class="bi bi-file-text fs-2"></i>--}}
+{{--                        </span>--}}
+{{--                        <span class="menu-title">Office</span>--}}
+{{--                    </span>--}}
+{{--                </a>--}}
                 <a href="{{route('admin.vacancies.home')}}" class="menu-item py-2 {{ Request::route()->getName() === 'categories' ? 'here' : '' }}">
                     <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
