@@ -11,6 +11,7 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\VacancyResponseController;
 use App\Http\Controllers\UkraineBridgeFacilityController;
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
@@ -67,6 +68,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
         Route::get('/vacancy-responses', [VacancyResponseController::class, 'index'])->name('vacancy-responses.home');
         Route::get('/vacancy-responses/delete/{id}', [VacancyResponseController::class, 'destroy'])->name('vacancy-responses.delete');
+
+        Route::get('/team', [EmployeeController::class, 'index'])->name('team.home');
+        Route::post('/team/store', [EmployeeController::class, 'store'])->name('team.store');
+        Route::get('/team/delete/{id}', [EmployeeController::class, 'destroy'])->name('team.delete');
     });
 });
 
@@ -74,10 +79,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
 Route::get('/', [HomeController::class, 'index']);
 Route::view('/about', 'about');
 Route::view('/products', 'products');
-//Route::view('/careers', 'services/careers');
 Route::view('/offices', 'services/georgia-office');
-Route::view('/team', 'services/team');
+
 Auth::routes();
+
 Route::get('/news', [NewsController::class, 'news'])->name('news');
 Route::get('/blog', [AdminController::class, 'blog'])->name('blog');
 Route::get('/portfolio', [PortfolioController::class, 'portfolio'])->name('portfolio');
@@ -88,6 +93,7 @@ Route::post('/vacancy', [VacancyResponseController::class, 'store'])->name('vaca
 Route::get('/uk_facility', [UkraineBridgeFacilityController::class, 'uk_facility'])->name('uk_facility');
 Route::get('/uk_facility/{facility}', [UkraineBridgeFacilityController::class, 'show'])->name('uk_facility.show');
 Route::get('/careers', [VacancyController::class, 'careers'])->name('careers');
+Route::get('/team', [EmployeeController::class, 'team'])->name('team');
 
 Route::fallback(function () {
     return view('error');

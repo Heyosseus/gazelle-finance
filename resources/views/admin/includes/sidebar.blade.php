@@ -72,7 +72,7 @@
                         <span class="menu-title">Ukraine bridge facility</span>
                     </span>
                 </a>
-                <a  class="menu-item py-2 {{ Request::route()->getName() === 'categories' ? 'here' : '' }}">
+                <a href="{{route('admin.team.home')}}" class="menu-item py-2 {{ Request::route()->getName() === 'team.home' ? 'here' : '' }}">
                     <span class="menu-link menu-center" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                         <span class="menu-icon me-0">
                             <i class="bi bi-file-text fs-2"></i>

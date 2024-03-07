@@ -32,7 +32,7 @@
                                 @php
                                     $shortDescription = strlen($oneUkraineBridgeFacility->description) > 200 ? substr($oneUkraineBridgeFacility->description, 0, 400) . '...' : $oneUkraineBridgeFacility->description;
                                 @endphp
-                                <td>{{ $shortDescription }}</td>
+                                <td>{!! $shortDescription !!}</td>
 {{--                                <td>{{ App\Models\User::whereId($oneUkraineBridgeFacility->author)->select('name')->first()->name }}</td>--}}
                                 <td><img style="max-width: 120px ; max-height: 120px;" src="{{$oneUkraineBridgeFacility->image}}" alt=""></td>
                                 <td>{{ $oneUkraineBridgeFacility->created_at }}</td>
@@ -73,7 +73,7 @@
 
         <div class="modal fade" id="kt_modal_add_customer" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered mw-650px">
-                <form action="{{ route('admin.ukraine_bridge_facility.store') }}" enctype="multipart/form-data" method="post">
+                <form action="{{ route('admin.ukraine_bridge_facility.store') }}" enctype="multipart/form-data" method="post" novalidate>
                     @csrf
 
                     <div class="modal-dialog">
@@ -101,7 +101,7 @@
 
                                     <div class="fv-row mb-7 ">
                                         <label class="fs-6 fw-bold mb-2 required">Description</label>
-                                        <textarea class="form-control form-control-solid required" placeholder="Description text..." name="description" rows="8" required></textarea>
+                                        <textarea class="form-control form-control-solid required" placeholder="Description text..." name="description" rows="8"  id="uk-textarea"  required></textarea>
                                     </div>
 
                                     <div class="fv-row mb-10 images">
@@ -125,5 +125,15 @@
         </div>
     </div>
 </div>
+
+@endsection
+@section('scripts')
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#uk-textarea' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
 
 @endsection
