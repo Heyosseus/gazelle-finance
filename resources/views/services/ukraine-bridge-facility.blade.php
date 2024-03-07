@@ -35,7 +35,7 @@
                             @php
                                 $shortDescription = strlen($facility->description) > 200 ? substr($facility->description, 0, 400) . '...' : $facility->description;
                             @endphp
-                            <p class="text-{{ $key % 2 === 0 ? 'gray-200' : 'black' }} lg:text-lg leading-8 tracking-wider"> {!! str_replace('<p>', '<p class="' . ($key % 2 === 0 ? 'text-gray-200' : '') . '">', $shortDescription) !!}</p>
+                            <p class="text-{{ $key % 2 === 0 ? 'gray-200' : 'black' }} lg:text-lg leading-8 tracking-wider"> {!! str_replace('<p>', '<p class="' . ($key % 2 === 0 ? 'text-gray-200  mt-0' : ' mt-0') . '">', $shortDescription) !!}</p>
                             <a href="{{ route('uk_facility.show', ['facility' => $facility->id]) }}"
                                class="text-{{ $key % 2 === 0 ? 'white' : 'black' }} border w-fit p-2 flex items-center space-x-2">
                                 <p>See more </p>

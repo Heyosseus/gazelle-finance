@@ -35,23 +35,6 @@
                                 @enderror
                         </div>
 
-                        <div class="col-8 mb-5 d-flex align-items-center justify-content-between mx-auto">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-
-                        </div>
-
                         <button type="submit" class="btn btn-dark my-5 rounded-5 mx-auto px-auto  py-2 d-flex justify-content-center align-items-center  col-6 ">
                            <span class="fs-5 text-nowrap text-center">{{ __('Login') }}</span>
                         </button>
