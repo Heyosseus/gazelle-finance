@@ -12,7 +12,7 @@
         <div class="w-44 h-px bg-black text-center mx-auto mb-10"></div>
         <p class="text-center w-full lg:w-1/2 mx-auto mb-20">With the support of its investors, GF will provide bridge financing
             and technical support to a select group of Ukrainian companies and their employees</p>
-        <div class="flex flex-col lg:flex-row lg:justify-between lg:space-x-20">
+        <div class="flex flex-col lg:flex-row lg:justify-center lg:space-x-20">
 
             <div class="space-y-10">
                 @foreach($UkraineBridgeFacility as $key => $facility)
@@ -33,9 +33,9 @@
                                 </div>
                             </div>
                             @php
-                                $shortDescription = strlen($facility->description) > 200 ? substr($facility->description, 0, 400) . '...' : $facility->description;
+                                $shortDescription = strlen($facility->description) > 200 ? substr($facility->description, 0, 200) . '...' : $facility->description;
                             @endphp
-                            <p class="text-{{ $key % 2 === 0 ? 'gray-200' : 'black' }} lg:text-lg leading-8 tracking-wider"> {!! str_replace('<p>', '<p class="' . ($key % 2 === 0 ? 'text-gray-200  mt-0' : ' mt-0') . '">', $shortDescription) !!}</p>
+                            <p class="text-{{ $key % 2 === 0 ? 'gray-200' : 'black' }} lg:text-lg leading-8 tracking-wider"> {!! str_replace('<p>', '<p class="' . ($key % 2 === 0 ? 'text-gray-200  mt-0 break-words' : ' mt-0 break-words') . '">', $shortDescription) !!}</p>
                             <a href="{{ route('uk_facility.show', ['facility' => $facility->id]) }}"
                                class="text-{{ $key % 2 === 0 ? 'white' : 'black' }} border w-fit p-2 flex items-center space-x-2">
                                 <p>See more </p>

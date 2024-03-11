@@ -36,7 +36,10 @@ class NewsController extends Controller
 
     public function show($id) : View
     {
-        $article = Article::findOrFail($id);
+        $article = Cache::remember('article' . $id, now()->addHours(24), function () use ($id) {
+            return Article::findOrFail($id);
+        });
+
         return view('show-news', ['article' => $article]);
     }
 

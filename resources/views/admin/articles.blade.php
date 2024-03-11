@@ -30,7 +30,7 @@
                             @foreach ($articles as $article)
                             <tr>
                                 <td>{{ $article->title }}</td>
-                                <td>{{ $article->description }}</td>
+                                <td>{!! $article->description !!} </td>
                                 <td>
                                     {{ $article->category->title ?? '' }}
                                 </td>
@@ -113,7 +113,7 @@
 
                                     <div class="fv-row mb-7 ">
                                         <label class="fs-6 fw-bold mb-2 required">Description</label>
-                                        <textarea class="form-control form-control-solid required" placeholder="Description text..." name="description" rows="8" required></textarea>
+                                        <textarea class="form-control form-control-solid required" id="articles-textarea" placeholder="Description text..." name="description" rows="8"></textarea>
                                     </div>
 
                                     <div class="fv-row mb-10 images">
