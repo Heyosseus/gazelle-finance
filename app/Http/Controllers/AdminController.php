@@ -83,6 +83,7 @@ class AdminController extends Controller
         if ($articles) {
             $articles->update(['deleted_at' => now()]);
             Cache::forget('articles');
+            Cache::forget('article' . $id);
         }
 
         return redirect()->back();

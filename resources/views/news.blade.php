@@ -5,20 +5,20 @@
             <h1 class="text-4xl text-left py-4">Our <span class="font-bold text-pink-950">Articles</span></h1>
             <div class="w-full h-px bg-gray-300 text-center "></div>
             @forelse ($articles as $article)
-                <div class="flex flex-col sm:flex-row justify-between md:mt-5 w-full sm:space-x-10 shadow-lg p-2 sm:p-6">
+                <div class="flex flex-col sm:flex-row justify-between md:mt-5 w-full sm:space-x-2 shadow-lg p-2 sm:p-6">
                     <div>
-                        <img src="{{ $article->photo }}" alt="" class="w-full md:w-52 h-auto sm:h-40 object-fill">
+                        <img src="{{ $article->photo }}" alt="" class="w-full md:w-48 h-auto sm:h-40 object-fill">
                         <div class="flex items-center justify-between mt-4 sm:flex-col sm:items-start sm:mt-0">
                             <p class="mt-0 text-xs sm:mt-2 "><strong>Author:</strong>  {{ $article->user?->name ?? 'Gazelle Finance' }}</p>
                             <p class="text-xs "><strong>Date:</strong> {{ substr($article->created_at, 0, 11) }}</p>
                         </div>
                     </div>
-                    <div class="flex flex-col mt-8 sm:mt-0 space-y-10 w-full">
+                    <div class="flex flex-col mt-8 sm:mt-0 space-y-10 w-full sm:w-1/2 xl:w-96">
                         <div>
                             <h1 class="text-lg sm:text-xl font-bold">{{ $article->title }}</h1>
                             <div class="w-full h-px bg-gray-300 mt-2 text-center"></div>
                         </div>
-                        <p class="w-full text-sm">{{ \Illuminate\Support\Str::limit($article->description, 100) }}</p>
+                        <p class="w-full text-sm break-words">{{ \Illuminate\Support\Str::limit($article->description, 100) }}</p>
                         <a href="{{ route('news.show', ['news' => $article->id]) }}" class="text-pink-950 font-semibold  flex items-center space-x-2">
                             <p>See more </p>
                             <img src="{{ asset('icons/longRightArrow.svg') }}" alt="" width="15">
