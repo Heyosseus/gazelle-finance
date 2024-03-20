@@ -1,7 +1,7 @@
 <div id="portfolio" class="flex flex-col justify-between h-full px-4 mt-20 lg:px-16 ">
     <div class="flex lg:w-full mb-10 justify-center items-center">
-        <h1 class="text-3xl lg:text-5xl border-b-2 py-2 w-fit border-pink-950 text-center">Our <span
-                class="text-pink-950 font-bold">Gazelles</span></h1>
+        <h1 class="text-3xl lg:text-5xl border-b-2 py-2 w-fit border-pink-950 text-center">{{__('dashboard.our')}} <span
+                class="text-pink-950 font-bold">{{__('dashboard.gazelles')}}</span></h1>
     </div>
 
     <div class="flex flex-col xl:flex-row items-center space-x-4 justify-around xl:mt-8">
@@ -42,10 +42,10 @@
                 to rapidly scale their businesses and become market leaders.</p>
 
             <div
-                class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 text-center flex-wrap mt-5 lg:mt-10  lg:justify-center lg:space-x-4">
+                class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 text-center flex-wrap mt-5 lg:mt-10  lg:justify-center lg:space-x-4 xl:space-x-1">
                 <div
                     class="border py-2 cursor-pointer  px-4 rounded-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors">
-                    Growth
+                    {{__('dashboard.growth')}}
                 </div>
                 <div
                     class="border py-2 cursor-pointer  px-4 rounded-full border-pink-950 text-pink-950 hover:bg-pink-950 hover:text-white transition-colors">
@@ -53,15 +53,15 @@
                 </div>
                 <div
                     class="border py-2  cursor-pointer px-4 rounded-full border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white transition-colors">
-                    Services
+                    {{__('dashboard.services')}}
                 </div>
                 <div
                     class="border py-2 cursor-pointer  px-4 rounded-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors">
-                    Portfolio
+                    {{__('dashboard.portfolio')}}
                 </div>
                 <div
                     class="border py-2  cursor-pointer px-4 rounded-full border-red-700 text-red-700  hover:bg-red-700  hover:text-white transition-colors">
-                    Partners
+                    {{__('dashboard.partners')}}
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
 
     <div class="mt-20">
         <a href="/portfolio" class="rounded-full px-5 w-fit flex mx-auto py-2 border border-pink-950 mt-4 bg-white text-pink-950 hover:bg-pink-950 hover:text-white cursor-pointer">
-            See More</a>
+            {{__('dashboard.see_more')}}</a>
     </div>
 
 

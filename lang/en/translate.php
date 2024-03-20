@@ -16,5 +16,5 @@ return [
     'team' => 'Team',
     'testimonials' => 'Testimonials',
     'partners' => 'Partners',
-
+    'links' => 'Links',
 ];

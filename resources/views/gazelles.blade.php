@@ -2,7 +2,7 @@
     <x-header></x-header>
     <div class="p-5 md:p-10">
         <div class="space-y-3">
-            <h1 class="text-2xl md:text-4xl text-center">Our <span class="font-bold text-pink-950">Gazelles</span></h1>
+            <h1 class="text-2xl md:text-4xl text-center">{{__('dashboard.our')}} <span class="font-bold text-pink-950">{{__('dashboard.gazelles')}}</span></h1>
             <div class="w-36 h-0.5 bg-gray-500 mx-auto"></div>
         </div>
         <p class="text-center md:text-lg md:mx-auto w-full xl:w-1/2 mt-10">Gazelles constitute only 5-10 percent of all private companies, yet in
@@ -31,10 +31,10 @@
                         </div>
                         <div class="flex items-center w-full justify-between">
                             <div class="flex flex-col items-start text-sm">
-                                <h1 class="text-pink-950 mt-2  text-center">Name: <span class="font-bold">{{$p->company}}</span> </h1>
-                                <h1 class="text-pink-950 mt-2  text-center">Industry: <span class="font-bold">{{$p->industry}}</span> </h1>
-                                <h1 class="text-pink-950 mt-2  text-center">Location: <span class="font-bold">{{$p->location}}</span> </h1>
-                                <h1 class="text-pink-950 mt-2  text-center">Website:  <a href="https://{{$p->website_url}}" target="_blank" class="font-bold text-blue-600">{{$p->website_url}}</a></h1>
+                                <h1 class="text-pink-950 mt-2  text-center">{{__('dashboard.name')}}: <span class="font-bold">{{$p->company}}</span> </h1>
+                                <h1 class="text-pink-950 mt-2  text-center">{{__('services.industry')}}: <span class="font-bold">{{$p->industry}}</span> </h1>
+                                <h1 class="text-pink-950 mt-2  text-center">{{__('services.location')}}: <span class="font-bold">{{$p->location}}</span> </h1>
+                                <h1 class="text-pink-950 mt-2  text-center">{{__('services.website')}}:  <a href="https://{{$p->website_url}}" target="_blank" class="font-bold text-blue-600">{{$p->website_url}}</a></h1>
                             </div>
                             <img src="{{$p->logo}}" alt="image" class="w-28 h-28 object-contain ">
                         </div>

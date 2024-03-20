@@ -1,5 +1,5 @@
 <div class="flex flex-col lg:flex-row items-center justify-between px-20 py-5 border-t-[1px] border-gray-300">
-    <p class="text-center text-black mt-4 text-sm">© 2024, Gazelle Finance, All rights reserved</p>
+    <p class="text-center text-black mt-4 text-sm">© 2024, {{__('dashboard.rights')}}</p>
     <div class="flex space-x-2 mt-4">
         <a href="https://www.facebook.com/GazelleFinance/">
             <img src="{{asset('icons/facebookIcon.svg')}}"

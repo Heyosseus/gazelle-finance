@@ -11,10 +11,10 @@ return [
     'ukrainian_bridge_facility' => 'Ukrainian bridge facility',
     'Portfolio/Gazelles' => 'პორტფოლიო',
     'careers' => 'კარიერა',
-    'georgiaoffice' => 'ქართული ოფისი',
-    'armeniaoffice' => 'სომხური ოფისი',
+    'georgiaoffice' => 'საქართველოს ოფისი',
+    'armeniaoffice' => 'სომხეთის ოფისი',
     'team' => 'გუნდი',
     'testimonials' => 'უკუკავშირი',
     'partners' => 'პარტნიორები',
-
+    'links' => 'ბმულები',
 ];

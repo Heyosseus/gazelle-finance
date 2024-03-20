@@ -38,7 +38,7 @@
                             <p class="text-{{ $key % 2 === 0 ? 'gray-200' : 'black' }} lg:text-lg leading-8 tracking-wider"> {!! str_replace('<p>', '<p class="' . ($key % 2 === 0 ? 'text-gray-200  mt-0 break-words' : ' mt-0 break-words') . '">', $shortDescription) !!}</p>
                             <a href="{{ route('uk_facility.show', ['facility' => $facility->id]) }}"
                                class="text-{{ $key % 2 === 0 ? 'white' : 'black' }} border w-fit p-2 flex items-center space-x-2">
-                                <p>See more </p>
+                                <p>{{__('dashboard.see_more')}} </p>
                             </a>
                         </div>
                         @if($key % 2 !== 0)
@@ -51,8 +51,8 @@
             </div>
 
             <div id="hiddenContent"
-                 class="fixed inset-y-48  right-0 w-full xl:w-1/5 bg-pink-950 text-gray-300 overflow-y-auto px-6 py-4 rounded">
-                <h1 class="text-3xl font-bold text-center text-white">Contents</h1>
+                 class="fixed inset-y-48 right-0 w-full lg:w-1/4 bg-pink-950 text-gray-300 overflow-y-auto px-6 py-4 rounded">
+                <h1 class="text-3xl font-bold text-center text-white">{{__('services.contents')}}</h1>
                 <div class="w-20 h-0.5 bg-white mx-auto "></div>
                 @foreach($UkraineBridgeFacility as $key => $facility)
                     <div class="mt-4 space-y-3 cursor-pointer">
