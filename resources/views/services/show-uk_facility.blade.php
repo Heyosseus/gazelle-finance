@@ -14,7 +14,7 @@
 
             <div class="space-y-10 lg:flex w-full justify-around lg:space-y-0">
                 <div
-                    class="flex flex-col xl:flex-row ">
+                    class="flex flex-col align-start ">
                     <img src="{{$facility->image}}" alt=""
                          class="hidden lg:block w-96  object-contain justify-between p-4">
                 </div>

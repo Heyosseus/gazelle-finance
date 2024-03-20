@@ -61,6 +61,7 @@ class AdminController extends Controller
         $image_path = Storage::url($path);
 
 
+
         $car = Article::create([
             'title' => $validator['name'],
             'photo' => $image_path,

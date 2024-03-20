@@ -11,7 +11,7 @@
                     <div class="p-6">
                         <div
                             class="border py-2 px-4 w-fit mb-2 rounded-full border-pink-950 text-pink-950 hover:bg-pink-950 hover:text-white transition-colors cursor-pointer">{{$blog->category->title}}</div>
-                        <h2 class="font-bold text-2xl text-gray-800 min-h-32">{{$blog->title}} </h2>
+                        <h2 class="blogTitle font-bold text-2xl text-gray-800 min-h-32">{{$blog->title}} </h2>
                         <a href="{{ route('news.show', ['news' => $blog->id]) }}"
                            class="text-pink-950 font-semibold mt-4 justify-end flex items-center space-x-2">
                             <p>Read more </p>
@@ -31,3 +31,23 @@
         more</a>
 </div>
 <div class="w-full h-px bg-gray-300 mt-10"></div>
+<script>
+    // Get the title element
+    var titleElement = document.querySelectorAll('.blogTitle');
+
+    titleElement.forEach(title => {
+        // Get the text content of the title
+        var titleText = title.textContent;
+
+        // Check if the title length exceeds 50 characters
+        if (titleText.length > 50) {
+            // Truncate the title and append ellipsis
+            titleText = titleText.substring(0, 50) + '...';
+        }
+
+        // Update the title element with the truncated text
+        title.textContent = titleText;
+    })
+
+
+</script>
