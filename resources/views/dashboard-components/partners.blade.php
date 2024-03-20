@@ -47,7 +47,7 @@
         justify-content: space-between;
         &:hover {
             transform: scale(0.9);
-            cursor:pointer;
+            cursor: pointer;
         }
         border-radius: 20%;
     }
@@ -56,7 +56,6 @@
         border-radius: 15px;
     }
 
-
     .carousel-track {
         display: flex;
         position: absolute;
@@ -64,8 +63,8 @@
         justify-content: space-around;
         align-items: center;
         gap: 16px;
-        width: 100%;
-        animation: slide 20s linear infinite backwards;
+        width: 200%; /* Double the width for looping effect */
+        animation: slide 20s linear infinite;
         &:hover {
             animation-play-state: paused;
         }
@@ -76,7 +75,7 @@
             transform: translateX(0);
         }
         100% {
-            transform: translateX(-100%);
+            transform: translateX(-50%); /* Move back to the start position for looping */
         }
     }
 </style>

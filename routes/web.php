@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImpactController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProductsController;
@@ -12,6 +13,8 @@ use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\VacancyResponseController;
 use App\Http\Controllers\UkraineBridgeFacilityController;
 use App\Http\Controllers\EmployeeController;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
@@ -80,10 +83,30 @@ Route::get('/', [HomeController::class, 'index']);
 Route::view('/about', 'about');
 Route::view('/products', 'products');
 Route::view('/offices', 'services/georgia-office');
+//Route::get('/change-language/{locale}', [LanguageController::class, 'changeLanguage'])->name('change.language');
+
+
+Route::get('/change-language/{locale}', function (string $locale) {
+    if (!in_array($locale, ['en', 'ka'])) {
+        abort(400);
+    }
+
+    // Set the locale for the current request
+    App::setLocale($locale);
+
+    // Store the locale in session for subsequent requests
+    session()->put('locale', $locale);
+
+    // Redirect back or to another page as needed
+    return redirect()->back();
+})->name('change.language');
+
+
 
 Auth::routes();
 
 Route::get('/news', [NewsController::class, 'news'])->name('news');
+Route::get('/en', [NewsController::class, 'news'])->name('news');
 Route::get('/blog', [AdminController::class, 'blog'])->name('blog');
 Route::get('/portfolio', [PortfolioController::class, 'portfolio'])->name('portfolio');
 Route::get('/news/{news}', [NewsController::class, 'show'])->name('news.show');
@@ -98,3 +121,5 @@ Route::get('/team', [EmployeeController::class, 'team'])->name('team');
 Route::fallback(function () {
     return view('error');
 });
+
+
