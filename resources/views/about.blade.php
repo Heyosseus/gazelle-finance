@@ -1,27 +1,27 @@
 <x-layout>
     <x-header></x-header>
     <div class="w-full items-center justify-center mt-4  px-4 lg:px-32 py-8  rounded-lg  flex flex-col cursor-pointer">
-        <h1 class="text-4xl">About <span class="font-bold text-pink-950">Us</span></h1>
+        <h1 class="text-4xl">{{__('services.about')}} <span class="font-bold text-pink-950">{{__('services.us')}}</span></h1>
         <div class="w-20 h-[1px] bg-gray-950 mx-auto mt-2"></div>
 
         <div class="flex items-center justify-center xl:justify-between w-full mt-3">
             <div class="hidden xl:block ml-10 mt-20">
                 <div class="flex flex-col rounded-xl border border-black py-2 px-5">
-                    <h1 class="text-xl text-center">Our <span class="font-bold text-pink-950">Story</span></h1>
+                    <h1 class="text-xl text-center">{{__('services.our')}} <span class="font-bold text-pink-950">{{__('services.story')}}</span></h1>
                 </div>
                 <div class="w-[0.5px] h-32 bg-black  mx-auto"></div>
                 <div class="flex flex-col rounded-xl border border-black py-2 px-5">
-                    <h1 class="text-xl">Our <span class="font-bold text-pink-950">Mission</span></h1>
+                    <h1 class="text-xl">{{__('services.our')}} <span class="font-bold text-pink-950">{{__('services.mission')}}</span></h1>
                 </div>
                 <div class="w-[0.5px]  h-32 bg-black  mx-auto"></div>
                 <div class="flex flex-col rounded-xl border border-black py-2 px-5">
-                    <h1 class="text-xl">Our <span class="font-bold text-pink-950">Vision</span></h1>
+                    <h1 class="text-xl">{{__('services.our')}} <span class="font-bold text-pink-950">{{__('services.vision')}}</span></h1>
                 </div>
             </div>
 
             <div>
                 <div class="w-full xl:w-[800px]  shadow-xl p-5 md:p-10 leading-8 rounded-xl">
-                    <div class="block xl:hidden text-2xl text-center mb-6">Our <span class="font-bold text-pink-950">Story</span>
+                    <div class="block xl:hidden text-2xl text-center mb-6">{{__('services.our')}} <span class="font-bold text-pink-950">{{__('services.story')}}</span>
                     </div>
                     Gazelle Finance, launched in 2013 with Eurasia Foundation's support, targets high-growth SMEs in
                     Eurasia. The 2017 closure of Gazelle Fund LP, totaling $31M,
@@ -51,13 +51,13 @@
         </div>
 
         <div class="h-full mt-20">
-            <h1 class="text-4xl text-center">Find out more <span class="font-bold text-pink-950"> About Us</span></h1>
+            <h1 class="text-4xl text-center">{{__('services.find_out_more')}} <span class="font-bold text-pink-950">{{__('services.about_us')}}</span></h1>
             <div class="w-60 h-[1px] bg-gray-950 mx-auto mt-2"></div>
 
             <div class="flex flex-col lg:flex-row justify-between mt-10 lg:space-x-4">
                 <div class="w-full  xl:w-1/3 shadow-xl flex flex-col space-y-3   p-5 py-10  justify-between  rounded-xl">
                     <div class="flex justify-between  items-start">
-                        <h1 class="text-pink-950 text-2xl font-bold">CAREERS AT GAZELLE</h1>
+                        <h1 class="text-pink-950 text-2xl font-bold  text-uppercase">{{__('services.careers')}}</h1>
                         <div class="rounded-full bg-gray-300 p-3">
                             <img src="{{asset('icons/briefcase-arrow-right.svg')}}" alt="" width="20" >
                         </div>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="w-full   xl:w-1/3 shadow-xl flex flex-col space-y-3  p-5 py-10  justify-between  rounded-xl">
                     <div class="flex justify-between  items-start">
-                        <h1 class="text-pink-950 text-2xl font-bold">READ OUR NEWS</h1>
+                        <h1 class="text-pink-950 text-2xl font-bold text-uppercase">{{__('services.read')}}</h1>
                         <div class="rounded-full bg-gray-300 p-3">
                             <img src="{{asset('icons/videoconference.svg')}}" alt="" width="20" >
                         </div>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="w-full  xl:w-1/3 shadow-xl flex flex-col space-y-3  p-5 py-10  justify-between  rounded-xl">
                     <div class="flex justify-between  items-start">
-                        <h1 class="text-pink-950 text-2xl font-bold">WE ARE HERE FOR YOU</h1>
+                        <h1 class="text-pink-950 text-2xl font-bold text-uppercase">{{__('services.we_are_here')}}</h1>
                         <div class="rounded-full bg-gray-300 p-3">
                             <img src="{{asset('icons/employees.svg')}}" alt="" width="20" >
                         </div>
@@ -117,7 +117,7 @@
             <div class="mt-10 flex justify-between  flex-col lg:flex-row">
                 <div class="w-full lg:w-1/2 shadow-xl flex flex-col space-y-3  p-5 py-10  justify-between  rounded-xl">
                     <div class="flex justify-between">
-                        <h1 class="text-pink-950 text-2xl font-bold">OUR PRODUCTS</h1>
+                        <h1 class="text-pink-950 text-2xl font-bold text-uppercase">{{__('services.products')}}</h1>
                         <div class="rounded-full bg-gray-300 p-3">
                             <img src="{{asset('icons/selling.svg')}}" alt="" width="20" >
                         </div>
@@ -138,7 +138,7 @@
                 <div
                     class="w-full  lg:w-1/3 shadow-xl flex flex-col space-y-3 p-5 py-10  justify-between bg-gray-950 rounded-xl">
                     <div class="flex justify-between">
-                        <h1 class="text-white text-2xl font-bold">GET IN TOUCH</h1>
+                        <h1 class="text-white text-2xl font-bold text-uppercase">{{__('services.get_in_touch')}}</h1>
                         <div class="rounded-full bg-gray-300 p-3">
                             <img src="{{asset('icons/attribution-pencil.svg')}}" alt="" width="20" >
                         </div>

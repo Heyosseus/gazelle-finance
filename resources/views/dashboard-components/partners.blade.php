@@ -1,13 +1,13 @@
 <div class="flex flex-col w-full lg:flex-row justify-around items-center px-4 space-x-4 lg:p-20 mt-10" id="partners">
     <div class="flex flex-col lg:w-1/2 items-center lg:items-start">
-        <h1 class="text-3xl  lg:text-5xl border-b-2 py-2 border-pink-950 ">Our <span class="text-pink-950 font-bold">Partners</span>
+        <h1 class="text-3xl  lg:text-5xl border-b-2 py-2 border-pink-950 ">{{__('dashboard.our')}} <span class="text-pink-950 font-bold">{{ __('translate.partners') }}</span>
         </h1>
         <p class="mt-10 text-lg text-center lg:text-start w-full xl:w-[500px] leading-8"><span
                 class="text-pink-950 font-semibold "> Empowering </span> success through strategic partnerships, we
             collaborate to drive innovation and achieve shared
             goals. </p>
         <a href="/portfolio" class="text-pink-950 font-semibold mt-20 flex items-center space-x-2">
-            <p>See more </p>
+            <p>{{__('dashboard.see_more')}} </p>
             <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
         </a>
     </div>

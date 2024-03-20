@@ -3,7 +3,7 @@
     <div class="flex flex-col h-full justify-between space-y-20">
         <div class="flex flex-col items-center justify-around">
             <div class="p-10 lg:p-20 ">
-                <h1 class="text-3xl text-center">Our <span class="font-bold text-pink-950">Products</span></h1>
+                <h1 class="text-3xl text-center">{{__('services.our')}} <span class="font-bold text-pink-950">{{__('services.products')}} </span></h1>
                 <div class="w-20 h-px bg-black mx-auto mt-2"></div>
                 <p class="w-full xl:w-[800px] leading-6 tracking-wide mt-10 text-center mx-auto">Our products are
                     similar to
@@ -58,8 +58,8 @@
 
             <div class="w-full p-10 lg:p-20">
 
-                <h1 class=" text-2xl lg:text-3xl text-center mt-10">Why <span
-                        class="text-pink-950 font-bold">Gazelle Finance?</span>
+                <h1 class=" text-2xl lg:text-3xl text-center mt-10">{{__('services.why')}} <span
+                        class="text-pink-950 font-bold">{{__('services.gazelle')}}?</span>
                 </h1>
 
                 <p class="text-gray-950  mt-10 text-center leading-7 w-full items-center justify-center">
@@ -71,13 +71,11 @@
 
                 <div
                     class="flex flex-col space-y-4 w-full  justify-center items-center xl:mr-auto   mt-10  cursor-pointer">
-                    <h1 class="my-10 text-2xl lg:text-3xl">Is <span
-                            class="text-pink-950 font-semibold">Gazelle Finance</span> a good fit for
-                        my
-                        company?</h1>
+                    <h1 class="my-10 text-2xl lg:text-3xl">{{__('services.is')}} <span
+                            class="text-pink-950 font-semibold">{{__('services.gazelle')}}</span> {{__('services.good_fit')}}</h1>
                     <div class="flex justify-center xl:justify-around items-center w-full">
                         <div class="p-5 w-52 border border-gray-950 text-center hidden xl:flex  justify-between  ">
-                            Revenues
+                            {{__('services.revenues')}}
                             <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
                         </div>
                         <div
@@ -89,7 +87,7 @@
 
                     <div class="flex justify-center xl:justify-around items-center w-full">
                         <div class="hidden xl:flex p-5 w-52 border border-gray-950 text-center  justify-between">
-                            Track Record
+                            {{__('services.track')}}
                             <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
                         </div>
                         <div
@@ -100,7 +98,7 @@
                     </div>
                     <div class="flex justify-center xl:justify-around  items-center w-full">
                         <div class="p-5 w-52 border border-gray-950 text-center hidden xl:flex justify-between ">
-                            Business Plan
+                            {{__('services.plan')}}
                             <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
                         </div>
                         <div
@@ -111,7 +109,7 @@
                     </div>
                     <div class="flex justify-center xl:justify-around items-center w-full">
                         <div class="p-5 w-52 border border-gray-950 text-center hidden  xl:flex justify-between  ">
-                            Team
+                            {{__('services.team')}}
                             <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
                         </div>
                         <div
@@ -122,7 +120,7 @@
                     </div>
                     <div class="flex justify-center xl:justify-around  items-center w-full pb-20 lg:pb-0">
                         <div class="p-5 w-52 border border-gray-950 text-center hidden xl:flex justify-between ">
-                            Standards
+                            {{__('services.standards')}}
                             <img src="{{asset('icons/longRightArrow.svg')}}" alt="" width="15">
                         </div>
                         <div
